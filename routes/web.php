@@ -44,3 +44,9 @@ Route::get('/campaign-pendidikan', function () {
 
     return view('campaign-pendidikan');
 });
+
+
+Route::get('/blogs', function () {
+
+    return view('blogs');
+});

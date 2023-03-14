@@ -1,726 +1,1170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>SEO Master - SEO Agency Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Kind Heart Charity - Free Bootstrap 5.2.2 CSS Template</title>
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="css/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="css/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="css/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
+    <!--
 
-    <!-- Template Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+TemplateMo 581 Kind Heart Charity
+
+https://templatemo.com/tm-581-kind-heart-charity
+
+-->
+
 </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+<body id="section_1">
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 d-flex flex-wrap">
+                    <p class="d-flex me-4 mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt me-2" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                          </svg>
+                        Akershusstranda 20, 0150 Oslo, Norway
+                    </p>
+
+                    <p class="d-flex mb-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope me-2" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                          </svg>
+
+                        <a href="mailto:info@company.com">
+                            info@company.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                    <ul class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-twitter" viewBox="0 0 16 16">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                        </svg>
+
+
+                        <li class="social-icon-item" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-twitter" viewBox="0 0 16 16" href="#">
+                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                            </svg>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-instagram"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-youtube"></a>
+                        </li>
+
+                        <li class="social-icon-item">
+                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-        <!-- Spinner End -->
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <span>
+                    Rumah Donasi
+                    <small>Non-profit Organization</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about">About</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#section_5"
+                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Campaign</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
+
+                            <li><a class="dropdown-item" href="/campaign-pendidikan">Campaign Pendidikan</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="login">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero-section hero-section-full-height">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 p-0">
+                        <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/6.jpeg"
+                                        class="carousel-image img-fluid" alt="...">
+
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>be a Kind Heart</h1>
+
+                                        <p>Professional charity theme based on Bootstrap 5.2.2</p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="assets/7.jpeg"
+                                        class="carousel-image img-fluid" alt="...">
+
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>Non-profit</h1>
+
+                                        <p>You can support us to grow more</p>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="assets/8.jpg"
+                                        class="carousel-image img-fluid" alt="...">
+
+                                    <div class="carousel-caption d-flex flex-column justify-content-end">
+                                        <h1>Humanity</h1>
+
+                                        <p>Please tell your friends about our website</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-search me-2"></i>RUMAH<span class="fs-5">Donasi</span></h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="project.html" class="nav-item nav-link">Project</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
+        <section class="section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-10 col-12 text-center mx-auto">
+                        <h2 class="mb-5">Welcome to Rumah Donasi</h2>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="assets/hands.png" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text">Become a <strong>volunteer</strong></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="assets/heart.png" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text"><strong>Caring</strong> Earth</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="assets/receive.png" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text">Make a <strong>Donation</strong></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="featured-block d-flex justify-content-center align-items-center">
+                            <a href="donate.html" class="d-block">
+                                <img src="assets/scholarship.png" class="featured-block-image img-fluid" alt="">
+
+                                <p class="featured-block-text"><strong>Scholarship</strong> Program</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding section-bg" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                        <img src="assets/mitra-logo-pink.png"
+                            class="custom-text-box-image img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="custom-text-box">
+                            {{-- <h2 class="mb-2">Our Story</h2> --}}
+
+                            <h5 class="mb-3">Apa itu Rumah Donasi ?</h5>
+
+                            <p class="mb-0">RumahDonasi merupakan situs web yang dibangun khusus untuk mengumpulkan dana bagi pasien dan masyarakat yang memiliki kemampuan finansial terbatas serta tinggal di wilayah sulit dijangkau. RumahDonasi bekerja dengan menghubungkan para calon donatur dan para pasien serta masyarakat membutuhkan sehingga mereka dapat memperoleh pengobatan dan fasilitas pendukung lainnya yang menyeluruh.</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="custom-text-box mb-lg-0">
+                                    <h5 class="mb-3">Our Mission</h5>
+
+                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor quis metus</p>
+
+                                    <ul class="custom-list mt-2">
+                                        <li class="custom-list-item d-flex">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg custom-text-box-icon me-2" viewBox="0 0 16 16">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                              </svg>
+                                            Charity Theme
+                                        </li>
+
+                                        <li class="custom-list-item d-flex">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg custom-text-box-icon me-2" viewBox="0 0 16 16">
+                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                              </svg>
+                                            Semantic HTML
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0">
+                                    <div class="counter-thumb">
+                                        <div class="d-flex">
+                                            <span class="counter-number" data-from="1" data-to="2009"
+                                                data-speed="1000"></span>
+                                            <span class="counter-number-text"></span>
+                                        </div>
+
+                                        <span class="counter-text">Founded</span>
+                                    </div>
+
+                                    <div class="counter-thumb mt-4">
+                                        <div class="d-flex">
+                                            <span class="counter-number" data-from="1" data-to="120"
+                                                data-speed="1000"></span>
+                                            <span class="counter-number-text">B</span>
+                                        </div>
+
+                                        <span class="counter-text">Donations</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <button type="button" class="btn text-secondary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-                    <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-secondary text-light rounded-pill py-2 px-4 ms-3">Pro Version</a>
-                </div>
-            </nav>
 
-            <div class="container-xxl py-5 bg-primary hero-header mb-5">
-                <div class="container my-5 py-5 px-lg-5">
-                    <div class="row g-5 py-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated zoomIn">All in one SEO tool need to grow your business rapidly</h1>
-                            <p class="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
-                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Free Quote</a>
-                            <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <img class="img-fluid" src="assets/hero.png" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        {{-- <section class="about-section section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <img src="images/portrait-volunteer-who-organized-donations-charity.jpg"
+                            class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-5 col-md-7 col-12">
+                        <div class="custom-text-block">
+                            <h2 class="mb-0">Sandy Chan</h2>
+
+                            <p class="text-muted mb-lg-4 mb-md-4">Founding Partner</p>
+
+                            <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito Professional
+                                charity theme based</p>
+
+                            <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus</p>
+
+                            <ul class="social-icon mt-4">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-twitter"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                </div>
+            </div>
+        </section> --}}
+
+
+        <section class="section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center mb-4">
+                        <h2>Campaign Bencana </h2>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="assets/1.jpeg"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="assets/1.jpeg"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="assets/1.jpeg"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center mb-4">
+                        <h2>Campaign Pendidikan</h2>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="assets/1.jpeg"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="assets/1.jpeg"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="assets/1.jpeg"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section section-padding section-bg">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+
+                    <div class="col-lg-5 col-12 ms-auto">
+                        <h2 class="mb-0">Berbagi Bersama<br> #RumahDonasi</h2>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+
+                        <a href="#section_4" class="custom-btn btn smoothscroll">Bergabung bersama kita</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        {{-- <section class="volunteer-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-white mb-4">Volunteer</h2>
+
+                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
+                            <h3 class="mb-4">Become a volunteer today</h3>
+
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
+                                        placeholder="Jack Doe" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <input type="email" name="volunteer-email" id="volunteer-email"
+                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
+                                        required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
+                                        class="form-control" placeholder="Subject" required>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="input-group input-group-file">
+                                        <input type="file" class="form-control" id="inputGroupFile02">
+
+                                        <label class="input-group-text" for="inputGroupFile02">Upload your CV</label>
+
+                                        <i class="bi-cloud-arrow-up ms-auto"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
+                                placeholder="Comment (Optional)"></textarea>
+
+                            <button type="submit" class="form-control">Submit</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <img src="images/smiling-casual-woman-dressed-volunteer-t-shirt-with-badge.jpg"
+                            class="volunteer-image img-fluid" alt="">
+
+                        <div class="custom-block-body text-center">
+                            <h4 class="text-white mt-lg-3 mb-lg-3">About Volunteering</h4>
+
+                            <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm
+                                tokito Professional charity theme based</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> --}}
+
+        <section class="news-section section-padding" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 mb-5">
+                        <h2>Blogs</h2>
+                    </div>
+
+                    <div class="col-lg-7 col-12">
+                        <div class="news-block">
+                            <div class="news-block-top">
+                                <a href="news-detail.html">
+                                    <img src="assets/7.jpeg"
+                                        class="news-image img-fluid" alt="">
+                                </a>
+
+                                <div class="news-category-block">
+                                    <a href="#" class="category-block-link">
+                                        Donation,
+                                    </a>
+                                    <a href="#" class="category-block-link">
+                                        Bencana
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="news-block-info">
+                                <div class="d-flex mt-2">
+                                    <div class="news-block-date">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                              </svg>
+                                            October 12, 2036
+                                        </p>
+                                    </div>
+
+                                    <div class="news-block-author mx-5">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                              </svg>
+                                            By Admin
+                                        </p>
+                                    </div>
+
+                                    {{-- <div class="news-block-comment">
+                                        <p>
+                                            <i class="bi-chat-left custom-icon me-1"></i>
+                                            32 Comments
+                                        </p>
+                                    </div> --}}
+                                </div>
+
+                                <div class="news-block-title mb-2">
+                                    <h4><a href="news-detail.html" class="news-block-title-link">Campaign Bencana menuju surga</a></h4>
+                                </div>
+
+                                <div class="news-block-body">
+                                    <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
+                                        Professional charity theme based on Bootstrap</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-block mt-3">
+                            <div class="news-block-top">
+                                <a href="news-detail.html">
+                                    <img src="assets/6.jpeg"
+                                        class="news-image img-fluid" alt="">
+                                </a>
+
+                                <div class="news-category-block">
+                                    <a href="#" class="category-block-link">
+                                        Donation,
+                                    </a>
+                                    <a href="#" class="category-block-link">
+                                        Pendidikan
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="news-block-info">
+                                <div class="d-flex mt-2">
+                                    <div class="news-block-date">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                              </svg>
+                                            October 20, 2036
+                                        </p>
+                                    </div>
+
+                                    <div class="news-block-author mx-5">
+                                        <p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                              </svg>
+                                            By Admin
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="news-block-title mb-2">
+                                    <h4><a href="news-detail.html" class="news-block-title-link">Campaign Pendidikan Is the best</a>
+                                    </h4>
+                                </div>
+
+                                <div class="news-block-body">
+                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
+                                        elementum, tempor risus vel, condimentum orci</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-12 mx-auto">
+                        <form class="custom-form search-form" action="#" method="post" role="form">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+
+                            <button type="submit" class="form-control">
+                                <i class="bi-search"></i>
+                            </button>
+                        </form>
+
+                        <h5 class="mt-5 mb-3">Recent news</h5>
+
+                        <div class="news-block news-block-two-col d-flex mt-4">
+                            <div class="news-block-two-col-image-wrap">
+                                <a href="news-detail.html">
+                                    <img src="assets/8.jpg"
+                                        class="news-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="news-block-two-col-info">
+                                <div class="news-block-title mb-2">
+                                    <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                    </h6>
+                                </div>
+
+                                <div class="news-block-date">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                          </svg>
+                                        October 16, 2036
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-block news-block-two-col d-flex mt-4">
+                            <div class="news-block-two-col-image-wrap">
+                                <a href="news-detail.html">
+                                    <img src="assets/2.jpeg"
+                                        class="news-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="news-block-two-col-info">
+                                <div class="news-block-title mb-2">
+                                    <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a>
+                                    </h6>
+                                </div>
+
+                                <div class="news-block-date">
+                                    <p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                                          </svg>
+                                        October 24, 2036
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-block d-flex flex-column">
+                            <h5 class="mb-3">Categories</h5>
+
+                            <a href="#" class="category-block-link">
+                                Donation
+                                <span class="badge">20</span>
+                            </a>
+
+                            <a href="#" class="category-block-link">
+                                Bencana
+                                <span class="badge">30</span>
+                            </a>
+
+                            <a href="#" class="category-block-link">
+                                Pendidikan
+                                <span class="badge">10</span>
+                            </a>
+                        </div>
+
+                        <div class="tags-block">
+                            <h5 class="mb-3">Tags</h5>
+
+                            <a href="#" class="tags-block-link">
+                                Donation
+                            </a>
+
+                            <a href="#" class="tags-block-link">
+                                Bencana
+                            </a>
+
+                            <a href="#" class="tags-block-link">
+                                Pendidikan
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonial-section section-padding section-bg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="mb-lg-3">Happy customers</h2>
+
+                        <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing
+                                            kengan omeg kohm tokito charity theme</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Maria</span>,
+                                            Boss</small>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor
+                                            mauris quis metus tempor orci</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Thomas</span>,
+                                            Partner</small>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing
+                                            kengan omeg kohm tokito charity theme</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Jane</span>,
+                                            Advisor</small>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="carousel-caption">
+                                        <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor
+                                            mauris quis metus tempor orci</h4>
+
+                                        <small class="carousel-name"><span class="carousel-name-title">Bob</span>,
+                                            Entreprenuer</small>
+                                    </div>
+                                </div>
+
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                        <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                        <img src="images/avatar/portrait-young-redhead-bearded-male.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
+                                        <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+
+                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
+                                        <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg"
+                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                    </li>
+                                </ol>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-section section-padding" id="section_6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                        <div class="contact-info-wrap">
+                            <h2>Get in touch</h2>
+
+                            <div class="contact-image-wrap d-flex flex-wrap">
+                                <img src="assets/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+                                    class="img-fluid avatar-image" alt="">
+
+                                <div class="d-flex flex-column justify-content-center ms-3">
+                                    <p class="mb-0">Clara Barton</p>
+                                    <p class="mb-0"><strong>HR & Office Manager</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="contact-info">
+                                <h5 class="mb-3">Contact Infomation</h5>
+
+                                <p class="d-flex mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt me-2" viewBox="0 0 16 16">
+                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                      </svg>
+                                    Akershusstranda 20, 0150 Oslo, Norway
+                                </p>
+
+                                <p class="d-flex mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone me-2" viewBox="0 0 16 16">
+                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                      </svg>
+                                    <a href="tel: 305-240-9671">
+                                        305-240-9671
+                                    </a>
+                                </p>
+
+                                <p class="d-flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope me-2" viewBox="0 0 16 16">
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                      </svg>
+                                    <a href="mailto:info@yourgmail.com">
+                                        donate@charity.org
+                                    </a>
+                                </p>
+
+                                <a href="#" class="custom-btn btn mt-3">Get Direction</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-12 mx-auto">
+                        <form class="custom-form contact-form" action="#" method="post" role="form">
+                            <h2>Contact form</h2>
+
+                            <p class="mb-4">Or, you can just send an email:
+                                <a href="#">info@charity.org</a>
+                            </p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <input type="text" name="first-name" id="first-name" class="form-control"
+                                        placeholder="Jack" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <input type="text" name="last-name" id="last-name" class="form-control"
+                                        placeholder="Doe" required>
+                                </div>
+                            </div>
+
+                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
+                                placeholder="Jackdoe@gmail.com" required>
+
+                            <textarea name="message" rows="5" class="form-control" id="message"
+                                placeholder="What can we help you?"></textarea>
+
+                            <button type="submit" class="form-control">Send Message</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 mb-4">
+                    <img src="images/logo.png" class="logo img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                    <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                    <p class="text-white d-flex mb-2">
+                        <i class="bi-telephone me-2"></i>
+
+                        <a href="tel: 305-240-9671" class="site-footer-link">
+                            305-240-9671
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                            donate@charity.org
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex mt-3">
+                        <i class="bi-geo-alt me-2"></i>
+                        Akershusstranda 20, 0150 Oslo, Norway
+                    </p>
+
+                    <a href="#" class="custom-btn btn mt-3">Get Direction</a>
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
 
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
 
-        <!-- Full Screen Search Start -->
-        <div class="modal fade" id="searchModal" tabindex="-1">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
-                    <div class="modal-header border-0">
-                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2036 <a href="#">Kind Heart</a> Charity Org.
+                            Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a><br>Distribution:
+                            <a href="https://themewagon.com">ThemeWagon</a>
+                        </p>
                     </div>
-                    <div class="modal-body d-flex align-items-center justify-content-center">
-                        <div class="input-group" style="max-width: 600px;">
-                            <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword">
-                            <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Full Screen Search End -->
 
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-twitter"></a>
+                            </li>
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="section-title position-relative mb-4 pb-2">
-                            <h6 class="position-relative text-primary ps-4">About Us</h6>
-                            <h2 class="mt-2">The best SEO solution with 10 years of experience</h2>
-                        </div>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Award Winning</h6>
-                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional Staff</h6>
-                            </div>
-                            <div class="col-sm-6">
-                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
-                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mt-4">
-                            <a class="btn btn-primary rounded-pill px-4 me-3" href="">Read More</a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
 
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
 
-        <!-- Newsletter Start -->
-        <div class="container-xxl  newsletter my-5 wow fadeInUp" data-wow-delay="0.1s" style="background-color: rgb(90, 183, 255)">
-            <div class="container px-lg-5">
-                <div class="row align-items-center" style="height: 250px;">
-                    <div class="col-12 col-md-6">
-                        <h3 class="text-white">BERBAGI RUTIN SETIAP BULAN</h3>
-                        <small class="text-white">Yuk, tunjukan kepedulian terhadap sesama dengan menjadi #temanDonasi.</small>
-                        <div class="position-relative w-100 mt-3">
-                            <button type="button" class="btn btn-light" style="">Mulai Berdonasi Rutin</button>
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"></button>
-                        </div>
-                    </div>
-                    <div class="col-md-6 text-center mb-n5 d-none d-md-block">
-                        <img class="img-fluid mt-5" style="height: 250px;" src="assets/newsletter.png">
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                            </li>
 
-        {{-- <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="row g-4" style="background-color: rgb(235, 235, 235)">
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s" href="#">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <br>
-                           <img src="assets/1.jpeg" style="">
-                            <h6 class="mb-1" style="text-align: left" >Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja</h6>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Donasi</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Web Design</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Social Media Marketing</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">Email Marketing</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">PPC Advertising</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
-                            <div class="service-icon flex-shrink-0">
-                                <i class="fa fa-home fa-2x"></i>
-                            </div>
-                            <h5 class="mb-3">App Development</h5>
-                            <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
-                            <a class="btn px-3 mt-auto mx-auto" href="">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <!-- Service End -->
-
-
-        <!-- Portfolio Start -->
-        <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                    {{-- <h6 class="position-relative d-inline text-primary ps-4">Our Projects</h6> --}}
-                    <h2 class="mt-2">Campaign Rumah Donasi</h2>
-                </div>
-                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="col-12 text-center">
-                        <ul class="list-inline mb-5" id="portfolio-flters">
-                            <li class="btn px-3 pe-4 active" data-filter="*" id="all">All</li>
-                            <li class="btn px-3 pe-4" data-filter=".first" id="CB">Campaign Bencana</li>
-                            <li class="btn px-3 pe-4" data-filter=".second" id="CP">Campaign Pendidikan</li>
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
+                            </li>
                         </ul>
                     </div>
-                </div>
-            </div>
 
-            <section class="wrapper">
-                <div class="container-fostrap">
-                    <div class="content">
-                        <div class="container" id="campaign" style="background-color: rgb(232, 243, 251)">
-                            <br>
-                            <button type="button" class="btn btn-outline-info btn-sm">lihat lainnya</button>
-                            <h6 style="text-align: left" >Campaign Bencana</h6>
-                            <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="card active">
-                                        <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/1.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja
-                                              </a>
-                                            </h4>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="card">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/2.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Kelainan Usus Sejak Lahir Hingga Tak bisa BAB dengan Normal, Dipta Butuh Biaya
-                                              </a>
-                                            </h4>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="card">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/3.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja
-                                              </a>
-                                            </h4>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-
-                                        <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="wrapper">
-                <div class="container-fostrap">
-                    <div class="content">
-                        <div class="container" id="campaign1" style="background-color: rgb(232, 243, 251)">
-                            <br>
-                            <button type="button" class="btn btn-outline-info btn-sm">lihat lainnya</button>
-                            <h6 style="text-align: left" >Campaign Pendidikan</h6>
-                            <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="card active">
-                                        <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/1.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja
-                                              </a>
-                                            </h4>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="card">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/2.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Kelainan Usus Sejak Lahir Hingga Tak bisa BAB dengan Normal, Dipta Butuh Biaya
-                                              </a>
-                                            </h4>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="card">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/3.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja
-                                              </a>
-                                            </h4>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-
-                                        <a class="carousel-control-next w-auto" href="#recipeCarousel" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon bg-dark border border-dark rounded-circle" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </div>
-        <!-- Portfolio End -->
-
-
-        <!-- Testimonial Start -->
-        <div class="container-xxl bg-primary testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                        <i class="fa fa-quote-left fa-2x mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded text-white p-4">
-                        <i class="fa fa-quote-left fa-2x mb-3"></i>
-                        <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h6 class="text-white mb-1">Client Name</h6>
-                                <small>Profession</small>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
+    </footer>
 
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/js/js/jquery.min.js"></script>
+    <script src="js/js/js/bootstrap.min.js"></script>
+    <script src="js/js/js/jquery.sticky.js"></script>
+    <script src="js/js/js/click-scroll.js"></script>
+    <script src="js/js/js/counter.js"></script>
+    <script src="js/js/js/custom.js"></script>
 
-        <!-- Team Start -->
-        <div class="container-xxl py-5">
-            <div class="container px-lg-5">
-                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="position-relative d-inline text-primary ps-4">Our Team</h6>
-                    <h2 class="mt-2">Meet Our Team Members</h2>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <img class="img-fluid rounded w-100" src="img/team-1.jpg" alt="">
-                            </div>
-                            <div class="px-4 py-3">
-                                <h5 class="fw-bold m-0">Jhon Doe</h5>
-                                <small>CEO</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <img class="img-fluid rounded w-100" src="img/team-2.jpg" alt="">
-                            </div>
-                            <div class="px-4 py-3">
-                                <h5 class="fw-bold m-0">Emma William</h5>
-                                <small>Manager</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0 d-flex flex-column align-items-center mt-4 pt-5" style="width: 75px;">
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-square text-primary bg-white my-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                                <img class="img-fluid rounded w-100" src="img/team-3.jpg" alt="">
-                            </div>
-                            <div class="px-4 py-3">
-                                <h5 class="fw-bold m-0">Noah Michael</h5>
-                                <small>Designer</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Popular Link</h5>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Condition</a>
-                        <a class="btn btn-link" href="">Career</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Project Gallery</h5>
-                        <div class="row g-2">
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/lib/wow/wow.min.js"></script>
-    <script src="js/lib/easing/easing.min.js"></script>
-    <script src="js/lib/waypoints/waypoints.min.js"></script>
-    <script src="js/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="js/lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="js/lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
-<script>
-$('#recipeCarousel').carousel({
-    interval: 10000
-  })
-
-  $('.carousel .carousel-item').each(function(){
-      var minPerSlide = 3;
-      var next = $(this).next();
-      if (!next.length) {
-      next = $(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
-
-      for (var i=0;i<minPerSlide;i++) {
-          next=next.next();
-          if (!next.length) {
-              next = $(this).siblings(':first');
-            }
-
-          next.children(':first-child').clone().appendTo($(this));
-        }
-  });
-</script>
-
-<script>
-    $('#all').click(function() {
-       $('#campaign1').removeClass('d-none');
-       $('#campaign').removeClass('d-none');
-
-    });
-
-    $('#CB').click(function() {
-       $('#campaign').removeClass('d-none');
-       $('#campaign1').addClass('d-none');
-    });
-
-    $('#CP').click(function() {
-       $('#campaign1').removeClass('d-none');
-       $('#campaign').addClass('d-none');
-    });
-
-    // document.getElementById("all").addEventListener("click", function () {
-    //     document.getElementById("campaign").style.display = "block";
-    // });
-    // document.getElementById("CB").addEventListener("click", function () {
-    //     document.getElementById("campaign").style.display = "none";
-    // });
-
-
-    // document.getElementById("CB").addEventListener("click", function () {
-    //     document.getElementById("campaign").style.display = "block";
-    // });
-    // document.getElementById("all").addEventListener("click", function () {
-    //     document.getElementById("campaign").style.display = "none";
-    // });
-
-
-    // document.getElementById("CB").addEventListener("click", function () {
-    //     document.getElementById("campaign").style.display = "block";
-    // });
-    // document.getElementById("all").addEventListener("click", function () {
-    //     document.getElementById("campaign").style.display = "none";
-    // });
-
-</script>
-
 </html>
-
