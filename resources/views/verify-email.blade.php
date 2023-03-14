@@ -71,7 +71,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--end::Action-->
 							<!--begin::Link-->
 							<div class="mb-11">
-								<a href="../../demo10/dist/index.html" class="btn btn-sm btn-primary">Skip for now</a>
+								<a href="/email/verify/resend-verification" class="btn btn-sm btn-primary">KIRIM ULANG EMAIL VERIFIKASI</a>
 							</div>
 							<!--end::Link-->
 							<!--begin::Illustration-->

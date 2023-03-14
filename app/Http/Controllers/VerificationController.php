@@ -9,7 +9,8 @@ class VerificationController
 {
     public function notice()
     {
-        return "Mohon untuk melakukan verifikasi email terlebih dahulu";
+        return view("/verify-email");
+        // return "Mohon untuk melakukan verifikasi email terlebih dahulu";
     }
 
     public function verify(EmailVerificationRequest $request)
@@ -22,6 +23,7 @@ class VerificationController
     public function send(Request $request)
     {
         $request->user()->sendEmailVerificationNotification();
-        return "Verifikasi Email berhasil dikirim";
+        return view("/verify-email");
+        // return "Verifikasi Email berhasil dikirim";
     }
 }
