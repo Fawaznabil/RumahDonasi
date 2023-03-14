@@ -1,3 +1,5 @@
+@section('konten')
+
 <!doctype html>
 <html lang="en">
 
@@ -11,12 +13,12 @@
     <title>Kind Heart Charity - Free Bootstrap 5.2.2 CSS Template</title>
 
     <!-- CSS FILES -->
-    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
+    <link href="{{ asset('style1.css') }}" rel="stylesheet">
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -87,7 +89,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="Kind Heart Charity">
+                <img src="{{ asset('assets/mitra-logo-pink309.png')}}" class="logo img-fluid" alt="Kind Heart Charity">
                 <span>
                     Rumah Donasi
                     <small>Non-profit Organization</small>
@@ -143,7 +145,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="assets/6.jpeg"
+                                    <img src="{{ asset('assets/6.jpeg')}}"
                                         class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
@@ -154,7 +156,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="assets/7.jpeg"
+                                    <img src="{{ asset('assets/7.jpeg')}}"
                                         class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
@@ -165,7 +167,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="assets/8.jpg"
+                                    <img src="{{ asset('assets/8.jpg')}}"
                                         class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
@@ -206,7 +208,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
-                                <img src="assets/hands.png" class="featured-block-image img-fluid" alt="">
+                                <img src="{{ asset('assets/hands.png')}}" class="featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text">Become a <strong>volunteer</strong></p>
                             </a>
@@ -216,7 +218,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
-                                <img src="assets/heart.png" class="featured-block-image img-fluid" alt="">
+                                <img src="{{ asset('assets/heart.png')}}" class="featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"><strong>Caring</strong> Earth</p>
                             </a>
@@ -226,7 +228,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
-                                <img src="assets/receive.png" class="featured-block-image img-fluid" alt="">
+                                <img src="{{ asset('assets/receive.png')}}" class="featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text">Make a <strong>Donation</strong></p>
                             </a>
@@ -236,7 +238,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
-                                <img src="assets/scholarship.png" class="featured-block-image img-fluid" alt="">
+                                <img src="{{ asset('assets/scholarship.png')}}" class="featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text"><strong>Scholarship</strong> Program</p>
                             </a>
@@ -252,7 +254,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                        <img src="assets/mitra-logo-pink.png"
+                        <img src="{{ asset('assets/mitra-logo-pink.png')}}"
                             class="custom-text-box-image img-fluid" alt="">
                     </div>
 
@@ -372,7 +374,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -408,7 +410,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -444,7 +446,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -492,7 +494,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -528,7 +530,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -564,7 +566,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -692,7 +694,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block">
                             <div class="news-block-top">
                                 <a href="news-detail.html">
-                                    <img src="assets/7.jpeg"
+                                    <img src="{{ asset('assets/7.jpeg')}}"
                                         class="news-image img-fluid" alt="">
                                 </a>
 
@@ -748,7 +750,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block mt-3">
                             <div class="news-block-top">
                                 <a href="news-detail.html">
-                                    <img src="assets/6.jpeg"
+                                    <img src="{{ asset('assets/6.jpeg')}}"
                                         class="news-image img-fluid" alt="">
                                 </a>
 
@@ -810,7 +812,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
                                 <a href="news-detail.html">
-                                    <img src="assets/8.jpg"
+                                    <img src="{{ asset('assets/8.jpg')}}"
                                         class="news-image img-fluid" alt="">
                                 </a>
                             </div>
@@ -835,7 +837,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
                                 <a href="news-detail.html">
-                                    <img src="assets/2.jpeg"
+                                    <img src="{{ asset('assets/2.jpeg')}}"
                                         class="news-image img-fluid" alt="">
                                 </a>
                             </div>
@@ -988,7 +990,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <h2>Get in touch</h2>
 
                             <div class="contact-image-wrap d-flex flex-wrap">
-                                <img src="assets/portrait-beautiful-young-woman-standing-grey-wall.jpg"
+                                <img src="{{ asset('assets/portrait-beautiful-young-woman-standing-grey-wall.jpg')}}"
                                     class="img-fluid avatar-image" alt="">
 
                                 <div class="d-flex flex-column justify-content-center ms-3">
@@ -1158,12 +1160,12 @@ https://templatemo.com/tm-581-kind-heart-charity
     </footer>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/js/js/jquery.min.js"></script>
-    <script src="js/js/js/bootstrap.min.js"></script>
-    <script src="js/js/js/jquery.sticky.js"></script>
-    <script src="js/js/js/click-scroll.js"></script>
-    <script src="js/js/js/counter.js"></script>
-    <script src="js/js/js/custom.js"></script>
+    <script src="{{ asset('js/js/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('js/js/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/js/js/jquery.sticky.js')}}"></script>
+    <script src="{{ asset('js/js/js/click-scroll.js')}}"></script>
+    <script src="{{ asset('js/js/js/counter.js')}}"></script>
+    <script src="{{ asset('js/js/js/custom.js')}}"></script>
 
 </body>
 
