@@ -74,3 +74,15 @@ Route::get('/verify-email', function () {
 
     return view('verify-email');
 });
+
+// admin
+
+Route::get('/admin', function () {
+
+    return view('admin.index-admin');
+});
+
+Route::get('/admin/master-user', function () {
+
+    return view('admin.master-user');
+});
