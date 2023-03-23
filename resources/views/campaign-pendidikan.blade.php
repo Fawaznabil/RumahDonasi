@@ -28,53 +28,6 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 <body>
 
-    <header class="site-header">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-8 col-12 d-flex flex-wrap">
-                    <p class="d-flex me-4 mb-0">
-                        <i class="bi-geo-alt me-2"></i>
-                        Akershusstranda 20, 0150 Oslo, Norway
-                    </p>
-
-                    <p class="d-flex mb-0">
-                        <i class="bi-envelope me-2"></i>
-
-                        <a href="mailto:info@company.com">
-                            info@company.com
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                    <ul class="social-icon">
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-twitter"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-facebook"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-instagram"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-youtube"></a>
-                        </li>
-
-                        <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-whatsapp"></a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -133,7 +86,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-12 col-12">
-                        <h1 class="text-white">News Listing</h1>
+                        <h1 class="text-white">Campaign Pendidikan</h1>
                     </div>
 
                 </div>
@@ -143,14 +96,9 @@ https://templatemo.com/tm-581-kind-heart-charity
         <section class="section-padding" id="section_3">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-12 col-12 text-center mb-4">
-                        <h2>Campaign Bencana </h2>
-                    </div>
-
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -179,14 +127,14 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -215,14 +163,14 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="assets/1.jpeg"
+                            <img src="{{ asset('assets/1.jpeg')}}"
                                 class="custom-block-image img-fluid" alt="">
 
                             <div class="custom-block">
@@ -251,39 +199,154 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            {{-- Pagination --}}
+            <div class="col-lg-4 col-12 mx-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-lg justify-content-center mt-5">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
         </section>
 
-        <div class="col-lg-4 col-12 mx-auto">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination pagination-lg justify-content-center mt-5">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
 
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
 
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        
     </main>
 
     <footer class="site-footer">

@@ -125,6 +125,7 @@ Route::get('/verify-email', function () {
     return view('verify-email');
 });
 
+
 // Login google
 Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[App\Http\Controllers\GoogleController::class,'handleGoogleCallback'])->name('google.callback');
@@ -139,3 +140,21 @@ Route::get('/sign-in', function(){
 });
 
 Route::post('/post_login', [AuthController::class,'post_login'])->name('post_login');
+
+// admin
+Route::get('/admin', function () {
+
+    return view('admin.index-admin');
+});
+
+Route::get('/admin/master-user', function () {
+
+    return view('admin.master-user');
+});
+
+//donatur tidak login
+
+Route::get('/donate', function () {
+
+    return view('donate-not-login');
+});
