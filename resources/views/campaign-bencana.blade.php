@@ -1,355 +1,454 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Pod Talk - Listing Page</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <!-- CSS FILES -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Kind Heart Charity - News Listing</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- CSS FILES -->
+    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Sono:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
+    <!--
 
-        <link rel="stylesheet" href="css/css/bootstrap-icons.css">
+TemplateMo 581 Kind Heart Charity
 
-        <link rel="stylesheet" href="css/css/owl.carousel.min.css">
-
-        <link rel="stylesheet" href="css/css/owl.theme.default.min.css">
-
-        <link href="css/css/templatemo-pod-talk.css" rel="stylesheet">
-        <link href="style1.css" rel="stylesheet">
-        <link href="card.css" rel="stylesheet">
-
-<!--
-
-TemplateMo 584 Pod Talk
-
-https://templatemo.com/tm-584-pod-talk
+https://templatemo.com/tm-581-kind-heart-charity
 
 -->
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <main>
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <span>
+                    Kind Heart Charity
+                    <small>Non-profit Organization</small>
+                </span>
+            </a>
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand me-lg-5 me-0" href="index.html">
-                        <img src="assets/mitra-logo-pink.png" class="logo-image img-fluid" alt="templatemo pod talk">
-                    </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <form action="#" method="get" class="custom-form search-form flex-fill me-3" role="search">
-                        <div class="input-group input-group-lg">
-                            <input name="search" type="search" class="form-control" id="search" placeholder="Ingin bantu siapa hari ini?" style="font-family: Arial, Helvetica, sans-serif" aria-label="Search">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/">Home</a>
+                    </li>
 
-                            <button type="submit" class="form-control" id="submit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                  </svg>
-                            </button>
-                        </div>
-                    </form>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll " href="/about">About</a>
+                    </li>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                </button>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Campaign</a>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
-                            </li>
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about">About</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link"  href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Campaign</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item active" href="listing-page.html">Campaign Bencana</a></li>
-
-                                    <li><a class="dropdown-item" href="detail-page.html">Campaign Pendidikan</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact">Contact</a>
-                            </li>
+                            <li><a class="dropdown-item" href="/campaign-pendidikan">Campaign Pendidikan</a></li>
                         </ul>
+                    </li>
 
-                        <div class="ms-4">
-                            <a href="#section_3" class="btn custom-btn custom-border-btn smoothscroll">Sing Up</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="/contact">Contact</a>
+                    </li>
 
-
-             <header class="site-header d-flex flex-column justify-content-center align-items-center">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 text-center">
-
-                            <h2 class="mb-0">Program Unggulan</h2>
-                        </div>
-
-                    </div>
-                </div>
-            </header>
-
-
-            <section class="wrapper">
-                <div class="container-fostrap swiper" >
-                    <div class="content">
-                        <div class="col-lg-12 col-12">
-                            <div class="section-title-wrap mb-5" style="margin-left: 30px">
-                                <h4 class="section-title">Campaign Bencana</h4>
-                            </div>
-                        </div>
-                       <div class="row swiper-wrapper" >
-                                <div class="col-lg-4 col-12 mb-4 mb-lg-0 ">
-                                    <div class="custom-block custom-block-full">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/1.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja
-                                              </a>
-                                            </h4><br>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4><br>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                                    <div class="custom-block custom-block-full">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/2.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Kelainan Usus Sejak Lahir Hingga Tak bisa BAB dengan Normal, Dipta Butuh Biaya
-                                              </a>
-                                            </h4><br>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4><br>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                                    <div class="custom-block custom-block-full">
-                                        <a class="img-card" href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html">
-                                        <img src="assets/3.jpeg" />
-                                      </a>
-                                        <div class="card-content">
-                                            <h4 class="card-title">
-                                                <a href="http://www.fostrap.com/2016/03/bootstrap-3-carousel-fade-effect.html"> Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi Ginja
-                                              </a>
-                                            </h4><br>
-                                            <p class="dana">
-                                                Dana terkumpul
-                                            </p>
-                                            <div class="progress" style="height: 5px;">
-                                                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                              </div>
-                                            <h4 class="card-title" style="margin-top: 10px">
-                                             Rp.2.000.000
-                                            </h4>
-                                            <br>
-                                            <p class="dana">
-                                               60 Donatur
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {{-- <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div> --}}
-                        </div>
-                        <div class="col-lg-4 col-12 mx-auto">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination pagination-lg justify-content-center mt-5">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-            <div class="halo" style="background-color: black" >
-                <div class="container">
-                <img src="assets/5.jpeg" >
-                </div>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="login">Donate</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-        {{-- <footer class="site-footer-campaign">
-            <div class="container">
-                <div class="row">
-                    <img src="assets/5.jpeg">
-                </div>
-            </div>
-        </footer> --}}
+    <main>
 
-        <footer class="site-footer">
+        <section class="news-detail-header-section text-center">
+            <div class="section-overlay"></div>
+
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                        <div class="subscribe-form-wrap">
-                            <h6>Subscribe. Every weekly.</h6>
+                    <div class="col-lg-12 col-12">
+                        <h1 class="text-white">Campaign Bencana</h1>
+                    </div>
 
-                            <form class="custom-form subscribe-form" action="#" method="get" role="form">
-                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address" required="">
+                </div>
+            </div>
+        </section>
 
-                                <div class="col-lg-12 col-12">
-                                    <button type="submit" class="form-control" id="submit">Subscribe</button>
+        <section class="section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
                                 </div>
-                            </form>
+
+                                <a class="custom-btn btn" data-toggle="modal" data-target="#exampleModalCenter" >Donate now</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12 mb-4 mb-md-0 mb-lg-0">
-                        <h6 class="site-footer-title mb-3">Contact</h6>
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
 
-                        <p class="mb-2"><strong class="d-inline me-2">Phone:</strong> 010-020-0340</p>
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
 
-                        <p>
-                            <strong class="d-inline me-2">Email:</strong>
-                            <a href="#">inquiry@pod.co</a>
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block-wrap">
+                            <img src="{{ asset('assets/1.jpeg')}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
+                                        Ginja</strong>
+
+                                    <div class="progress mt-4">
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            <strong>Dana Terkumpul</strong><br>
+                                            Rp 2.000.000
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            <strong>Target</strong><br>
+                                            Rp 50.000.000
+                                        </p>
+                                    </div><hr>
+                                    <p class="donatur" style="font-size: 13px">
+                                       60 Donatur
+                                    </p>
+                                </div>
+
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            {{-- Pagination --}}
+            <div class="col-lg-4 col-12 mx-auto">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-lg justify-content-center mt-5">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 mb-4">
+                    <img src="images/logo.png" class="logo img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                    <ul class="footer-menu">
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
+
+                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                    <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                    <p class="text-white d-flex mb-2">
+                        <i class="bi-telephone me-2"></i>
+
+                        <a href="tel: 305-240-9671" class="site-footer-link">
+                            305-240-9671
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <i class="bi-envelope me-2"></i>
+
+                        <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                            donate@charity.org
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex mt-3">
+                        <i class="bi-geo-alt me-2"></i>
+                        Akershusstranda 20, 0150 Oslo, Norway
+                    </p>
+
+                    <a href="#" class="custom-btn btn mt-3">Get Direction</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <p class="copyright-text mb-0">Copyright © 2036 <a href="#">Kind Heart</a> Charity Org.
+                            Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a><br>Distribution:
+                            <a href="https://themewagon.com">ThemeWagon</a>
                         </p>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <h6 class="site-footer-title mb-3">Download Mobile</h6>
-
-                        <div class="site-footer-thumb mb-4 pb-2">
-                            <div class="d-flex flex-wrap">
-                                <a href="#">
-                                    <img src="images/app-store.png" class="me-3 mb-2 mb-lg-0 img-fluid" alt="">
-                                </a>
-
-                                <a href="#">
-                                    <img src="images/play-store.png" class="img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <h6 class="site-footer-title mb-3">Social</h6>
-
+                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                         <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-
                             <li class="social-icon-item">
                                 <a href="#" class="social-icon-link bi-twitter"></a>
                             </li>
 
                             <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                <a href="#" class="social-icon-link bi-facebook"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-instagram"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link bi-linkedin"></a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
                             </li>
                         </ul>
                     </div>
 
                 </div>
             </div>
+        </div>
+    </footer>
 
-            <div class="container pt-5">
-                <div class="row align-items-center">
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/js/js/jquery.min.js"></script>
+    <script src="js/js/js/bootstrap.min.js"></script>
+    <script src="js/js/js/jquery.sticky.js"></script>
+    <script src="js/js/js/click-scroll.js"></script>
+    <script src="js/js/js/counter.js"></script>
+    <script src="js/js/js/custom.js"></script>
 
-                    <div class="col-lg-2 col-md-3 col-12">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="images/pod-talk-logo.png" class="logo-image img-fluid" alt="templatemo pod talk">
-                        </a>
-                    </div>
+</body>
 
-                    <div class="col-lg-7 col-md-9 col-12">
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Homepage</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Browse episodes</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Help Center</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-12">
-                        <p class="copyright-text mb-0">Copyright © 2036 Talk Pod Company
-                        <br><br>
-                        Design: <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a></p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/js/jquery.min.js"></script>
-        <script src="js/js/bootstrap.bundle.min.js"></script>
-        <script src="js/js/owl.carousel.min.js"></script>
-        <script src="js/js/custom.js"></script>
-        <script src="swiper.bundle.min.js"></script>
-
-    </body>
 </html>

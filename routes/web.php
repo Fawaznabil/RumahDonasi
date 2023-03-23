@@ -76,7 +76,6 @@ Route::get('/verify-email', function () {
 });
 
 // admin
-
 Route::get('/admin', function () {
 
     return view('admin.index-admin');
@@ -85,4 +84,11 @@ Route::get('/admin', function () {
 Route::get('/admin/master-user', function () {
 
     return view('admin.master-user');
+});
+
+//donatur tidak login
+
+Route::get('/donate', function () {
+
+    return view('donate-not-login');
 });
