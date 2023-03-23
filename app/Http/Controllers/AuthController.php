@@ -13,25 +13,29 @@ class AuthController
     {
         return view('auth.login');
     }
-    
+
     public function post_login(Request $request)
     {
         // dd($request->all());
         if(Auth::attempt($request->only('email','password'))){
-            return redirect('/');
+            return redirect('/Home');
         }
         return redirect('/sign-in');
     }
 
     public function logout(){
         Auth::logout();
-
-        request()->session()->invaalidate();
-
-        request()->session()->regenerateToken();
-
-        return redirect('/');
+        return redirect('/')->with('Success','Berhasil Logout');
     }
+    // public function logout(){
+    //     Auth::logout();
+
+    //     request()->session()->invaalidate();
+
+    //     request()->session()->regenerateToken();
+
+    //     return redirect('/');
+    // }
 
 
     public function get_register()

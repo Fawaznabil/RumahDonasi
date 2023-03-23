@@ -74,7 +74,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Akun</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/profile">Akun</a>
                     </li>
                 </ul>
             </div>

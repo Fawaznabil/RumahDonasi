@@ -26,6 +26,12 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/Home', function () {
+
+    return view('index-login');
+});
+
+
 Route::get('/detailDonasi', function () {
 
     return view('detailDonasi');
@@ -54,6 +60,11 @@ Route::get('/campaign-pendidikan', function () {
 Route::get('/blogs', function () {
 
     return view('blogs');
+});
+
+Route::get('/profile', function () {
+
+    return view('profile');
 });
 
 // Forget Password
@@ -140,6 +151,9 @@ Route::get('/sign-in', function(){
 });
 
 Route::post('/post_login', [AuthController::class,'post_login'])->name('post_login');
+
+// log out
+Route::get('/sesi/logout',[AuthController::class,'logout']);
 
 // admin
 Route::get('/admin', function () {
