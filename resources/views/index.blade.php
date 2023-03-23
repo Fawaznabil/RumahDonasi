@@ -128,7 +128,11 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="login">Donate</a>
+                        <a class="nav-link " href="/sign-in">Donate</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/contact">Akun</a>
                     </li>
                 </ul>
             </div>
