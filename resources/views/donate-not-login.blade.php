@@ -69,12 +69,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <a class="nav-link click-scroll" href="/contact">Contact</a>
                     </li>
 
-                    <li class="nav-item ms-3">
+                    <li class="nav-item">
                         <a class="nav-link " href="login">Donate</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/profile">Akun</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
                 </ul>
             </div>
@@ -127,7 +127,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                            $10
+                                            10.000
                                         </label>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault2">
                                         <label class="form-check-label" for="flexRadioDefault2">
-                                            $15
+                                            15.000
                                         </label>
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault3">
                                         <label class="form-check-label" for="flexRadioDefault3">
-                                            $20
+                                            20.000
                                         </label>
                                     </div>
                                 </div>
@@ -157,7 +157,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault4">
                                         <label class="form-check-label" for="flexRadioDefault4">
-                                            $30
+                                            30.000
                                         </label>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault5">
                                         <label class="form-check-label" for="flexRadioDefault5">
-                                            $45
+                                            45.000
                                         </label>
                                     </div>
                                 </div>
@@ -177,14 +177,14 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <input class="form-check-input" type="radio" name="flexRadioDefault"
                                             id="flexRadioDefault6">
                                         <label class="form-check-label" for="flexRadioDefault6">
-                                            $50
+                                            50.000
                                         </label>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-12 form-check-group">
                                     <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon1">$</span>
+                                        <span class="input-group-text" id="basic-addon1">Rp</span>
 
                                         <input type="text" class="form-control" placeholder="Custom amount"
                                             aria-label="Username" aria-describedby="basic-addon1">

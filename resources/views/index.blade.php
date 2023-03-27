@@ -16,7 +16,7 @@
     <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
-    <link href="{{ asset('style1.css') }}" rel="stylesheet">
+    <link href="{{ asset('../style1.css') }}" rel="stylesheet">
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -69,12 +69,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
 
-                    <li class="nav-item ms-3">
+                    <li class="nav-item">
                         <a class="nav-link " href="/sign-in">Donate</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Akun</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
                 </ul>
             </div>

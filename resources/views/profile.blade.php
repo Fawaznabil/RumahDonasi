@@ -90,7 +90,7 @@ License: For each use you must have a valid license purchased only from above li
                         <a class="nav-link click-scroll" href="/contact">Contact</a>
                     </li>
 
-                    <li class="nav-item ms-3">
+                    <li class="nav-item">
                         <a class="nav-link" href="login">Donate</a>
                     </li>
 
@@ -11119,7 +11119,7 @@ License: For each use you must have a valid license purchased only from above li
 
                                     <div class="col-lg-5 col-12">
 
-                                        <a href="#section_4" class="custom-btn btn smoothscroll">Keluar Akun</a>
+                                        <a href="#section_4" class="custom-btn btn smoothscroll">Keluar Login</a>
                                     </div>
 
                                 </div>
