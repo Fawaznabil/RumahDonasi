@@ -770,6 +770,16 @@ strong {
   padding-bottom: 150px;
 }
 
+.profile-section {
+    background-image: url('https://www.linkpicture.com/q/close-up-happy-people-working-together.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
 .donate-form {
   background: var(--white-color);
   border-radius: var(--border-radius-medium);

@@ -172,3 +172,23 @@ Route::get('/donate', function () {
 
     return view('donate-not-login');
 });
+
+Route::get('/donate', function () {
+
+    return view('donate');
+});
+
+Route::get('/payment', function () {
+
+    return view('pembayaran');
+});
+
+Route::get('/finalpayment', function () {
+
+    return view('final-payment');
+});
+
+Route::get('/user-login', function () {
+
+    return view('user.newprofile');
+});

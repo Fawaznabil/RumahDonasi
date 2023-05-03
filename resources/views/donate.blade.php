@@ -86,7 +86,6 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="section-overlay"></div>
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-6 col-12 mx-auto">
                         <form class="custom-form donate-form" action="#" method="get" role="form">
                             <h3 class="mb-4">Make a donation</h3>
@@ -195,42 +194,25 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <h5 class="mt-1">Personal Info</h5>
                                 </div>
 
-                                <div class="col-lg-6 col-12 mt-2">
+                                <div class="col-lg-12 col-12 mt-2">
                                     <input type="text" name="donation-name" id="donation-name" class="form-control"
                                         placeholder="Jack Doe" required>
                                 </div>
 
-                                <div class="col-lg-6 col-12 mt-2">
-                                    <input type="email" name="donation-email" id="donation-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                        required>
-                                </div>
-
                                 <div class="col-lg-12 col-12">
-                                    <h5 class="mt-4 pt-1">Choose Payment</h5>
+                                    <h5 class="mt-4 pt-1">Metode Pembayaran</h5>
                                 </div>
 
                                 <div class="col-lg-12 col-12 mt-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault9">
-                                        <label class="form-check-label" for="flexRadioDefault9">
-                                            <i class="bi-credit-card custom-icon ms-1"></i>
-                                            Debit or Credit card
-                                        </label>
-                                    </div>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Pilih Metode Pembayaran</option>
+                                            <option value="1">Bank BRI</option>
+                                            <option value="2">Bank BCA</option>
+                                            <option value="3">Bank Mandiri</option>
+                                          </select>
 
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault10">
-                                        <label class="form-check-label" for="flexRadioDefault10">
-                                            <i class="bi-paypal custom-icon ms-1"></i>
-                                            Paypal
-                                        </label>
-                                    </div>
-
-                                    <button type="submit" class="form-control mt-4">Submit Donation</button>
-                                </div>
+                                <button type="submit" class="form-control mt-4">Submit Donation</button>
+                            </div>
                             </div>
                         </form>
                     </div>
