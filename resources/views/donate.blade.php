@@ -197,19 +197,17 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <div class="col-lg-12 col-12 mt-2">
                                     <input type="text" name="donation-name" id="donation-name" class="form-control"
                                         placeholder="Jack Doe" required>
+                                        <div class="form-check form-switch mt-2">
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Sembunyikan nama saya (donasi sebagai anonim)</label>
+                                          </div>
                                 </div>
 
                                 <div class="col-lg-12 col-12">
-                                    <h5 class="mt-4 pt-1">Metode Pembayaran</h5>
+                                    <h5 class="mt-2">Doa di Donasi (Opsional)</h5>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tulis doamu disini..."></textarea>
                                 </div>
 
-                                <div class="col-lg-12 col-12 mt-2">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Pilih Metode Pembayaran</option>
-                                            <option value="1">Bank BRI</option>
-                                            <option value="2">Bank BCA</option>
-                                            <option value="3">Bank Mandiri</option>
-                                          </select>
 
                                 <button type="submit" class="form-control mt-4">Submit Donation</button>
                             </div>

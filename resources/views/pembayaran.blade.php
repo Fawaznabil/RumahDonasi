@@ -105,50 +105,13 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-12 col-12">
                                     <input class="form-control" type="text" value="Jack Doe" aria-label="Disabled input example" disabled readonly>
-                                    <div class="form-check form-switch mt-2">
-                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                        <label class="form-check-label" for="flexSwitchCheckDefault">Sembunyikan nama saya (donasi sebagai anonim)</label>
-                                      </div>
                                 </div>
+
+
 
                                 <div class="col-lg-12 col-12">
-                                    <h5 class="">Metode Pembayaran</h5>
-                                </div>
-                                <div class="col-lg-10 col-10">
-                                    <input class="form-control" type="text" value="BRI Virtual Account" aria-label="Disabled input example" disabled readonly>
-                                </div>
-                                <div class="col-lg-2 col-2">
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        Ganti
-                                    </button>
-
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Ganti Metode Pembayaran</h5>
-                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Pilih Metode Pembayaran</option>
-                                                    <option value="1">Bank BRI</option>
-                                                    <option value="2">Bank BCA</option>
-                                                    <option value="3">Bank Mandiri</option>
-                                                  </select>
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                              <a href="/payment" class="btn btn-primary">Save Changes</a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-12">
-                                    <h5 class="mt-2">Doa di Donasi (Opsional)</h5>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tulis doamu disini..."></textarea>
+                                    <h5 class="mt-2">Doa di Donasi</h5>
+                                    <input class="form-control" type="text" value="Jack Doe" aria-label="Disabled input example" disabled readonly>
                                 </div>
 
                             </div>
