@@ -325,19 +325,18 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                             <div class="custom-block">
                                 <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
                                     <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
                                         Ginja</strong>
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
 
                                     <div class="d-flex align-items-center my-2">
                                         <p class="mb-0">
                                             <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
+                                            
                                         </p>
                                         <p class="ms-auto mb-0">
                                             <strong>Target</strong><br>
@@ -348,8 +347,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                        60 Donatur
                                     </p>
                                 </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
@@ -385,7 +383,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
@@ -421,7 +419,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
@@ -450,7 +448,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         Ginja</strong>
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="50"
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
 
@@ -469,7 +467,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
@@ -505,7 +503,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>
@@ -541,7 +539,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </p>
                                 </div>
 
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                                <a href="/donate" class="custom-btn btn">Donate now</a>
                             </div>
                         </div>
                     </div>

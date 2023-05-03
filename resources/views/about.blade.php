@@ -166,7 +166,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </div>
                 </div>
 
-                <div class="row" style="background-color: rgb(241, 250, 252)">
+                <div class="row" >
                     <div class="col-sm-4"><br>
                         <div class="card">
                             <div class="card-body">

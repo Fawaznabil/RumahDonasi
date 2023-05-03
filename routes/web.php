@@ -5,9 +5,11 @@ use Illuminate\Http\Request;
 use App\Events\MessageCreated;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\indexController;
 use Illuminate\Auth\Events\PasswordReset;
 use App\Http\Controllers\GoogleControllerr;
 use App\Http\Controllers\VerificationController;
+use App\Http\Controllers\donasiController;
 // use Illuminate\Support\Facades\Auth;
 
 /*
@@ -26,10 +28,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/Home', function () {
+Route::resource('/Home', indexController::class);
+// Route::get('/Home', function () {
 
-    return view('index-login');
-});
+//     return view('index-login');
+// });
 
 
 Route::get('/detailDonasi', function () {
@@ -166,9 +169,17 @@ Route::get('/admin/master-user', function () {
     return view('admin.master-user');
 });
 
+Route::get('/test', function () {
+
+    return view('test');
+});
 //donatur tidak login
 
-Route::get('/donate', function () {
+// Route::get('/donate', function () {
 
-    return view('donate-not-login');
-});
+//     return view('donate-not-login');
+// });
+
+Route::get('/donate', [donasiController::class, 'index']);
+Route::post('/checkout', [donasiController::class, 'checkout']);
+Route::get('/invoice/{id}', [donasiController::class, 'invoice']);

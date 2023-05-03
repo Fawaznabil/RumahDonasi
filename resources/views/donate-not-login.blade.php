@@ -8,6 +8,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+     {{-- <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
+     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+     data-client-key="{{ config('midtrans.client_key') }}"></script>
+ <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment --> --}}
+
+
     <title>Kind Heart Charity - News Listing</title>
 
     <!-- CSS FILES -->
@@ -88,7 +94,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form donate-form" action="#" method="get" role="form">
+                        <form class="custom-form donate-form" action="/checkout" method="post">
+                            @csrf
                             <h3 class="mb-4">Make a donation</h3>
 
                             <div class="row">
@@ -107,7 +114,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
+                                {{-- <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
                                     <div class="form-check form-check-radio">
                                         <input class="form-check-input" type="radio" name="DonationFrequency"
                                             id="DonationFrequencyMonthly">
@@ -116,7 +123,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             Monthly
                                         </label>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="col-lg-12 col-12">
                                     <h5 class="mt-2 mb-3">Select an amount</h5>
@@ -124,7 +131,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        <input class="form-check-input" type="radio" name="harga"
                                             id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             10.000
@@ -134,7 +141,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        <input class="form-check-input" type="radio" name="harga"
                                             id="flexRadioDefault2">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             15.000
@@ -144,7 +151,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        <input class="form-check-input" type="radio" name="harga"
                                             id="flexRadioDefault3">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             20.000
@@ -154,7 +161,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        <input class="form-check-input" type="radio" name="harga"
                                             id="flexRadioDefault4">
                                         <label class="form-check-label" for="flexRadioDefault4">
                                             30.000
@@ -164,7 +171,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        <input class="form-check-input" type="radio" name="harga"
                                             id="flexRadioDefault5">
                                         <label class="form-check-label" for="flexRadioDefault5">
                                             45.000
@@ -174,7 +181,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        <input class="form-check-input" type="radio" name="harga"
                                             id="flexRadioDefault6">
                                         <label class="form-check-label" for="flexRadioDefault6">
                                             50.000
@@ -187,7 +194,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <span class="input-group-text" id="basic-addon1">Rp</span>
 
                                         <input type="text" class="form-control" placeholder="Custom amount"
-                                            aria-label="Username" aria-describedby="basic-addon1">
+                                            aria-label="Username" aria-describedby="basic-addon1" for="harga" name="harga">
                                     </div>
                                 </div>
 
@@ -196,21 +203,20 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="col-lg-6 col-12 mt-2">
-                                    <input type="text" name="donation-name" id="donation-name" class="form-control"
-                                        placeholder="Jack Doe" required>
+                                    <input type="text" name="nama" for="nama" class="form-control"
+                                        placeholder="Masukan nama" required>
                                 </div>
 
                                 <div class="col-lg-6 col-12 mt-2">
-                                    <input type="email" name="donation-email" id="donation-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                        required>
+                                    <input type="email" name="email" for="email" pattern="[^ @]*@[^ @]*"
+                                        class="form-control" placeholder="Masukan email" required>
                                 </div>
 
-                                <div class="col-lg-12 col-12">
+                                {{-- <div class="col-lg-12 col-12">
                                     <h5 class="mt-4 pt-1">Choose Payment</h5>
-                                </div>
+                                </div> --}}
 
-                                <div class="col-lg-12 col-12 mt-2">
+                                {{-- <div class="col-lg-12 col-12 mt-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="DonationPayment"
                                             id="flexRadioDefault9">
@@ -227,15 +233,15 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <i class="bi-paypal custom-icon ms-1"></i>
                                             Paypal
                                         </label>
-                                    </div>
+                                    </div> --}}
 
-                                    <button type="submit" class="form-control mt-4">Submit Donation</button>
-                                </div>
+                                <button type="submit" class="form-control mt-4"  id="pay-button" >Kirim Donation</button>
                             </div>
-                        </form>
                     </div>
-
+                    </form>
                 </div>
+
+            </div>
             </div>
         </section>
     </main>
@@ -345,7 +351,38 @@ https://templatemo.com/tm-581-kind-heart-charity
         myModal.addEventListener('shown.bs.modal', function () {
             myInput.focus()
         })
+
     </script>
+
+{{-- <script type="text/javascript">
+    // For example trigger on button clicked, or any time you need
+    var payButton = document.getElementById('pay-button');
+    payButton.addEventListener('click', function () {
+        // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
+        window.snap.pay('{{$snapToken}}', {
+            onSuccess: function (result) {
+                /* You may add your own implementation here */
+                alert("payment success!");
+                console.log(result);
+            },
+            onPending: function (result) {
+                /* You may add your own implementation here */
+                alert("wating your payment!");
+                console.log(result);
+            },
+            onError: function (result) {
+                /* You may add your own implementation here */
+                alert("payment failed!");
+                console.log(result);
+            },
+            onClose: function () {
+                /* You may add your own implementation here */
+                alert('you closed the popup without finishing the payment');
+            }
+        })
+    });
+
+</script> --}}
 
 </body>
 

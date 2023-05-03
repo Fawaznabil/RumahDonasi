@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\donasi;
 use Illuminate\Http\Request;
 
-class indexController extends Controller
+class indexController
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,31 @@ class indexController extends Controller
      */
     public function index()
     {
-        return view('index');
+    //             // dd($request->search1);
+    //     //Pencarian
+    //     if($request ->search1){
+    //         $data = donasi::where('NAMA_PEMESANAN',$request->search1)->paginate(10);
+    //         // $data = pemesanan::where('STATUS', 'NAMA_PEMESANAN', 'ASAL_INSTANSI'  .$request->search1)->paginate(5);
+    //     }else if($request->status){
+    //         $data = donasi::where('STATUS','LIKE','%'.$request->status.'%')->paginate(10);
+    //     }
+    //     else if($request->search2){
+    //         $data = donasi::where('ASAL_INSTANSI',$request->search2)->paginate(10);
+    //         // $data = pemesanan::where('STATUS', 'NAMA_PEMESANAN', 'ASAL_INSTANSI'  .$request->search1)->paginate(5);
+    //     }else{
+    //         $data = donasi::paginate(10);
+    //     }
+
+    //     //Banyak data
+    //     $total = donasi::count('TOTAL_HARGA');
+
+    //     return view('index-login',[
+    //         'data'=> $data,
+    //         'total'=> $total
+    //     ]);
+    // }
+
+        return view('index-login');
     }
 
     /**
