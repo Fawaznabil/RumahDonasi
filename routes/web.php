@@ -183,3 +183,28 @@ Route::get('/test', function () {
 Route::get('/donate', [donasiController::class, 'index']);
 Route::post('/checkout', [donasiController::class, 'checkout']);
 Route::get('/invoice/{id}', [donasiController::class, 'invoice']);
+
+
+
+
+
+Route::get('/donate', function () {
+
+    return view('donate');
+});
+
+Route::get('/payment', function () {
+
+    return view('pembayaran');
+});
+
+Route::get('/finalpayment', function () {
+
+    return view('final-payment');
+});
+
+Route::get('/user-login', function () {
+
+    return view('user.newprofile');
+});
+
