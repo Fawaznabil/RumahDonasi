@@ -11,12 +11,10 @@
     <title>Kind Heart Charity - Free Bootstrap 5.2.2 CSS Template</title>
 
     <!-- CSS FILES -->
-    <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
-
-    <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
-    <link href="{{ asset('../style1.css') }}" rel="stylesheet">
+    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
     <!--
 
 TemplateMo 581 Kind Heart Charity

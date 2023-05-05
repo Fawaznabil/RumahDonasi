@@ -203,8 +203,14 @@ Route::get('/finalpayment', function () {
     return view('final-payment');
 });
 
-Route::get('/user-login', function () {
+Route::get('/user-profile', function () {
 
     return view('user.newprofile');
 });
+
+Route::get('/user-status-donasi', function () {
+
+    return view('user.status-donasi');
+});
+
 
