@@ -160,11 +160,11 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin:Menu item-->
 										<div class="menu-item">
 											<!--begin:Menu link-->
-											<a class="menu-link" href="/admin/data-donasi">
+											<a class="menu-link" href="/admin/master-donasi">
 												<span class="menu-bullet">
 													<span class="bullet bullet-dot"></span>
 												</span>
-												<span class="menu-title">Data Donasi</span>
+												<span class="menu-title">Master Donasi</span>
 											</a>
 											<!--end:Menu link-->
 										</div>
@@ -9783,11 +9783,11 @@ License: For each use you must have a valid license purchased only from above li
         <!--begin::Javascript-->
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Global Javascript Bundle(mandatory for all pages)-->
-		<script src="../assets/plugins/global/plugins.bundle.js"></script>
-		<script src="../assets/js/scripts.bundle.js"></script>
+		<script src="../dist/assets/plugins/global/plugins.bundle.js"></script>
+		<script src="../dist/assets/js/scripts.bundle.js"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Vendors Javascript(used for this page only)-->
-		<script src="../assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<script src="../dist/assets/plugins/custom/datatables/datatables.bundle.js"></script>
 		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used for this page only)-->
 		<script src="../dist/assets/js/custom/apps/ecommerce/customers/listing/listing.js"></script>

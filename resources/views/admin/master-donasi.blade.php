@@ -10,7 +10,7 @@
 								<!--begin::Page title-->
 								<div class="page-title d-flex flex-column me-5 py-2">
 									<!--begin::Title-->
-									<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Master User</h1>
+									<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Master Donasi</h1>
 									<!--end::Title-->
 									<!--begin::Breadcrumb-->
 									<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
@@ -25,15 +25,13 @@
 										</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-muted">Data User</li>
+										<li class="breadcrumb-item text-muted">Data Master</li>
 										<!--end::Item-->
-										<!--begin::Item-->
-										<li class="breadcrumb-item">
+                                        <li class="breadcrumb-item">
 											<span class="bullet bg-gray-200 w-5px h-2px"></span>
 										</li>
-										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-dark">Master User</li>
+										<li class="breadcrumb-item text-dark">Master Donasi</li>
 										<!--end::Item-->
 									</ul>
 									<!--end::Breadcrumb-->
@@ -222,13 +220,12 @@
 															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
 														</div>
 													</th>
-													<th class="min-w-125px">NIK</th>
-													<th class="min-w-125px">Nama Lengkap</th>
-                                                    <th class="min-w-125px">Alamat</th>
-                                                    <th class="min-w-125px">No. HP</th>
-                                                    <th class="min-w-125px">Email</th>
-                                                    <th class="min-w-125px">Password</th>
-													<th class="min-w-125px">Status</th>
+													<th class="min-w-125px">ID_Donasi</th>
+                                                    <th class="min-w-125px">ID_Donatur</th>
+                                                    <th class="min-w-125px">Nama Donatur</th>
+													<th class="min-w-125px">Nama Campaign</th>
+													<th class="min-w-125px">Jumlah Donasi</th>
+                                                    <th class="min-w-125px">Status</th>
 													<th class="min-w-125px">Created Date</th>
 													<th class="text-end min-w-70px">Actions</th>
 												</tr>
@@ -237,33 +234,18 @@
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<tbody class="fw-semibold text-gray-600">
-                                                <tr>
-													<!--begin::Checkbox-->
-													<td>
+												<tr>
+                                                    <td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
 															<input class="form-check-input" type="checkbox" value="1" />
 														</div>
 													</td>
-													<!--end::Checkbox-->
-                                                    <td>
-                                                        152111513039
-                                                    </td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/ecommerce/customers/details.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08345627923</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-                                                    <td>
-                                                        *****
-                                                    </td>
-													<!--begin::Status=-->
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
 													<td>
 														<!--begin::Badges-->
 														<div class="badge badge-light-success">Active</div>
@@ -298,90 +280,20 @@
 														</div>
 														<!--end::Menu-->
 													</td>
-													<!--end::Action=-->
 												</tr>
-												<tr>
-													<!--begin::Checkbox-->
-													<td>
+
+                                                <tr>
+                                                    <td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
 															<input class="form-check-input" type="checkbox" value="1" />
 														</div>
 													</td>
-													<!--end::Checkbox-->
-                                                    <td>152111513039</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/ecommerce/customers/details.html" class="text-gray-800 text-hover-primary mb-1">Melody Macy</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.barito</td>
-                                                    <td>081357043779</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">melody@altbox.com</a>
-													</td>
-													<!--end::Email=-->
-                                                    <td>*****</td>
-													<!--begin::Status=-->
-													<td>
-														<!--begin::Badges-->
-														<div class="badge badge-light-danger">Locked</div>
-														<!--end::Badges-->
-													</td>
-													<!--end::Status=-->
-													<!--begin::Date=-->
-													<td>05 May 2023, 2:40 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr>
-												<tr>
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1" />
-														</div>
-													</td>
-                                                    <td>152111513039</td>
-													<!--end::Checkbox-->
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/ecommerce/customers/details.html" class="text-gray-800 text-hover-primary mb-1">Max Smith</a>
-													</td>
-                                                    <td>Jl.barito</td>
-                                                    <td>081357043779</td>
-													<!--end::Name=-->
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">max@kt.com</a>
-													</td>
-													<!--end::Email=-->
-                                                    <td>*****</td>
-													<!--begin::Status=-->
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
 													<td>
 														<!--begin::Badges-->
 														<div class="badge badge-light-success">Active</div>
@@ -389,7 +301,7 @@
 													</td>
 													<!--end::Status=-->
 													<!--begin::Date=-->
-													<td>05 May 2023, 6:05 pm</td>
+													<td>15 Apr 2023, 9:23 pm</td>
 													<!--end::Date=-->
 													<!--begin::Action=-->
 													<td class="text-end">
@@ -416,31 +328,20 @@
 														</div>
 														<!--end::Menu-->
 													</td>
-													<!--end::Action=-->
 												</tr>
-												<tr>
-													<!--begin::Checkbox-->
-													<td>
+
+                                                <tr>
+                                                    <td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
 															<input class="form-check-input" type="checkbox" value="1" />
 														</div>
 													</td>
-													<!--end::Checkbox-->
-                                                    <td>152111513039</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/ecommerce/customers/details.html" class="text-gray-800 text-hover-primary mb-1">Sean Bean</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.barito</td>
-                                                    <td>081357043779</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">sean@dellito.com</a>
-													</td>
-													<!--end::Email=-->
-                                                    <td>****</td>
-													<!--begin::Status=-->
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
 													<td>
 														<!--begin::Badges-->
 														<div class="badge badge-light-success">Active</div>
@@ -448,7 +349,7 @@
 													</td>
 													<!--end::Status=-->
 													<!--begin::Date=-->
-													<td>19 Aug 2023, 11:05 am</td>
+													<td>15 Apr 2023, 9:23 pm</td>
 													<!--end::Date=-->
 													<!--begin::Action=-->
 													<td class="text-end">
@@ -475,7 +376,246 @@
 														</div>
 														<!--end::Menu-->
 													</td>
-													<!--end::Action=-->
+												</tr>
+
+                                                <tr>
+                                                    <td>
+														<div class="form-check form-check-sm form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1" />
+														</div>
+													</td>
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
+													<td>
+														<!--begin::Badges-->
+														<div class="badge badge-light-success">Active</div>
+														<!--end::Badges-->
+													</td>
+													<!--end::Status=-->
+													<!--begin::Date=-->
+													<td>15 Apr 2023, 9:23 pm</td>
+													<!--end::Date=-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<span class="svg-icon svg-icon-5 m-0">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+														<!--begin::Menu-->
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+															</div>
+															<!--end::Menu item-->
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+															</div>
+															<!--end::Menu item-->
+														</div>
+														<!--end::Menu-->
+													</td>
+												</tr>
+
+                                                <tr>
+                                                    <td>
+														<div class="form-check form-check-sm form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1" />
+														</div>
+													</td>
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
+													<td>
+														<!--begin::Badges-->
+														<div class="badge badge-light-success">Active</div>
+														<!--end::Badges-->
+													</td>
+													<!--end::Status=-->
+													<!--begin::Date=-->
+													<td>15 Apr 2023, 9:23 pm</td>
+													<!--end::Date=-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<span class="svg-icon svg-icon-5 m-0">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+														<!--begin::Menu-->
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+															</div>
+															<!--end::Menu item-->
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+															</div>
+															<!--end::Menu item-->
+														</div>
+														<!--end::Menu-->
+													</td>
+												</tr>
+
+                                                <tr>
+                                                    <td>
+														<div class="form-check form-check-sm form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1" />
+														</div>
+													</td>
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
+													<td>
+														<!--begin::Badges-->
+														<div class="badge badge-light-success">Active</div>
+														<!--end::Badges-->
+													</td>
+													<!--end::Status=-->
+													<!--begin::Date=-->
+													<td>15 Apr 2023, 9:23 pm</td>
+													<!--end::Date=-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<span class="svg-icon svg-icon-5 m-0">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+														<!--begin::Menu-->
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+															</div>
+															<!--end::Menu item-->
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+															</div>
+															<!--end::Menu item-->
+														</div>
+														<!--end::Menu-->
+													</td>
+												</tr>
+
+                                                <tr>
+                                                    <td>
+														<div class="form-check form-check-sm form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1" />
+														</div>
+													</td>
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
+													<td>
+														<!--begin::Badges-->
+														<div class="badge badge-light-success">Active</div>
+														<!--end::Badges-->
+													</td>
+													<!--end::Status=-->
+													<!--begin::Date=-->
+													<td>15 Apr 2023, 9:23 pm</td>
+													<!--end::Date=-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<span class="svg-icon svg-icon-5 m-0">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+														<!--begin::Menu-->
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+															</div>
+															<!--end::Menu item-->
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+															</div>
+															<!--end::Menu item-->
+														</div>
+														<!--end::Menu-->
+													</td>
+												</tr>
+
+                                                <tr>
+                                                    <td>
+														<div class="form-check form-check-sm form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1" />
+														</div>
+													</td>
+													<td>011</td>
+                                                    <td>001</td>
+                                                    <td>Sam Smith</td>
+                                                    <td>Bangun Masjid</td>
+                                                    <td>Rp 10.000</td>
+                                                    <!--begin::Status=-->
+													<td>
+														<!--begin::Badges-->
+														<div class="badge badge-light-success">Active</div>
+														<!--end::Badges-->
+													</td>
+													<!--end::Status=-->
+													<!--begin::Date=-->
+													<td>15 Apr 2023, 9:23 pm</td>
+													<!--end::Date=-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<span class="svg-icon svg-icon-5 m-0">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+														<!--begin::Menu-->
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+															</div>
+															<!--end::Menu item-->
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+															</div>
+															<!--end::Menu item-->
+														</div>
+														<!--end::Menu-->
+													</td>
 												</tr>
 											</tbody>
 											<!--end::Table body-->

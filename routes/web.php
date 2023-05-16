@@ -199,6 +199,16 @@ Route::get('/admin/master-user', function () {
     return view('admin.master-user');
 });
 
+Route::get('/admin/master-program', function () {
+
+    return view('admin.master-program');
+});
+
+Route::get('/admin/master-donasi', function () {
+
+    return view('admin.master-donasi');
+});
+
 Route::get('/test', function () {
 
     return view('test');
@@ -246,12 +256,8 @@ Route::resource('/campaign-pendidikan-login', campaignpendidikanController::clas
 
 // Route::get('/finalpayment', function () {
 
-<<<<<<< HEAD
 //     return view('final-payment');
 // });
-=======
-Route::get('/user-profile', function () {
->>>>>>> 8be49b0ca6b459e137181581a5645e6e5e5b6c9c
 
 // Route::get('/user-login', function () {
 
