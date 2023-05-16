@@ -16,7 +16,29 @@
     <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
-    <link href="{{ asset('../style1.css') }}" rel="stylesheet">
+    <link href="{{ asset('style1.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+    <style type="text/css">
+      .slider {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .slider .card {
+        width: 300px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        text-align: center;
+        padding: 17px;
+      }
+      .slider .card img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -26,6 +48,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 -->
 
 </head>
+
 <body id="section_1">
 
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
@@ -54,9 +77,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#section_5"
-                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Campaign</a>
+                        <a class="nav-link  dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Campaign</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                             <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
@@ -70,12 +92,29 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="/sign-in">Donate</a>
+                        <a class="nav-link" href="#section_3">Donate</a>
                     </li>
+                    @if(Auth::check())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    @else
 
                     <li class="nav-item">
                         <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -91,8 +130,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('assets/6.jpeg')}}"
-                                        class="carousel-image img-fluid" alt="...">
+                                    <img src="{{ asset('assets/6.jpeg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>be a Kind Heart</h1>
@@ -102,8 +140,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/7.jpeg')}}"
-                                        class="carousel-image img-fluid" alt="...">
+                                    <img src="{{ asset('assets/7.jpeg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Non-profit</h1>
@@ -113,8 +150,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/8.jpg')}}"
-                                        class="carousel-image img-fluid" alt="...">
+                                    <img src="{{ asset('assets/8.jpg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Humanity</h1>
@@ -151,6 +187,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <h2 class="mb-5">Welcome to Rumah Donasi</h2>
                     </div>
 
+
+
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
@@ -163,10 +201,10 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="donate.html" class="d-block">
+                            <a href="/sign-in" class="d-block">
                                 <img src="{{ asset('assets/heart.png')}}" class="featured-block-image img-fluid" alt="">
 
-                                <p class="featured-block-text"><strong>Caring</strong> Earth</p>
+                                <p class="featured-block-text"><strong>Make a </strong> Campaigner</p>
                             </a>
                         </div>
                     </div>
@@ -174,7 +212,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
-                                <img src="{{ asset('assets/receive.png')}}" class="featured-block-image img-fluid" alt="">
+                                <img src="{{ asset('assets/receive.png')}}" class="featured-block-image img-fluid"
+                                    alt="">
 
                                 <p class="featured-block-text">Make a <strong>Donation</strong></p>
                             </a>
@@ -184,12 +223,14 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
                             <a href="donate.html" class="d-block">
-                                <img src="{{ asset('assets/scholarship.png')}}" class="featured-block-image img-fluid" alt="">
+                                <img src="{{ asset('assets/scholarship.png')}}" class="featured-block-image img-fluid"
+                                    alt="">
 
-                                <p class="featured-block-text"><strong>Scholarship</strong> Program</p>
+                                <p class="featured-block-text"><strong>Campaigner</strong> Program</p>
                             </a>
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -200,8 +241,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
 
                     <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                        <img src="{{ asset('assets/mitra-logo-pink.png')}}"
-                            class="custom-text-box-image img-fluid" alt="">
+                        <img src="{{ asset('assets/mitra-logo-pink.png')}}" class="custom-text-box-image img-fluid"
+                            alt="">
                     </div>
 
                     <div class="col-lg-6 col-12">
@@ -210,7 +251,11 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                             <h5 class="mb-3">Apa itu Rumah Donasi ?</h5>
 
-                            <p class="mb-0">RumahDonasi merupakan situs web yang dibangun khusus untuk mengumpulkan dana bagi pasien dan masyarakat yang memiliki kemampuan finansial terbatas serta tinggal di wilayah sulit dijangkau. RumahDonasi bekerja dengan menghubungkan para calon donatur dan para pasien serta masyarakat membutuhkan sehingga mereka dapat memperoleh pengobatan dan fasilitas pendukung lainnya yang menyeluruh.</p>
+                            <p class="mb-0">RumahDonasi merupakan situs web yang dibangun khusus untuk mengumpulkan dana
+                                bagi pasien dan masyarakat yang memiliki kemampuan finansial terbatas serta tinggal di
+                                wilayah sulit dijangkau. RumahDonasi bekerja dengan menghubungkan para calon donatur dan
+                                para pasien serta masyarakat membutuhkan sehingga mereka dapat memperoleh pengobatan dan
+                                fasilitas pendukung lainnya yang menyeluruh.</p>
                         </div>
 
                         <div class="row">
@@ -222,16 +267,22 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                     <ul class="custom-list mt-2">
                                         <li class="custom-list-item d-flex">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg custom-text-box-icon me-2" viewBox="0 0 16 16">
-                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check-lg custom-text-box-icon me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                            </svg>
                                             Charity Theme
                                         </li>
 
                                         <li class="custom-list-item d-flex">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg custom-text-box-icon me-2" viewBox="0 0 16 16">
-                                                <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check-lg custom-text-box-icon me-2"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                            </svg>
                                             Semantic HTML
                                         </li>
                                     </ul>
@@ -267,7 +318,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </div>
             </div>
         </section>
-
 
         {{-- <section class="about-section section-padding">
             <div class="container">
@@ -313,242 +363,89 @@ https://templatemo.com/tm-581-kind-heart-charity
         <section class="section-padding" id="section_3">
             <div class="container">
                 <div class="row">
-
                     <div class="col-lg-12 col-12 text-center mb-4">
                         <h2>Campaign Bencana </h2>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <section class="section-padding" id="section_3">
-            <div class="container">
-                <div class="row">
+        <div class="slider">
+            @foreach ($bencana as $item )
+            <div class="card" style="max-width: 330px">
+                <img src="{{asset('/gambar_folder/'.$item->gambar)}}"  class="custom-block-image img-fluid" alt="Card 2">
+                <div class="custom-block-body">
+                    <a href=""><strong>{{ $item->judul }}</a></strong>
 
-                    <div class="col-lg-12 col-12 text-center mb-4">
-                        <h2>Campaign Pendidikan</h2>
+                    <div class="progress mt-4">
+                        <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
+                            aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
+                    <div class="d-flex align-items-center my-2">
+                        <p class="mb-0">
+                            <strong>Dana Terkumpul</strong><br>
 
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
+                        </p>
+                        <p class="ms-auto mb-0">
+                            <strong>Target</strong><br>
+                            Rp {{ $item->target }}
+                        </p>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="donate.html" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    <hr>
+                    <p class="donatur" style="font-size: 13px">
+                        60 Donatur
+                    </p>
                 </div>
+                <a href="/sign-in" class="custom-btn btn">Donate now</a>
             </div>
-        </section>
+            @endforeach
+          </div>
+
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+            <section class="section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-12 text-center mb-4">
+                            <h2>Campaign Pendidikan</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="slider">
+                @foreach ($pendidikan as $item )
+                <div class="card" style="max-width: 330px">
+                    <img src="{{asset('/gambar_folder/'.$item->gambar)}}"  class="custom-block-image img-fluid" alt="Card 2">
+                    <div class="custom-block-body">
+                        <a href=""><strong>{{ $item->judul }}</a></strong>
+
+                        <div class="progress mt-4">
+                            <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+
+                        <div class="d-flex align-items-center my-2">
+                            <p class="mb-0">
+                                <strong>Dana Terkumpul</strong><br>
+
+                            </p>
+                            <p class="ms-auto mb-0">
+                                <strong>Target</strong><br>
+                                Rp {{ $item->target }}
+                            </p>
+                        </div>
+                        <hr>
+                        <p class="donatur" style="font-size: 13px">
+                            60 Donatur
+                        </p>
+                    </div>
+                    <a href="/sign-in" class="custom-btn btn">Donate now</a>
+                </div>
+                @endforeach
+              </div><br><br>
 
         <section class="cta-section section-padding section-bg">
             <div class="container">
@@ -567,67 +464,6 @@ https://templatemo.com/tm-581-kind-heart-charity
             </div>
         </section>
 
-        {{-- <section class="volunteer-section section-padding" id="section_4">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-12">
-                        <h2 class="text-white mb-4">Volunteer</h2>
-
-                        <form class="custom-form volunteer-form mb-5 mb-lg-0" action="#" method="post" role="form">
-                            <h3 class="mb-4">Become a volunteer today</h3>
-
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-name" id="volunteer-name" class="form-control"
-                                        placeholder="Jack Doe" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <input type="email" name="volunteer-email" id="volunteer-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                        required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <input type="text" name="volunteer-subject" id="volunteer-subject"
-                                        class="form-control" placeholder="Subject" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <div class="input-group input-group-file">
-                                        <input type="file" class="form-control" id="inputGroupFile02">
-
-                                        <label class="input-group-text" for="inputGroupFile02">Upload your CV</label>
-
-                                        <i class="bi-cloud-arrow-up ms-auto"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <textarea name="volunteer-message" rows="3" class="form-control" id="volunteer-message"
-                                placeholder="Comment (Optional)"></textarea>
-
-                            <button type="submit" class="form-control">Submit</button>
-                        </form>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <img src="images/smiling-casual-woman-dressed-volunteer-t-shirt-with-badge.jpg"
-                            class="volunteer-image img-fluid" alt="">
-
-                        <div class="custom-block-body text-center">
-                            <h4 class="text-white mt-lg-3 mb-lg-3">About Volunteering</h4>
-
-                            <p class="text-white">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm
-                                tokito Professional charity theme based</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> --}}
-
         <section class="news-section section-padding" id="section_5">
             <div class="container">
                 <div class="row">
@@ -640,8 +476,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block">
                             <div class="news-block-top">
                                 <a href="news-detail.html">
-                                    <img src="{{ asset('assets/7.jpeg')}}"
-                                        class="news-image img-fluid" alt="">
+                                    <img src="{{ asset('assets/7.jpeg')}}" class="news-image img-fluid" alt="">
                                 </a>
 
                                 <div class="news-category-block">
@@ -658,18 +493,22 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <div class="d-flex mt-2">
                                     <div class="news-block-date">
                                         <p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                            </svg>
                                             October 12, 2036
                                         </p>
                                     </div>
 
                                     <div class="news-block-author mx-5">
                                         <p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
                                             By Admin
                                         </p>
                                     </div>
@@ -683,7 +522,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">Campaign Bencana menuju surga</a></h4>
+                                    <h4><a href="news-detail.html" class="news-block-title-link">Campaign Bencana menuju
+                                            surga</a></h4>
                                 </div>
 
                                 <div class="news-block-body">
@@ -696,8 +536,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block mt-3">
                             <div class="news-block-top">
                                 <a href="news-detail.html">
-                                    <img src="{{ asset('assets/6.jpeg')}}"
-                                        class="news-image img-fluid" alt="">
+                                    <img src="{{ asset('assets/6.jpeg')}}" class="news-image img-fluid" alt="">
                                 </a>
 
                                 <div class="news-category-block">
@@ -714,25 +553,30 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <div class="d-flex mt-2">
                                     <div class="news-block-date">
                                         <p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                            </svg>
                                             October 20, 2036
                                         </p>
                                     </div>
 
                                     <div class="news-block-author mx-5">
                                         <p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                            </svg>
                                             By Admin
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">Campaign Pendidikan Is the best</a>
+                                    <h4><a href="news-detail.html" class="news-block-title-link">Campaign Pendidikan Is
+                                            the best</a>
                                     </h4>
                                 </div>
 
@@ -758,8 +602,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
                                 <a href="news-detail.html">
-                                    <img src="{{ asset('assets/8.jpg')}}"
-                                        class="news-image img-fluid" alt="">
+                                    <img src="{{ asset('assets/8.jpg')}}" class="news-image img-fluid" alt="">
                                 </a>
                             </div>
 
@@ -771,9 +614,11 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="news-block-date">
                                     <p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                        </svg>
                                         October 16, 2036
                                     </p>
                                 </div>
@@ -783,8 +628,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
                                 <a href="news-detail.html">
-                                    <img src="{{ asset('assets/2.jpeg')}}"
-                                        class="news-image img-fluid" alt="">
+                                    <img src="{{ asset('assets/2.jpeg')}}" class="news-image img-fluid" alt="">
                                 </a>
                             </div>
 
@@ -796,9 +640,11 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="news-block-date">
                                     <p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                                          </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                        </svg>
                                         October 24, 2036
                                     </p>
                                 </div>
@@ -845,172 +691,6 @@ https://templatemo.com/tm-581-kind-heart-charity
             </div>
         </section>
 
-
-        <section class="testimonial-section section-padding section-bg">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-8 col-12 mx-auto">
-                        <h2 class="mb-lg-3">Happy customers</h2>
-
-                        <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
-
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing
-                                            kengan omeg kohm tokito charity theme</h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Maria</span>,
-                                            Boss</small>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor
-                                            mauris quis metus tempor orci</h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Thomas</span>,
-                                            Partner</small>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing
-                                            kengan omeg kohm tokito charity theme</h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Jane</span>,
-                                            Advisor</small>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item">
-                                    <div class="carousel-caption">
-                                        <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor
-                                            mauris quis metus tempor orci</h4>
-
-                                        <small class="carousel-name"><span class="carousel-name-title">Bob</span>,
-                                            Entreprenuer</small>
-                                    </div>
-                                </div>
-
-                                <ol class="carousel-indicators">
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                        <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                                        <img src="images/avatar/portrait-young-redhead-bearded-male.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                                        <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-
-                                    <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                                        <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg"
-                                            class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                    </li>
-                                </ol>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="contact-section section-padding" id="section_6">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
-                        <div class="contact-info-wrap">
-                            <h2>Get in touch</h2>
-
-                            <div class="contact-image-wrap d-flex flex-wrap">
-                                <img src="{{ asset('assets/portrait-beautiful-young-woman-standing-grey-wall.jpg')}}"
-                                    class="img-fluid avatar-image" alt="">
-
-                                <div class="d-flex flex-column justify-content-center ms-3">
-                                    <p class="mb-0">Clara Barton</p>
-                                    <p class="mb-0"><strong>HR & Office Manager</strong></p>
-                                </div>
-                            </div>
-
-                            <div class="contact-info">
-                                <h5 class="mb-3">Contact Infomation</h5>
-
-                                <p class="d-flex mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt me-2" viewBox="0 0 16 16">
-                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                      </svg>
-                                    Akershusstranda 20, 0150 Oslo, Norway
-                                </p>
-
-                                <p class="d-flex mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone me-2" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                      </svg>
-                                    <a href="tel: 305-240-9671">
-                                        305-240-9671
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope me-2" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                                      </svg>
-                                    <a href="mailto:info@yourgmail.com">
-                                        donate@charity.org
-                                    </a>
-                                </p>
-
-                                <a href="#" class="custom-btn btn mt-3">Get Direction</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12 mx-auto">
-                        <form class="custom-form contact-form" action="#" method="post" role="form">
-                            <h2>Contact form</h2>
-
-                            <p class="mb-4">Or, you can just send an email:
-                                <a href="#">info@charity.org</a>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
-                                        placeholder="Jack" required>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Doe" required>
-                                </div>
-                            </div>
-
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="Jackdoe@gmail.com" required>
-
-                            <textarea name="message" rows="5" class="form-control" id="message"
-                                placeholder="What can we help you?"></textarea>
-
-                            <button type="submit" class="form-control">Send Message</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="site-footer">
@@ -1112,6 +792,22 @@ https://templatemo.com/tm-581-kind-heart-charity
     <script src="{{ asset('js/js/js/click-scroll.js')}}"></script>
     <script src="{{ asset('js/js/js/counter.js')}}"></script>
     <script src="{{ asset('js/js/js/custom.js')}}"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slider').slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+          adaptiveHeight: true,
+        });
+      });
+    </script>
 
 </body>
 

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\donasi;
+use App\Models\campaign;
 use Illuminate\Http\Request;
+use Illuminate\Auth\AuthManager;
 
 class donasiController
 {
@@ -13,25 +15,20 @@ class donasiController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return view('donate-not-login');
+        $campaign = campaign::findOrFail($id);
+        return view('donate', ["campaign" => $campaign]);
     }
 
     public function checkout(Request $request)
     {
 
-        // $data = [
-        //     'nama'=>$request->nama,
-        //     'email' => $request->email,
-        //     'harga' => $request->harga,
-        //     'total_harga' => $request->harga+2000,
-        //     'status' => 'Unpaid',
-        // ];
-                // $donasi = donasi::create($data);
-
-
-        $request -> request->add(['total_harga' => $request->harga + 2000, 'status' => 'Unpaid']);
+        if($request->hide == true) {
+            $request -> request->add(['total_harga' => $request->total_donasi + 2000, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, 'nama'=>'anonim' ]);
+        }else{
+        $request -> request->add(['total_harga' => $request->total_donasi + 2000, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, ]);
+        }
         $donasi = donasi::create($request->all());
 
         // $request->request->add(['total_harga' => $request->harga + 2000, 'status' => 'Unpaid']);
@@ -48,7 +45,7 @@ class donasiController
 
         $params = array(
             'transaction_details' => array(
-                'order_id' => $donasi->id,
+                'order_id' => rand(),
                 'gross_amount' => $donasi->total_harga,
                 // 'order_id' => $donasi['id'],
                 // 'gross_amount' => $donasi['total_harga']
@@ -57,11 +54,13 @@ class donasiController
                 'first_name' => $request->nama,
                 'last_name' => '',
                 'email' => $request->email,
+
             ),
         );
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-        return view('checkout', compact('snapToken','donasi'));
+
+        return view('pembayaran', compact('snapToken','donasi'));
 
     }
 
@@ -79,9 +78,22 @@ class donasiController
 
     public function invoice($id)
     {
-        $donasi = donasi::find($id);
-        return view('invoice', compact('donasi'));
+
+    $total = donasi::count();
+    $selesai = donasi::where('STATUS','selesai')->count();
+    $dalamAntrian = donasi::where('STATUS','dalam antrian')->count();
+    $donasi = donasi::all();
+
+    // $data = pemesanan::where('STATUS', 'dalam antrian')->orderBy('id', 'desc')->get();
+
+    return view('user.newprofile',[
+        'data'=> $donasi,
+        'dalamAntrian'=>$dalamAntrian
+    ]);
+        // $donasi = donasi::find($id);
+        // return view('user.newprofile', compact('donasi'));
     }
+
     public function create()
     {
         //
@@ -95,7 +107,23 @@ class donasiController
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'NAMA_PEMESANAN'=>$request->nama_pemesanan,
+            'JUDUL' => $request->judul,
+            'ASAL_INSTANSI' => $request->asal_instansi,
+            'DESKRIPSI' => $request->deskripsi,
+            'JENIS_KONTEN' => $request->jenis_konten,
+            'id_user' => $request->id_user,
+            'TGL_UPLOAD' => $request->tgl_upload,
+            'MEDIA' => $request->media,
+            'LINK_POSTER' => $request->link_poster,
+            'LINK_KONTEN' => $request->link_konten,
+            'JENIS_KONTEN' => $request->jenis_konten,
+        ];
+
+        donasi::create($data);
+        $data = donasi::orderBy('id', 'desc')->get();
+        return view('admin')->with('data', $data);
     }
 
     /**

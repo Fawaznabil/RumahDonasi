@@ -10,13 +10,23 @@
 
     <title>Kind Heart Charity - News Listing</title>
 
+    <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="SET_YOUR_CLIENT_KEY_HERE"></script>
+    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
+    <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="SET_YOUR_CLIENT_KEY_HERE"></script>
+    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
+
     <!-- CSS FILES -->
-    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
+    <link href="{{ asset('style1.css') }}" rel="stylesheet">
+
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -46,44 +56,44 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/">Home</a>
+                        <a class="nav-link click-scroll" href="/Home">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll " href="/about">About</a>
+                        <a class="nav-link " href="/about-login">About</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
-                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Campaign</a>
+                        <a class="nav-link  dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Campaign</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
+                            <li><a class="dropdown-item" href="/campaign-bencana-login">Campaign Bencana</a></li>
 
-                            <li><a class="dropdown-item" href="/campaign-pendidikan">Campaign Pendidikan</a></li>
+                            <li><a class="dropdown-item" href="/campaign-pendidikan-login">Campaign Pendidikan</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/contact">Contact</a>
+                        <a class="nav-link" href="/contact-login">Contact</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="login">Donate</a>
+                        <a class="nav-link" href="#">Donate</a>
                     </li>
-
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Akun
-                          </a>
-                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Akun Saya</a></li>
-                            <li><a class="dropdown-item" href="#">Donasi Saya</a></li>
-                            <li><a class="dropdown-item" href="#">Bantuan</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/home">Logout</a></li>
-                          </ul>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -99,16 +109,17 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin"
+                                            class="rounded-circle p-1 bg-primary" width="110">
                                         <div class="mt-3">
-                                            <h4>John Doe</h4>
-                                            <p class="text-secondary mb-1">Full Stack Developer</p>
-                                            <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                                            <h4> </h4>
+                                            <p class="text-secondary mb-1"></p>
+                                            <p class="text-muted font-size-sm"></p>
                                             <button class="btn btn-primary">Follow</button>
                                             <button class="btn btn-outline-primary">Message</button>
                                         </div>
                                     </div>
-                                    <hr class="my-4">
+                                    {{-- <hr class="my-4">
                                     <ul class="list-group list-group-flush">
                                         <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                             <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe me-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
@@ -130,51 +141,45 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook me-2 icon-inline text-primary"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>Facebook</h6>
                                             <span class="text-secondary">bootdey</span>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg-8">
                             <div class="card">
                                 <div class="card-body">
+
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Full Name</h6>
+                                            <h6 class="mb-0" style="font-size: 20px">Nama Lengkap</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="John Doe">
+                                            <input type="text" class="form-control" name="name" value="">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Email</h6>
+                                            <h6 class="mb-0" style="font-size: 20px">Email</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="john@example.com">
+                                            <input type="text" class="form-control" name="email" value="">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Phone</h6>
+                                            <h6 class="mb-0" style="font-size: 20px">No Telepon</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="(239) 816-9029">
+                                            <input type="text" class="form-control"name="notelepon" value="">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Mobile</h6>
+                                            <h6 class="mb-0" >Alamat</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="(320) 380-4539">
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Address</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" value="Bay Area, San Francisco, CA">
+                                            <input type="text" class="form-control" name="alamat" value="">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -185,38 +190,140 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="d-flex align-items-center mb-3">Project Status</h5>
-                                            <p>Web Design</p>
-                                            <div class="progress mb-3" style="height: 5px">
-                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <h5 class="d-flex align-items-center mb-3">Laporan</h5><br>
+                                            <p>Donasi</p>
+                                            <div class="post d-flex flex-column-fluid" id="kt_post">
+                                                <!--begin::Container-->
+                                                <div id="kt_content_container" class="container-xxl">
+                                                    <div class="tab-content">
+                                                        <!--begin::Tab panel-->
+                                                        <div id="kt_billing_months"
+                                                            class="card-body p-0 tab-pane fade show active"
+                                                            role="tabpanel" aria-labelledby="kt_billing_months">
+                                                            <!--begin::Table container-->
+                                                            <div class="table-responsive">
+                                                                <!--begin::Table-->
+                                                                <table
+                                                                    class="table table-row-bordered align-middle gy-4 gs-9">
+                                                                    <thead
+                                                                        class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
+                                                                        <tr>
+                                                                            <td class="min-w-150px">Nama</td>
+                                                                            <td class="min-w-150px">Donasi</td>
+                                                                            <td class="min-w-150px">Total Harga</td>
+                                                                            <td class="min-w-150px">Status</td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="fw-semibold text-gray-600">
+                                                                        @foreach ($data->where('id_user',
+                                                                        Auth::user()->id) as $item)
+
+                                                                        <!--begin::Table row-->
+                                                                        <tr>
+                                                                            <td style="font-size: 13px">
+                                                                                {{ $item->nama }}
+                                                                            </td>
+                                                                            <td style="font-size: 13px">
+                                                                                Rp.{{ $item->total_donasi }}
+                                                                            </td>
+                                                                            <td style="font-size: 13px">
+                                                                                Rp.{{ $item->total_harga }}
+                                                                            </td>
+                                                                            <td style="font-size: 13px">
+                                                                                {{ $item->status }}
+                                                                            </td>
+                                                                        </tr>
+                                                                        @endforeach
+
+                                                                    </tbody>
+                                                                </table>
+                                                                <!--end::Table-->
+                                                            </div>
+                                                            <!--end::Table container-->
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Tab Content-->
+                                                </div>
+                                                <!--end::Billing Address-->
                                             </div>
-                                            <p>Website Markup</p>
-                                            <div class="progress mb-3" style="height: 5px">
-                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <p>One Page</p>
-                                            <div class="progress mb-3" style="height: 5px">
-                                                <div class="progress-bar bg-success" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <p>Mobile Template</p>
-                                            <div class="progress mb-3" style="height: 5px">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                            <p>Backend API</p>
-                                            <div class="progress" style="height: 5px">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <!--end::Container--> <br>
+
+                                            <p>Campaigner</p>
+                                            <div class="post d-flex flex-column-fluid" id="kt_post">
+                                                <!--begin::Container-->
+                                                <div id="kt_content_container" class="container-xxl">
+                                                    <div class="tab-content">
+                                                        <!--begin::Tab panel-->
+                                                        <div id="kt_billing_months"
+                                                            class="card-body p-0 tab-pane fade show active"
+                                                            role="tabpanel" aria-labelledby="kt_billing_months">
+                                                            <!--begin::Table container-->
+                                                            <div class="table-responsive">
+                                                                <!--begin::Table-->
+                                                                <table
+                                                                    class="table table-row-bordered align-middle gy-4 gs-9">
+                                                                    <thead
+                                                                        class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
+                                                                        <tr>
+                                                                            <td class="min-w-150px">Nama</td>
+                                                                            <td class="min-w-150px">Kategori</td>
+                                                                            <td class="min-w-150px">Judul</td>
+                                                                            <td class="min-w-150px">Target</td>
+                                                                            <td class="min-w-150px">Tanggal Penggalangan
+                                                                            </td>
+                                                                            <td></td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody class="fw-semibold text-gray-600">
+                                                                        @foreach ($data->where('id_user',
+                                                                        Auth::user()->id) as $item)
+                                                                        <!--begin::Table row-->
+                                                                        <tr>
+                                                                            <td>
+                                                                                {{ $item->namaLembaga}}
+                                                                            </td>
+                                                                            <td>
+                                                                                {{ $item->kategori}}
+                                                                            </td>
+                                                                            <td>
+                                                                                {{ $item->judul}}
+                                                                            </td>
+                                                                            <td>
+                                                                                {{ $item->target}}
+                                                                            </td>
+                                                                            <td>
+                                                                                {{ $item->batasWaktu}}
+                                                                            </td>
+                                                                        </tr>
+                                                                        @endforeach
+                                                                    </tbody>
+                                                                </table>
+                                                                <!--end::Table-->
+                                                            </div>
+                                                            <!--end::Table container-->
+                                                        </div>
+
+                                                    </div>
+                                                    <!--end::Tab Content-->
+                                                </div>
+                                                <!--end::Billing Address-->
                                             </div>
                                         </div>
+                                        <!--end::Post-->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </section>
     </main>
@@ -326,6 +433,7 @@ https://templatemo.com/tm-581-kind-heart-charity
         myModal.addEventListener('shown.bs.modal', function () {
             myInput.focus()
         })
+
     </script>
 
 </body>

@@ -122,7 +122,7 @@ License: For each use you must have a valid license purchased only from above li
 											<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
 											<!--end::Indicator progress-->
 										</button>
-										<a href="../../demo10/dist/authentication/layouts/overlay/sign-in.html" class="btn btn-light">Cancel</a>
+										<a href="/sign-in" class="btn btn-light">Cancel</a>
 									</div>
 									<!--end::Actions-->
 								</form>

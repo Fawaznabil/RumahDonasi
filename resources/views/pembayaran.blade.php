@@ -17,6 +17,16 @@
 
     <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
+
+    <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="SET_YOUR_CLIENT_KEY_HERE"></script>
+    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
+    <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
+    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js"
+        data-client-key="SET_YOUR_CLIENT_KEY_HERE"></script>
+    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
+
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -87,7 +97,7 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form donate-form" action="#" method="get" role="form">
+                        <div class="custom-form donate-form">
                             <h3 class="mb-4">Pembayaran</h3>
 
                             <div class="row">
@@ -96,7 +106,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="col-lg-12 col-12">
-                                    <input class="form-control" type="text" value="Rp. 10.000" aria-label="Disabled input example" disabled readonly>
+                                    <input class="form-control" type="text" value={{ $donasi->total_harga }}
+                                        aria-label="Disabled input example" disabled readonly>
                                 </div>
 
                                 <div class="col-lg-12 col-12 mt-2">
@@ -104,19 +115,19 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="col-lg-12 col-12">
-                                    <input class="form-control" type="text" value="Jack Doe" aria-label="Disabled input example" disabled readonly>
+                                    <input class="form-control" type="text" value={{ $donasi->nama }}
+                                        aria-label="Disabled input example" disabled readonly>
                                 </div>
-
-
 
                                 <div class="col-lg-12 col-12">
                                     <h5 class="mt-2">Doa di Donasi</h5>
-                                    <input class="form-control" type="text" value="Jack Doe" aria-label="Disabled input example" disabled readonly>
+                                    <input class="form-control" type="text" value={{ $donasi->doa }}
+                                        aria-label="Disabled input example" disabled readonly>
                                 </div>
 
                             </div>
-                            <button type="submit" class="form-control mt-4">Submit Donation</button>
-                        </form>
+                            <button type="submit" class="form-control mt-4" id="pay-button">Submit Donation</button>
+                        </div>
                     </div>
 
                 </div>
@@ -229,6 +240,38 @@ https://templatemo.com/tm-581-kind-heart-charity
         myModal.addEventListener('shown.bs.modal', function () {
             myInput.focus()
         })
+
+    </script>
+
+    <script type="text/javascript">
+        // For example trigger on button clicked, or any time you need
+        var payButton = document.getElementById('pay-button');
+        payButton.addEventListener('click', function () {
+            // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
+            window.snap.pay('{{ $snapToken }}', {
+                onSuccess: function (result) {
+                    /* You may add your own implementation here */
+                    //   alert("payment success!");
+                    window.location.href = '/profile/{{ $donasi->id }}'
+                    console.log(result);
+                },
+                onPending: function (result) {
+                    /* You may add your own implementation here */
+                    alert("wating your payment!");
+                    console.log(result);
+                },
+                onError: function (result) {
+                    /* You may add your own implementation here */
+                    alert("payment failed!");
+                    console.log(result);
+                },
+                onClose: function () {
+                    /* You may add your own implementation here */
+                    alert('you closed the popup without finishing the payment');
+                }
+            })
+        });
+
     </script>
 
 </body>

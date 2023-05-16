@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 
@@ -17,12 +18,12 @@
     <title>Kind Heart Charity - News Listing</title>
 
     <!-- CSS FILES -->
-    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
+    <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
+    <link href="{{ asset('style1.css') }}" rel="stylesheet">
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -193,58 +194,33 @@ https://templatemo.com/tm-581-kind-heart-charity
                                         <span class="input-group-text" id="basic-addon1">Rp</span>
 
                                         <input type="text" class="form-control" placeholder="Custom amount"
-                                            aria-label="Username" aria-describedby="basic-addon1" for="harga" name="harga">
+                                            aria-label="Username" aria-describedby="basic-addon1" for="total_donasi" name="total_donasi">
                                     </div>
                                 </div>
+
+                                @auth
+                                <input type="text" class="form-control" placeholder="Custom amount"
+                                            aria-label="Username" aria-describedby="basic-addon1" for="total_donasi" name="id_user" value="{{ Auth::user()->id }}" hidden>
+                                            <input type="text" class="form-control" placeholder="Custom amount"
+                                            aria-label="Username" aria-describedby="basic-addon1" for="total_donasi" name="id_campaign" value="{{ $campaign->id }}" hidden>
+                                            @endauth
 
                                 <div class="col-lg-12 col-12">
                                     <h5 class="mt-1">Personal Info</h5>
                                 </div>
 
-                                <div class="col-lg-6 col-12 mt-2">
-                                    <input type="text" name="nama" for="nama" class="form-control"
-                                        placeholder="Masukan nama" required>
-                                </div>
-
-                                <div class="col-lg-6 col-12 mt-2">
-                                    <input type="email" name="email" for="email" pattern="[^ @]*@[^ @]*"
-                                        class="form-control" placeholder="Masukan email" required>
-                                </div>
-
-                                {{-- <div class="col-lg-12 col-12">
-                                    <h5 class="mt-4 pt-1">Choose Payment</h5>
-                                </div> --}}
-
-                                {{-- <div class="col-lg-12 col-12 mt-2">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault9">
-                                        <label class="form-check-label" for="flexRadioDefault9">
-                                            <i class="bi-credit-card custom-icon ms-1"></i>
-                                            Debit or Credit card
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault10">
-                                        <label class="form-check-label" for="flexRadioDefault10">
-                                            <i class="bi-paypal custom-icon ms-1"></i>
-                                            Paypal
-                                        </label>
-                                    </div> --}}
                                     <div class="col-lg-12 col-12 mt-2">
-                                        <input type="text" name="donation-name" id="donation-name" class="form-control"
-                                            placeholder="Jack Doe" required>
+                                        <input type="text" name="nama" id="donation-name" class="form-control" for="nama"
+                                            placeholder="Masukan Nama">
                                             <div class="form-check form-switch mt-2">
-                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <input class="form-check-input" type="checkbox" name="hide" id="flexSwitchCheckDefault">
                                                 <label class="form-check-label" for="flexSwitchCheckDefault">Sembunyikan nama saya (donasi sebagai anonim)</label>
                                               </div>
                                     </div>
 
                                     <div class="col-lg-12 col-12">
                                         <h5 class="mt-2">Doa di Donasi (Opsional)</h5>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tulis doamu disini..."></textarea>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tulis doamu disini..." name="doa"></textarea>
                                     </div>
 
                                 <button type="submit" class="form-control mt-4"  id="pay-button" >Kirim Donation</button>
@@ -352,12 +328,12 @@ https://templatemo.com/tm-581-kind-heart-charity
     </footer>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/js/js/jquery.min.js"></script>
-    <script src="js/js/js/bootstrap.min.js"></script>
-    <script src="js/js/js/jquery.sticky.js"></script>
-    <script src="js/js/js/click-scroll.js"></script>
-    <script src="js/js/js/counter.js"></script>
-    <script src="js/js/js/custom.js"></script>
+    <script src="{{ asset('js/js/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/js/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/js/js/jquery.sticky.js') }}"></script>
+    <script src="{{ asset('js/js/js/click-scroll.js') }}"></script>
+    <script src="{{ asset('js/js/js/counter.js') }}"></script>
+    <script src="{{ asset('js/js/js/custom.js') }}"></script>
     <script>
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
@@ -367,37 +343,6 @@ https://templatemo.com/tm-581-kind-heart-charity
         })
 
     </script>
-
-{{-- <script type="text/javascript">
-    // For example trigger on button clicked, or any time you need
-    var payButton = document.getElementById('pay-button');
-    payButton.addEventListener('click', function () {
-        // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
-        window.snap.pay('{{$snapToken}}', {
-            onSuccess: function (result) {
-                /* You may add your own implementation here */
-                alert("payment success!");
-                console.log(result);
-            },
-            onPending: function (result) {
-                /* You may add your own implementation here */
-                alert("wating your payment!");
-                console.log(result);
-            },
-            onError: function (result) {
-                /* You may add your own implementation here */
-                alert("payment failed!");
-                console.log(result);
-            },
-            onClose: function () {
-                /* You may add your own implementation here */
-                alert('you closed the popup without finishing the payment');
-            }
-        })
-    });
-
-</script> --}}
-
 </body>
 
 </html>

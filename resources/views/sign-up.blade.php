@@ -117,6 +117,15 @@ License: For each use you must have a valid license purchased only from above li
                                     <div class="fv-row mb-8">
 										<input type="text" placeholder="Name" name="name" autocomplete="off" class="form-control bg-transparent" />
 									</div>
+                                    <div class="fv-row mb-8">
+										<input type="text" placeholder="No Telepon" name="notelepon" autocomplete="off" class="form-control bg-transparent" />
+									</div>
+                                    <div class="fv-row mb-8">
+										<input type="text" placeholder="NIK" name="nik" autocomplete="off" class="form-control bg-transparent" />
+									</div>
+                                    <div class="fv-row mb-8">
+										<input type="text" placeholder="Alamat" name="alamat" autocomplete="off" class="form-control bg-transparent" />
+									</div>
 									<div class="fv-row mb-8">
 										<input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent" />
 									</div>

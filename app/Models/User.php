@@ -22,6 +22,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'notelepon',
+        'nik',
+        'alamat',
         'number',
         'photo',
         'google_id'
@@ -46,18 +49,28 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    public function pemesanan()
+    public function donasi()
     {
-        return $this->hasMany(pemesanan::class);
+        return $this->hasMany(donasi::class);
     }
 
-    public function konten()
+    public function campaign()
     {
-        return $this->hasMany(konten::class);
+        return $this->hasMany(campaign::class);
     }
 
-    public function message()
-    {
-        return $this->hasMany(message::class);
-    }
+    // public function pemesanan()
+    // {
+    //     return $this->hasMany(pemesanan::class);
+    // }
+
+    // public function konten()
+    // {
+    //     return $this->hasMany(konten::class);
+    // }
+
+    // public function message()
+    // {
+    //     return $this->hasMany(message::class);
+    // }
 }

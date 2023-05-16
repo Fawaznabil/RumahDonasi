@@ -16,7 +16,7 @@ class VerificationController
     public function verify(EmailVerificationRequest $request)
     {
         $request->fulfill();
-        return view("/index");
+        return view("auth.login");
         // return "Akun berhasil di verifikasi, Selamat datang di Dashboard";
     }
 

@@ -15,9 +15,12 @@ return new class extends Migration
     {
         Schema::create('donasis', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_user');
+            $table->foreignId('id_campaign');
             $table->string('nama');
-            $table->string('email')->unique();
-            $table->integer('harga');
+            $table->string('doa');
+            $table->integer('harga')->nullable();
+            $table->integer('total_donasi')->nullable();
             $table->bigInteger('total_harga');
             $table->enum('status',['Unpaid','Paid']);
             $table->timestamps();

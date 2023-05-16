@@ -10,6 +10,10 @@ use Illuminate\Auth\Events\PasswordReset;
 use App\Http\Controllers\GoogleControllerr;
 use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\donasiController;
+use App\Http\Controllers\profileController;
+use App\Http\Controllers\formCampaignController;
+use App\Http\Controllers\campaignpendidikanController;
+use App\Http\Controllers\campaignbencanaController;
 // use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,12 +27,15 @@ use App\Http\Controllers\donasiController;
 |
 */
 
-Route::get('/', function () {
+// Route::get('/', function () {
 
-    return view('index');
-});
+//     return view('index');
+// });
 
-Route::resource('/Home', indexController::class);
+Route::get('/', [formCampaignController::class, 'index']);
+Route::get('/Home', [formCampaignController::class, 'index']);
+
+// Route::resource('/Home', indexController::class);
 // Route::get('/Home', function () {
 
 //     return view('index-login');
@@ -44,10 +51,19 @@ Route::get('/about', function () {
 
     return view('about');
 });
+Route::get('/about-login', function () {
+
+    return view('about-login');
+});
 
 Route::get('/contact', function () {
 
     return view('contact');
+});
+
+Route::get('/contact-login', function () {
+
+    return view('contact-login');
 });
 
 Route::get('/campaign-bencana', function () {
@@ -60,15 +76,26 @@ Route::get('/campaign-pendidikan', function () {
     return view('campaign-pendidikan');
 });
 
+Route::resource('/campaign-bencana-login', campaignbencanaController::class);
+// Route::get('/campaign-bencana-login', function () {
+
+//     return view('campaign-bencana-login');
+// });
+
+Route::get('/campaign-pendidikan-login', function () {
+
+    return view('campaign-pendidikan-login');
+});
+
 Route::get('/blogs', function () {
 
     return view('blogs');
 });
 
-Route::get('/profile', function () {
+// Route::get('/profile', function () {
 
-    return view('profile');
-});
+//     return view('profile');
+// });
 
 // Forget Password
 Route::get('/reset-password', function(){
@@ -140,6 +167,7 @@ Route::get('/verify-email', function () {
 });
 
 
+
 // Login google
 Route::get('auth/google',[App\Http\Controllers\GoogleController::class,'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback',[App\Http\Controllers\GoogleController::class,'handleGoogleCallback'])->name('google.callback');
@@ -153,10 +181,12 @@ Route::get('/sign-in', function(){
     return view('auth.login');
 });
 
+
 Route::post('/post_login', [AuthController::class,'post_login'])->name('post_login');
 
 // log out
 Route::get('/sesi/logout',[AuthController::class,'logout']);
+
 
 // admin
 Route::get('/admin', function () {
@@ -173,6 +203,15 @@ Route::get('/test', function () {
 
     return view('test');
 });
+
+// Route::get('/form-campaign', function () {
+
+//     return view('form-campaign');
+// });
+
+Route::get('/form-campaign', [formCampaignController::class, 'formcampaign'])->name('form-campaign');
+Route::post('/Home', [formCampaignController::class, 'insertdata'])->name('insertdata');
+Route::get('/Home', [formCampaignController::class, 'home']);
 //donatur tidak login
 
 // Route::get('/donate', function () {
@@ -180,31 +219,38 @@ Route::get('/test', function () {
 //     return view('donate-not-login');
 // });
 
-Route::get('/donate', [donasiController::class, 'index']);
+Route::get('/donate/{id}', [donasiController::class, 'index']);
 Route::post('/checkout', [donasiController::class, 'checkout']);
-Route::get('/invoice/{id}', [donasiController::class, 'invoice']);
+Route::get('/profile/{id}', [donasiController::class, 'invoice']);
+
+Route::get('/user-login/{id}', [profileController::class, 'invoice']);
+
+Route::resource('/campaign-pendidikan-login', campaignpendidikanController::class);
+
+// Route::resource('/user-login', profileController::class);
 
 
 
 
 
-Route::get('/donate', function () {
 
-    return view('donate');
-});
+// Route::get('/profile', function () {
 
-Route::get('/payment', function () {
+//     return view('user.newprofile');
+// });
 
-    return view('pembayaran');
-});
+// Route::get('/payment', function () {
 
-Route::get('/finalpayment', function () {
+//     return view('pembayaran');
+// });
 
-    return view('final-payment');
-});
+// Route::get('/finalpayment', function () {
 
-Route::get('/user-login', function () {
+//     return view('final-payment');
+// });
 
-    return view('user.newprofile');
-});
+// Route::get('/user-login', function () {
+
+//     return view('user.newprofile');
+// });
 

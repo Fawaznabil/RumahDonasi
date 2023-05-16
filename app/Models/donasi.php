@@ -17,4 +17,14 @@ class donasi extends Model
     //     'total_harga',
     //     'status'
     // ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function campaign()
+    {
+        return $this->belongsTo(campaign::class);
+    }
 }
