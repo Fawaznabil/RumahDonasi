@@ -31,6 +31,8 @@ return new class extends Migration
             $table->string('deskripsiPenggalangan');
             $table->string('ajakan');
             $table->string('tujuanDana');
+            $table->string('statusPengajuan')->default('belum-verifikasi');
+            $table->string('statusCampaign')->default('sedang-berlangsung');
             $table->timestamps();
         });
     }

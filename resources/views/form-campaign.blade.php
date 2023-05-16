@@ -7616,7 +7616,7 @@ License: For each use you must have a valid license purchased only from above li
 
                                     <div class="fv-row mb-10">
                                         <!--end::Label-->
-                                        <label class="form-label">Tentang Diri Kamu</label>
+                                        <label class="required form-label">Tentang Diri Kamu</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <textarea name="deskripsiDiri"
