@@ -52,12 +52,9 @@ License: For each use you must have a valid license purchased only from above li
     <link href="css/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="css/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
-
     <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
 </head>
 <!--end::Head-->

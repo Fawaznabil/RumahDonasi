@@ -12,8 +12,10 @@
 
     <!-- CSS FILES -->
     <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
+    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
     <!--
 
@@ -68,120 +70,155 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
+                        <a class="nav-link " href="login">Donate</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="#">Donasi Saya</a></li>
+                            <li><a class="dropdown-item" href="#">Bantuan</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="/home">Logout</a></li>
+                          </ul>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <main>
-
-        <section class="news-detail-header-section text-center">
-            <div class="section-overlay"></div>
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12">
-                        <h1 class="text-white">News Listing</h1>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="contact-section section-padding" id="section_6">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
-                        <div class="contact-info-wrap">
-                            <h2>Get in touch</h2>
-
-                            <div class="contact-image-wrap d-flex flex-wrap">
-                                <img src="assets/portrait-beautiful-young-woman-standing-grey-wall.jpg"
-                                    class="img-fluid avatar-image" alt="">
-
-                                <div class="d-flex flex-column justify-content-center ms-3">
-                                    <p class="mb-0">Admin</p>
-                                    <p class="mb-0"><strong>Admin Rumah Donasi</strong></p>
-                                </div>
-                            </div>
-
-                            <div class="contact-info">
-                                <h5 class="mb-3">Contact Infomation</h5>
-
-                                <p class="d-flex mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt me-2" viewBox="0 0 16 16">
-                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                      </svg>
-                                    Akershusstranda 20, 0150 Oslo, Norway
-                                </p>
-
-                                <p class="d-flex mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone me-2" viewBox="0 0 16 16">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                                      </svg>
-                                    <a href="tel: 305-240-9671">
-                                        305-240-9671
-                                    </a>
-                                </p>
-
-                                <p class="d-flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope me-2" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                                      </svg>
-                                    <a href="mailto:info@yourgmail.com">
-                                        donate@charity.org
-                                    </a>
-                                </p>
-
-                                <a href="#" class="custom-btn btn mt-3">Get Direction</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-5 col-12 mx-auto">
-                        <form class="custom-form contact-form" action="#" method="post" role="form">
-                            <h2>Contact form</h2>
-
-                            <p class="mb-4">Or, you can just send an email:
-                                <a href="#">info@charity.org</a>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
-                                        placeholder="Jack" required>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Doe" required>
-                                </div>
-                            </div>
-
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="Jackdoe@gmail.com" required>
-
-                            <textarea name="message" rows="5" class="form-control" id="message"
-                                placeholder="What can we help you?"></textarea>
-
-                            <button type="submit" class="form-control">Send Message</button>
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
+        <h2>Section title</h2>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Header</th>
+                  <th scope="col">Header</th>
+                  <th scope="col">Header</th>
+                  <th scope="col">Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>random</td>
+                  <td>data</td>
+                  <td>placeholder</td>
+                  <td>text</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>placeholder</td>
+                  <td>irrelevant</td>
+                  <td>visual</td>
+                  <td>layout</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>data</td>
+                  <td>rich</td>
+                  <td>dashboard</td>
+                  <td>tabular</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>information</td>
+                  <td>placeholder</td>
+                  <td>illustrative</td>
+                  <td>data</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>text</td>
+                  <td>random</td>
+                  <td>layout</td>
+                  <td>dashboard</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>dashboard</td>
+                  <td>irrelevant</td>
+                  <td>text</td>
+                  <td>placeholder</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>dashboard</td>
+                  <td>illustrative</td>
+                  <td>rich</td>
+                  <td>data</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>placeholder</td>
+                  <td>tabular</td>
+                  <td>information</td>
+                  <td>irrelevant</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>random</td>
+                  <td>data</td>
+                  <td>placeholder</td>
+                  <td>text</td>
+                </tr>
+                <tr>
+                  <td>1,009</td>
+                  <td>placeholder</td>
+                  <td>irrelevant</td>
+                  <td>visual</td>
+                  <td>layout</td>
+                </tr>
+                <tr>
+                  <td>1,010</td>
+                  <td>data</td>
+                  <td>rich</td>
+                  <td>dashboard</td>
+                  <td>tabular</td>
+                </tr>
+                <tr>
+                  <td>1,011</td>
+                  <td>information</td>
+                  <td>placeholder</td>
+                  <td>illustrative</td>
+                  <td>data</td>
+                </tr>
+                <tr>
+                  <td>1,012</td>
+                  <td>text</td>
+                  <td>placeholder</td>
+                  <td>layout</td>
+                  <td>dashboard</td>
+                </tr>
+                <tr>
+                  <td>1,013</td>
+                  <td>dashboard</td>
+                  <td>irrelevant</td>
+                  <td>text</td>
+                  <td>visual</td>
+                </tr>
+                <tr>
+                  <td>1,014</td>
+                  <td>dashboard</td>
+                  <td>illustrative</td>
+                  <td>rich</td>
+                  <td>data</td>
+                </tr>
+                <tr>
+                  <td>1,015</td>
+                  <td>random</td>
+                  <td>tabular</td>
+                  <td>information</td>
+                  <td>text</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
     </main>
-
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -281,6 +318,14 @@ https://templatemo.com/tm-581-kind-heart-charity
     <script src="js/js/js/click-scroll.js"></script>
     <script src="js/js/js/counter.js"></script>
     <script src="js/js/js/custom.js"></script>
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
 
 </body>
 

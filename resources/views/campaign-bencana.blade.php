@@ -12,10 +12,8 @@
 
     <!-- CSS FILES -->
     <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
     <!--
 

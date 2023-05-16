@@ -246,11 +246,21 @@ Route::resource('/campaign-pendidikan-login', campaignpendidikanController::clas
 
 // Route::get('/finalpayment', function () {
 
+<<<<<<< HEAD
 //     return view('final-payment');
 // });
+=======
+Route::get('/user-profile', function () {
+>>>>>>> 8be49b0ca6b459e137181581a5645e6e5e5b6c9c
 
 // Route::get('/user-login', function () {
 
 //     return view('user.newprofile');
 // });
+
+Route::get('/user-status-donasi', function () {
+
+    return view('user.status-donasi');
+});
+
 

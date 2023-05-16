@@ -12,10 +12,8 @@
 
     <!-- CSS FILES -->
     <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
     <!--
 
@@ -31,7 +29,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" class="logo img-fluid" alt="">
+                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -46,39 +44,31 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link smoothscroll" href="index.html#section_1">Home</a>
+                        <a class="nav-link click-scroll" href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link smoothscroll" href="index.html#section_2">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link smoothscroll" href="index.html#section_3">Causes</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link smoothscroll" href="index.html#section_4">Volunteer</a>
+                        <a class="nav-link click-scroll " href="/about">About</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="index.html#section_5"
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
                             id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">News</a>
+                            aria-expanded="false">Campaign</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item active" href="news.html">News Listing</a></li>
+                            <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
 
-                            <li><a class="dropdown-item" href="news-detail.html">News Detail</a></li>
+                            <li><a class="dropdown-item" href="/campaign-pendidikan">Campaign Pendidikan</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link smoothscroll" href="index.html#section_6">Contact</a>
+                        <a class="nav-link click-scroll" href="/contact">Contact</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="donate.html">Donate</a>
+                        <a class="nav-link " href="login">Donate</a>
                     </li>
 
                     <li class="nav-item">
@@ -88,22 +78,7 @@ https://templatemo.com/tm-581-kind-heart-charity
             </div>
         </div>
     </nav>
-
     <main>
-
-        <section class="news-detail-header-section text-center">
-            <div class="section-overlay"></div>
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12 col-12">
-                        <h1 class="text-white">News Listing</h1>
-                    </div>
-
-                </div>
-            </div>
-        </section>
 
         <section class="news-section section-padding">
             <div class="container">
@@ -112,18 +87,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
                             <div class="news-block-top">
-                                <a href="news-detail.html">
-                                    <img src="images/news/medium-shot-volunteers-with-clothing-donations.jpg"
-                                        class="news-image img-fluid" alt="">
-                                </a>
+                                <img src="asset/images/news/medium-shot-volunteers-with-clothing-donations.jpg"
+                                    class="news-image img-fluid" alt="">
 
                                 <div class="news-category-block">
                                     <a href="#" class="category-block-link">
-                                        Lifestyle,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Clothing Donation
+                                        Nama Campaigner
                                     </a>
                                 </div>
                             </div>
@@ -132,114 +101,234 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <div class="d-flex mt-2">
                                     <div class="news-block-date">
                                         <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 18, 2036
+                                            <i class="bi bi-hourglass-split custom-icon me-1"></i>
+                                            Kurang berapa hari lagi
                                         </p>
                                     </div>
 
                                     <div class="news-block-author mx-5">
                                         <p>
-                                            <i class="bi-person custom-icon me-1"></i>
-                                            By Admin
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-comment">
-                                        <p>
-                                            <i class="bi-chat-left custom-icon me-1"></i>
-                                            32 Comments
+                                            <i class="bi bi-people-fill custom-icon me-1"></i>
+                                            20 Donatur
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">Clothing donation to
-                                            urban area</a></h4>
+                                    <h4>Judul Campaign</h4>
                                 </div>
+
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="progress mt-4">
+                                            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center my-2">
+                                            <p class="mb-0">
+                                                <strong>Dana Terkumpul</strong><br>
+                                                Rp 2.000.000
+                                            </p>
+                                            <p class="ms-auto mb-0">
+                                                <strong>Target</strong><br>
+                                                Rp 50.000.000
+                                            </p>
+                                        </div>
+                                    </div>
+                                  </div>
 
                                 <div class="news-block-body">
-                                    <p>This is a Bootstrap 5.2.2 CSS template for charity organization websites. You can
-                                        feel free to use it. Please tell your friends about TemplateMo website. Thank
-                                        you.</p>
+                                    <p><strong>Sed leo</strong> nisl, This is a Bootstrap 5.2.2 CSS template for charity
+                                        organization websites. You can feel free to use it. Please tell your friends
+                                        about TemplateMo website. Thank you.</p>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div class="news-block mt-3">
-                            <div class="news-block-top">
-                                <a href="news-detail.html">
-                                    <img src="images/news/medium-shot-people-collecting-foodstuff.jpg"
-                                        class="news-image img-fluid" alt="">
-                                </a>
-
-                                <div class="news-category-block">
-                                    <a href="#" class="category-block-link">
-                                        Food,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Donation,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Caring
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="news-block-info">
-                                <div class="d-flex mt-2">
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 12, 2036
-                                        </p>
+                                <div class="row mt-5 mb-4">
+                                    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                                        <img src="asset/images/news/africa-humanitarian-aid-doctor.jpg"
+                                            class="news-detail-image img-fluid" alt="">
                                     </div>
 
-                                    <div class="news-block-author mx-5">
-                                        <p>
-                                            <i class="bi-person custom-icon me-1"></i>
-                                            By Admin
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-comment">
-                                        <p>
-                                            <i class="bi-chat-left custom-icon me-1"></i>
-                                            35 Comments
-                                        </p>
+                                    <div class="col-lg-6 col-12">
+                                        <img src="asset/images/news/close-up-happy-people-working-together.jpg"
+                                            class="news-detail-image img-fluid" alt="">
                                     </div>
                                 </div>
 
-                                <div class="news-block-title mb-2">
-                                    <h4><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
-                                    </h4>
+                                <p>You are not allowed to redistribute this template ZIP file on any other template
+                                    collection website. Please <a href="https://templatemo.com/contact"
+                                        target="_blank">contact TemplateMo</a> for more information.</p>
+
+                                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                  Kabar Terbaru
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="list-group">
+                                                        <a class="list-group-item list-group-item-action">
+                                                          <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">Pencairan Dana Rp 10.000.000 </h5>
+                                                            <small>3 days ago</small>
+                                                          </div>
+                                                          <p class="mb-1">Ke rekening Bank Mandiri *** **** **** **** 7791 a/n UNHCR INDONESIA</p>
+                                                          <small>Rencana Penggunaan Dana Pencairan : Donasi akan di gunakan untuk program perlindungan pengungsi UNHCR Suriah.</small>
+                                                        </a>
+                                                        <a class="list-group-item list-group-item-action">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">Pencairan Dana Rp 10.000.000 </h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                              <p class="mb-1">Ke rekening Bank Mandiri *** **** **** **** 7791 a/n UNHCR INDONESIA</p>
+                                                              <small>Rencana Penggunaan Dana Pencairan : Donasi akan di gunakan untuk program perlindungan pengungsi UNHCR Suriah.</small>
+                                                        </a>
+                                                        <a class="list-group-item list-group-item-action">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">Pencairan Dana Rp 10.000.000 </h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                              <p class="mb-1">Ke rekening Bank Mandiri *** **** **** **** 7791 a/n UNHCR INDONESIA</p>
+                                                              <small>Rencana Penggunaan Dana Pencairan : Donasi akan di gunakan untuk program perlindungan pengungsi UNHCR Suriah.</small>
+                                                        </a>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                              <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                  Pencairan Dana
+                                                </button>
+                                              </h2>
+                                              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <div class="list-group">
+                                                        <a class="list-group-item list-group-item-action">
+                                                          <div class="d-flex w-100 justify-content-between">
+                                                            <h5 class="mb-1">Pencairan Dana Rp 10.000.000 </h5>
+                                                            <small>3 days ago</small>
+                                                          </div>
+                                                          <p class="mb-1">Ke rekening Bank Mandiri *** **** **** **** 7791 a/n UNHCR INDONESIA</p>
+                                                          <small>Rencana Penggunaan Dana Pencairan : Donasi akan di gunakan untuk program perlindungan pengungsi UNHCR Suriah.</small>
+                                                        </a>
+                                                        <a class="list-group-item list-group-item-action">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">Pencairan Dana Rp 10.000.000 </h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                              <p class="mb-1">Ke rekening Bank Mandiri *** **** **** **** 7791 a/n UNHCR INDONESIA</p>
+                                                              <small>Rencana Penggunaan Dana Pencairan : Donasi akan di gunakan untuk program perlindungan pengungsi UNHCR Suriah.</small>
+                                                        </a>
+                                                        <a class="list-group-item list-group-item-action">
+                                                            <div class="d-flex w-100 justify-content-between">
+                                                                <h5 class="mb-1">Pencairan Dana Rp 10.000.000 </h5>
+                                                                <small>3 days ago</small>
+                                                            </div>
+                                                              <p class="mb-1">Ke rekening Bank Mandiri *** **** **** **** 7791 a/n UNHCR INDONESIA</p>
+                                                              <small>Rencana Penggunaan Dana Pencairan : Donasi akan di gunakan untuk program perlindungan pengungsi UNHCR Suriah.</small>
+                                                        </a>
+                                                      </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                <form class="custom-form comment-form mt-5" action="#" method="post" role="form">
+                                    <h6 class="">Doa Orang Baik</h6>
+                                </form>
+
+                                <div class="social-share border-top py-4 d-flex flex-wrap align-items-center">
+                                </div>
+                                <div class="author-comment d-flex mb-4">
+                                    <img src="asset/images/avatar/studio-portrait-emotional-happy-funny.jpg"
+                                        class="img-fluid avatar-image" alt="">
+
+                                    <div class="author-comment-info ms-3">
+                                        <h6 class="mb-1">Jack</h6>
+
+                                        <p class="mb-0">Kind Heart Charity is the most supportive organization. This is
+                                            Bootstrap 5 HTML CSS template for everyone. Thank you.</p>
+                                    </div>
                                 </div>
 
-                                <div class="news-block-body">
-                                    <p>You are not allowed to redistribute this template ZIP file on any other template
-                                        collection website. Please <a href="https://templatemo.com/contact"
-                                            target="_blank">contact TemplateMo</a> for more information.</p>
+                                <div class="author-comment d-flex mt-3 mb-4">
+                                    <img src="asset/images/avatar/portrait-young-redhead-bearded-male.jpg"
+                                        class="img-fluid avatar-image" alt="">
+
+                                    <div class="author-comment-info ms-3">
+                                        <h6 class="mb-1">Wilson</h6>
+
+                                        <p class="mb-0">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
+                                            kohm tokito Professional charity theme based on Bootstrap</p>
+                                    </div>
                                 </div>
+
+                                <div class="author-comment d-flex mb-4">
+                                    <img src="asset/images/avatar/studio-portrait-emotional-happy-funny.jpg"
+                                        class="img-fluid avatar-image" alt="">
+
+                                    <div class="author-comment-info ms-3">
+                                        <h6 class="mb-1">Jack</h6>
+
+                                        <p class="mb-0">Kind Heart Charity is the most supportive organization. This is
+                                            Bootstrap 5 HTML CSS template for everyone. Thank you.</p>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-12 mx-auto mt-4 mt-lg-0">
-                        <form class="custom-form search-form" action="#" method="post" role="form">
-                            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
 
-                            <button type="submit" class="form-control">
-                                <i class="bi-search"></i>
-                            </button>
-                        </form>
+                        <div class="category-block d-flex flex-column">
+                            <h5 class="mb-3">Para Donatur</h5>
 
-                        <h5 class="mt-5 mb-3">Recent news</h5>
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+                            <a class="category-block-link">
+                                Anymous
+                                <span class="badge">Rp 50.000</span>
+                            </a>
+                        </div>
+
+                        <h5 class="mt-5 mb-3">Donasi Lainnya</h5>
 
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
                                 <a href="news-detail.html">
-                                    <img src="images/news/africa-humanitarian-aid-doctor.jpg"
+                                    <img src="asset/images/news/africa-humanitarian-aid-doctor.jpg"
                                         class="news-image img-fluid" alt="">
                                 </a>
                             </div>
@@ -262,7 +351,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="news-block news-block-two-col d-flex mt-4">
                             <div class="news-block-two-col-image-wrap">
                                 <a href="news-detail.html">
-                                    <img src="images/news/close-up-happy-people-working-together.jpg"
+                                    <img src="asset/images/news/close-up-happy-people-working-together.jpg"
                                         class="news-image img-fluid" alt="">
                                 </a>
                             </div>
@@ -276,95 +365,22 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 24, 2036
+                                        October 20, 2036
                                     </p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="category-block d-flex flex-column">
-                            <h5 class="mb-3">Categories</h5>
-
-                            <a href="#" class="category-block-link">
-                                Drinking water
-                                <span class="badge">20</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Food Donation
-                                <span class="badge">30</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Children Education
-                                <span class="badge">10</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Poverty Development
-                                <span class="badge">15</span>
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Clothing Donation
-                                <span class="badge">20</span>
-                            </a>
-                        </div>
-
-                        <div class="tags-block">
-                            <h5 class="mb-3">Tags</h5>
-
-                            <a href="#" class="tags-block-link">
-                                Donation
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Clothing
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Food
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Children
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Education
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Poverty
-                            </a>
-
-                            <a href="#" class="tags-block-link">
-                                Clean Water
-                            </a>
-                        </div>
-
-                        <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                            <h5 class="mb-4">Newsletter Form</h5>
-
-                            <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                                class="form-control" placeholder="Email Address" required>
-
-                            <div class="col-lg-12 col-12">
-                                <button type="submit" class="form-control">Subscribe</button>
-                            </div>
-                        </form>
                     </div>
 
                 </div>
             </div>
         </section>
     </main>
-
     <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12 mb-4">
-                    <img src="images/logo.png" class="logo img-fluid" alt="">
+                    <img src="asset/images/logo.png" class="logo img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -459,6 +475,14 @@ https://templatemo.com/tm-581-kind-heart-charity
     <script src="js/js/js/click-scroll.js"></script>
     <script src="js/js/js/counter.js"></script>
     <script src="js/js/js/custom.js"></script>
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
 
 </body>
 
