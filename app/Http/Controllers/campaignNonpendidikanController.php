@@ -4,25 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Facades\Auth;
-use App\Models\campaign;
 use Illuminate\Http\Request;
+use App\Models\campaign;
 use Illuminate\Support\Facades\DB;
 
-class campaignbencanaController
+class campaignNonpendidikanController
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        // Menentukan jumlah item per halaman
         $perPage = 8;
 
-        $bencana = DB::table('campaigns')
+        $pendidikan = DB::table('campaigns')
         ->Leftjoin('donasis', 'campaigns.id', '=', 'donasis.id_campaign')
         ->select(
             'campaigns.id as id_campaign',
@@ -32,17 +29,17 @@ class campaignbencanaController
             DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
             'campaigns.target',
             'campaigns.namaLembaga',
-            DB::raw('DATEDIFF( campaigns.batasWaktu,CURDATE()) AS sisa_hari'),
+            DB::raw('DATEDIFF(campaigns.batasWaktu, CURDATE()) AS sisa_hari'),
             DB::raw('COALESCE(SUM(donasis.total_donasi), 0) / campaigns.target * 100 AS presentasi'),
-        )->where('campaigns.kategori', 'bencana')
+        )->where('campaigns.kategori', 'pendidikan')
         ->groupBy('campaigns.id')
         ->paginate($perPage);
 
-        return view("campaign-bencana-login",[
-            // "data" => $paginator,
-            "bencana" => $bencana,
-
+        return view("campaign-pendidikan",[
+            // "data" => $campaigns,
+            "pendidikan" => $pendidikan ,
         ]);
+
     }
 
     /**
@@ -90,10 +87,7 @@ class campaignbencanaController
 
         campaign::create($data);
         $data = campaign::orderBy('id', 'desc')->get();
-
-        campaign::create($data);
-        $data = campaign::orderBy('id', 'desc')->get();
-        return view('campaign-bencana-login', ['campaignBencana' => campaign::all(),])->with('data', $data);
+        return view('campaign-pendidikan')->with('data', $data);
     }
 
     /**

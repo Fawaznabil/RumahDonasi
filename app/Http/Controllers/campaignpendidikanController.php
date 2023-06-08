@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use App\Models\campaign;
+use Illuminate\Support\Facades\DB;
 
 class campaignpendidikanController
 {
@@ -12,34 +15,29 @@ class campaignpendidikanController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-          //Pencarian
-          if($request ->search1){
-            $data = campaign::where('kategori',$request->search1)->paginate(10);
-            // $data = pemesanan::where('STATUS', 'NAMA_PEMESANAN', 'ASAL_INSTANSI'  .$request->search1)->paginate(5);
-        }else if($request->status){
-            $data = campaign::where('kategori','LIKE','%'.$request->status.'%')->paginate(10);
-        }
-        else if($request->search2){
-            $data = campaign::where('kategori',$request->search2)->paginate(10);
-            // $data = pemesanan::where('STATUS', 'NAMA_PEMESANAN', 'ASAL_INSTANSI'  .$request->search1)->paginate(5);
-        }else{
-            $data = campaign::where('kategori', 'pendidikan')->paginate(10);
-        }
+        $perPage = 8;
 
-        //Banyak data
-        $total = campaign::count();
+        $pendidikan = DB::table('campaigns')
+        ->Leftjoin('donasis', 'campaigns.id', '=', 'donasis.id_campaign')
+        ->select(
+            'campaigns.id as id_campaign',
+            'campaigns.judul',
+            'gambar',
+            DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
+            DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
+            'campaigns.target',
+            'campaigns.namaLembaga',
+            DB::raw('DATEDIFF(campaigns.batasWaktu, CURDATE()) AS sisa_hari'),
+            DB::raw('COALESCE(SUM(donasis.total_donasi), 0) / campaigns.target * 100 AS presentasi'),
+        )->where('campaigns.kategori', 'pendidikan')
+        ->groupBy('campaigns.id')
+        ->paginate($perPage);
 
-
-        // $data = pemesanan::where('STATUS', 'dalam antrian')->orderBy('id', 'desc')->get();
-
-        return view('campaign-pendidikan-login',[
-            'data'=> $data,
-            'total'=> $total,
-
+        return view("campaign-pendidikan-login",[
+            "pendidikan" => $pendidikan,
         ]);
-
     }
 
     /**

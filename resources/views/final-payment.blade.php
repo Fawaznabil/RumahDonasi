@@ -29,7 +29,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -68,11 +68,22 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="login">Donate</a>
+                        <a class="nav-link " href="/Home">Donate</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/profile/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

@@ -40,7 +40,21 @@ License: For each use you must have a valid license purchased only from above li
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
     <link href="css/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="css/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+    {{-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script> --}}
     <!--end::Global Stylesheets Bundle-->
+    {{-- <style>
+        trix-toolbar [data-trix-button-group="file-tools"]{
+            display: none;
+        }
+    </style> --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor5/36.0.1/ckeditor.min.js"
+        integrity="sha512-m1b22NPZjHOJ4PEMtKYmqK7s9UOKOQ2o7e+tTMfPLqGDN1jXUeE0JHSOVkuF3UIWDk/tLvbhv/Qjgb3c8G1k6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -7584,19 +7598,11 @@ License: For each use you must have a valid license purchased only from above li
                                     </div>
                                     <!--end::Heading-->
                                     <!--begin::Input group-->
-                                    <div class="mb-10 fv-row">
-                                        <!--begin::Label-->
-                                        <label class="required form-label mb-3">Pekerjaan</label>
-                                        <!--end::Label-->
-                                        <!--begin::Input-->
-                                        <input type="text" class="form-control form-control-lg form-control-solid"
-                                            name="pekerjaan" placeholder="" value="" />
-                                        <!--end::Input-->
-                                    </div>
+
 
                                     <div class="mb-10 fv-row">
                                         <!--begin::Label-->
-                                        <label class="required form-label mb-3">Nama Sekolah/Perusahaan/Lembaga</label>
+                                        <label class="required form-label mb-3">Nama Sekolah/Perusahaan/Lembaga/perorangan</label>
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <input type="text" class="form-control form-control-lg form-control-solid"
@@ -7610,7 +7616,17 @@ License: For each use you must have a valid license purchased only from above li
                                         <!--end::Label-->
                                         <!--begin::Input-->
                                         <input type="text" class="form-control form-control-lg form-control-solid"
-                                            name="lokasi" placeholder="" value="" />
+                                            name="lokasi" placeholder="" value="{{ Auth::user()->alamat }}"disabled />
+                                        <!--end::Input-->
+                                    </div>
+
+                                    <div class="mb-10 fv-row">
+                                        <!--begin::Label-->
+                                        <label class="required form-label mb-3">No Telepon</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input-->
+                                        <input type="text" class="form-control form-control-lg form-control-solid"
+                                            name="pekerjaan" placeholder="" value="{{ Auth::user()->notelepon }}"disabled />
                                         <!--end::Input-->
                                     </div>
 
@@ -7664,8 +7680,8 @@ License: For each use you must have a valid license purchased only from above li
                                         <label class="form-label required">Target donasi</label>
                                         <div class="input-group">
                                             <div class="input-group-text fs-5">Rp.</div>
-                                            <input type="text" class="form-control form-control-lg form-control-solid"
-                                            name="target" placeholder="" value="" />
+                                            <input type="text" class="form-control" placeholder="Custom amount"
+                                            aria-label="Username" aria-describedby="basic-addon1" for="target" name="target" oninput="addComma(this)">
                                         </div>
                                     </div><br>
 
@@ -7783,12 +7799,21 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
                                     </div>
 
+
                                     <div class="fv-row mb-10">
                                         <div class="form-group">
                                             <label class="form-label required">Ceritakan tentang diri anda, alasan penggalangan dana, dan rencana penggunaan dana</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea3" rows="10" name="deskripsiPenggalangan"></textarea>
+                                            <textarea class="form-control" id="editor"  type="text" name="deskripsiPenggalangan" rows="5"></textarea>
                                           </div>
                                     </div>
+
+                                    {{-- <div class="fv-row mb-10">
+                                        <div class="form-group">
+                                            <label class="form-label required" for="body">Ceritakan tentang diri anda, alasan penggalangan dana, dan rencana penggunaan dana</label>
+                                            <input id="body" type="hidden" name="deskripsiPenggalangan">
+                                            <trix-editor input="body"></trix-editor>
+                                          </div>
+                                    </div> --}}
 
                                     <div class="fv-row mb-10">
                                         <div class="form-group">
@@ -10330,6 +10355,40 @@ License: For each use you must have a valid license purchased only from above li
         });
 
     </script>
+
+{{-- <script>
+    document.addEventListener('trix-file-accept', function(e){
+        e.preventDefault();
+    })
+    </script> --}}
+
+<script>
+    function addComma(input) {
+    let value = input.value;
+
+    // Menghapus semua karakter non-digit
+    value = value.replace(/\D/g, '');
+
+    // Menambahkan koma setiap 3 digit dari sebelah kiri
+    value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+    // Mengupdate nilai input dengan nilai yang telah ditambahkan koma
+    input.value = value;
+  }
+
+          </script>
+
+
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>
+
+
+<script src="https://cdn.ckeditor.com/ckeditor5/38.0.1/classic/ckeditor.js"></script>
 
     <script src="js/js/scripts.bundle.js"></script>
     <script src="js/widgets.bundle.js"></script>

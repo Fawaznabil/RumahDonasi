@@ -18,19 +18,14 @@
     <title>Kind Heart Charity - News Listing</title>
 
     <!-- CSS FILES -->
-<<<<<<< HEAD
+
     <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
     <link href="{{ asset('style1.css') }}" rel="stylesheet">
-=======
-    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
->>>>>>> 8be49b0ca6b459e137181581a5645e6e5e5b6c9c
+
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -45,7 +40,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -60,11 +55,11 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/">Home</a>
+                        <a class="nav-link click-scroll" href="/Home">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll " href="/about">About</a>
+                        <a class="nav-link click-scroll " href="/about-login">About</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -73,23 +68,35 @@ https://templatemo.com/tm-581-kind-heart-charity
                             aria-expanded="false">Campaign</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
+                            <li><a class="dropdown-item" href="/campaign-bencana-login">Campaign Bencana</a></li>
 
-                            <li><a class="dropdown-item" href="/campaign-pendidikan">Campaign Pendidikan</a></li>
+                            <li><a class="dropdown-item" href="/campaign-pendidikan-login">Campaign Pendidikan</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/contact">Contact</a>
+                        <a class="nav-link click-scroll" href="/contact-login">Contact</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="login">Donate</a>
+                        <a class="nav-link " href="/Home">Donate</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -103,10 +110,10 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-6 col-12 mx-auto">
                         <form class="custom-form donate-form" action="/checkout" method="post">
                             @csrf
-                            <h3 class="mb-4">Make a donation</h3>
+                            <h3 class="mb-4" style="text-align: center">Buat Donasimu</h3><br>
 
                             <div class="row">
-                                <div class="col-lg-12 col-12">
+                                {{-- <div class="col-lg-12 col-12">
                                     <h5 class="mb-3">Donation Frequency</h5>
                                 </div>
 
@@ -119,7 +126,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             One Time
                                         </label>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 {{-- <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
                                     <div class="form-check form-check-radio">
@@ -136,19 +143,18 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <h5 class="mt-2 mb-3">Select an amount</h5>
                                 </div>
 
-                                <div class="col-lg-3 col-md-6 col-6 form-check-group">
+                                {{-- <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="harga"
-                                            id="flexRadioDefault1">
+                                        <input class="form-check-input" type="radio" id="flexRadioDefault1" name="total_donasi" value="10000">
                                         <label class="form-check-label" for="flexRadioDefault1">
-                                            10.000
+                                        10.000
                                         </label>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="harga"
+                                        <input class="form-check-input" type="radio" for="total_donasi" name="total_donasi" value="15000"
                                             id="flexRadioDefault2">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             15.000
@@ -158,7 +164,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="harga"
+                                        <input class="form-check-input" type="radio" for="total_donasi" name="total_donasi"
                                             id="flexRadioDefault3">
                                         <label class="form-check-label" for="flexRadioDefault3">
                                             20.000
@@ -168,7 +174,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="harga"
+                                        <input class="form-check-input" type="radio" for="total_donasi" name="total_donasi"
                                             id="flexRadioDefault4">
                                         <label class="form-check-label" for="flexRadioDefault4">
                                             30.000
@@ -178,7 +184,7 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="harga"
+                                        <input class="form-check-input" type="radio" for="total_donasi" name="total_donasi"
                                             id="flexRadioDefault5">
                                         <label class="form-check-label" for="flexRadioDefault5">
                                             45.000
@@ -188,20 +194,19 @@ https://templatemo.com/tm-581-kind-heart-charity
 
                                 <div class="col-lg-3 col-md-6 col-6 form-check-group">
                                     <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="harga"
+                                        <input class="form-check-input" type="radio" for="total_donasi" name="total_donasi"
                                             id="flexRadioDefault6">
                                         <label class="form-check-label" for="flexRadioDefault6">
                                             50.000
                                         </label>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="col-lg-6 col-12 form-check-group">
+                                <div class=" form-check-group" style="">
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon1">Rp</span>
-
                                         <input type="text" class="form-control" placeholder="Custom amount"
-                                            aria-label="Username" aria-describedby="basic-addon1" for="total_donasi" name="total_donasi">
+                                            aria-label="Username" aria-describedby="basic-addon1" for="total_donasi" name="total_donasi" oninput="addComma(this)">
                                     </div>
                                 </div>
 
@@ -217,8 +222,10 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                     <div class="col-lg-12 col-12 mt-2">
+
                                         <input type="text" name="nama" id="donation-name" class="form-control" for="nama"
                                             placeholder="Masukan Nama">
+
                                             <div class="form-check form-switch mt-2">
                                                 <input class="form-check-input" type="checkbox" name="hide" id="flexSwitchCheckDefault">
                                                 <label class="form-check-label" for="flexSwitchCheckDefault">Sembunyikan nama saya (donasi sebagai anonim)</label>
@@ -350,6 +357,40 @@ https://templatemo.com/tm-581-kind-heart-charity
         })
 
     </script>
+
+<script>
+  function addComma(input) {
+  let value = input.value;
+
+  // Menghapus semua karakter non-digit
+  value = value.replace(/\D/g, '');
+
+  // Menambahkan koma setiap 3 digit dari sebelah kiri
+  value = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  // Mengupdate nilai input dengan nilai yang telah ditambahkan koma
+  input.value = value;
+}
+
+        </script>
+
+<script>
+    // Ambil elemen checkbox dan textarea
+    var checkbox = document.getElementById("flexSwitchCheckDefault");
+    var textarea = document.getElementById("donation-name");
+
+    // Tambahkan event listener untuk mendeteksi perubahan status checkbox
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        // Checkbox diaktifkan
+        textarea.style.display = "none";
+      } else {
+        // Checkbox dinonaktifkan
+        textarea.style.display = "block";
+      }
+    });
+  </script>
+
 </body>
 
 </html>

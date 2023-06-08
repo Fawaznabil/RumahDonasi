@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Midtrans\Config;
+use Midtrans\CoreApi;
+
 use App\Http\Controllers\Controller;
 use App\Models\donasi;
 use App\Models\campaign;
@@ -24,24 +27,35 @@ class donasiController
     public function checkout(Request $request)
     {
 
+     // Mengambil nilai input dari request
+    $inputString = $request->input('total_donasi');
+
+    // Menghapus tanda koma dari string
+    $cleanString = str_replace(',', '', $inputString);
+
+    // Mengkonversi string yang telah dibersihkan menjadi integer menggunakan intval()
+    $nominal = intval($cleanString);
+//  dd($request->input('radio'));
+
         if($request->hide == true) {
-            $request -> request->add(['total_harga' => $request->total_donasi + 2000, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, 'nama'=>'anonim' ]);
+            $request -> request->add(['total_harga' => $nominal + 2000,'total_donasi' => $nominal, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, 'nama'=>'anonim' ]);
         }else{
-        $request -> request->add(['total_harga' => $request->total_donasi + 2000, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, ]);
+            $request -> request->add(['total_harga' => $nominal + 2000,'total_donasi' => $nominal, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, ]);
         }
-        $donasi = donasi::create($request->all());
+            $donasi = donasi::create($request->all());
 
         // $request->request->add(['total_harga' => $request->harga + 2000, 'status' => 'Unpaid']);
 
 
         // Set your Merchant Server Key
-        \Midtrans\Config::$serverKey = config('midtrans.server_key');
+
+        Config::$serverKey = config('midtrans.server_key');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = config('midtrans.is_production');
+        Config::$isProduction = config('midtrans.is_production');
         // Set sanitization on (default)
-        \Midtrans\Config::$isSanitized = true;
+        Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
-        \Midtrans\Config::$is3ds = true;
+        Config::$is3ds = true;
 
         $params = array(
             'transaction_details' => array(
@@ -82,13 +96,15 @@ class donasiController
     $total = donasi::count();
     $selesai = donasi::where('STATUS','selesai')->count();
     $dalamAntrian = donasi::where('STATUS','dalam antrian')->count();
-    $donasi = donasi::all();
+    $donasi = donasi::with('campaign')->get();
+    $campaign = campaign::all();
 
     // $data = pemesanan::where('STATUS', 'dalam antrian')->orderBy('id', 'desc')->get();
 
     return view('user.newprofile',[
         'data'=> $donasi,
-        'dalamAntrian'=>$dalamAntrian
+        'dalamAntrian'=>$dalamAntrian,
+        'campaign'=>$campaign
     ]);
         // $donasi = donasi::find($id);
         // return view('user.newprofile', compact('donasi'));

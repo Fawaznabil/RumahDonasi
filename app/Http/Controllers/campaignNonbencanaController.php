@@ -9,17 +9,15 @@ use App\Models\campaign;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class campaignbencanaController
+class campaignNonbencanaController
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-
-        // Menentukan jumlah item per halaman
         $perPage = 8;
 
         $bencana = DB::table('campaigns')
@@ -32,16 +30,17 @@ class campaignbencanaController
             DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
             'campaigns.target',
             'campaigns.namaLembaga',
-            DB::raw('DATEDIFF( campaigns.batasWaktu,CURDATE()) AS sisa_hari'),
+            DB::raw('DATEDIFF(campaigns.batasWaktu,CURDATE()) AS sisa_hari'),
             DB::raw('COALESCE(SUM(donasis.total_donasi), 0) / campaigns.target * 100 AS presentasi'),
         )->where('campaigns.kategori', 'bencana')
         ->groupBy('campaigns.id')
         ->paginate($perPage);
 
-        return view("campaign-bencana-login",[
-            // "data" => $paginator,
-            "bencana" => $bencana,
 
+
+        return view("campaign-bencana",[
+            // "data" => $campaigns,
+            "bencana" => $bencana ,
         ]);
     }
 
@@ -91,9 +90,10 @@ class campaignbencanaController
         campaign::create($data);
         $data = campaign::orderBy('id', 'desc')->get();
 
+
         campaign::create($data);
         $data = campaign::orderBy('id', 'desc')->get();
-        return view('campaign-bencana-login', ['campaignBencana' => campaign::all(),])->with('data', $data);
+        return view('campaign-bencana', ['campaignBencana' => campaign::all(),])->with('data', $data);
     }
 
     /**

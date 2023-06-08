@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\donasi;
+use App\Models\campaign;
 
 class profileController
 {
@@ -33,12 +34,13 @@ public function create()
 public function invoice($id)
 {
 
-$donasi = donasi::all();
-
+$donasi = donasi::with('campaign')->get();
+$campaign = campaign::all();
 // $data = pemesanan::where('STATUS', 'dalam antrian')->orderBy('id', 'desc')->get();
 
 return view('user.newprofile',[
-    'data'=> $donasi
+    'data'=> $donasi,
+    'campaign'=>$campaign,
 
 ]);
     // $donasi = donasi::find($id);

@@ -21,7 +21,6 @@
 
     <!-- CSS FILES -->
     <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
-
     <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
@@ -41,7 +40,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -64,7 +63,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
+                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">Campaign</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
@@ -79,7 +78,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
+                        <a class="nav-link" href="/Home">Donate</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
@@ -87,7 +86,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             Akun
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
                             <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -109,8 +108,8 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin"
-                                            class="rounded-circle p-1 bg-primary" width="110">
+                                        <img src="{{ asset( Auth::user()->photo ) }}" alt="Admin"
+                                             width="130">
                                         <div class="mt-3">
                                             <h4> </h4>
                                             <p class="text-secondary mb-1"></p>
@@ -155,7 +154,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <h6 class="mb-0" style="font-size: 20px">Nama Lengkap</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" name="name" value="">
+                                            <input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -163,7 +162,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <h6 class="mb-0" style="font-size: 20px">Email</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" name="email" value="">
+                                            <input type="text" class="form-control" name="email" value="{{ Auth::user()->email }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -171,7 +170,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <h6 class="mb-0" style="font-size: 20px">No Telepon</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control"name="notelepon" value="">
+                                            <input type="text" class="form-control"name="notelepon" value="{{ Auth::user()->notelepon }}">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -179,7 +178,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <h6 class="mb-0" >Alamat</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" name="alamat" value="">
+                                            <input type="text" class="form-control" name="alamat" value="{{ Auth::user()->alamat }}">
                                         </div>
                                     </div>
                                     <div class="row">
@@ -191,135 +190,152 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="d-flex align-items-center mb-3">Laporan</h5><br>
-                                            <p>Donasi</p>
-                                            <div class="post d-flex flex-column-fluid" id="kt_post">
-                                                <!--begin::Container-->
-                                                <div id="kt_content_container" class="container-xxl">
-                                                    <div class="tab-content">
-                                                        <!--begin::Tab panel-->
-                                                        <div id="kt_billing_months"
-                                                            class="card-body p-0 tab-pane fade show active"
-                                                            role="tabpanel" aria-labelledby="kt_billing_months">
-                                                            <!--begin::Table container-->
-                                                            <div class="table-responsive">
-                                                                <!--begin::Table-->
-                                                                <table
-                                                                    class="table table-row-bordered align-middle gy-4 gs-9">
-                                                                    <thead
-                                                                        class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
-                                                                        <tr>
-                                                                            <td class="min-w-150px">Nama</td>
-                                                                            <td class="min-w-150px">Donasi</td>
-                                                                            <td class="min-w-150px">Total Harga</td>
-                                                                            <td class="min-w-150px">Status</td>
-                                                                            <td></td>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody class="fw-semibold text-gray-600">
-                                                                        @foreach ($data->where('id_user',
-                                                                        Auth::user()->id) as $item)
 
-                                                                        <!--begin::Table row-->
-                                                                        <tr>
-                                                                            <td style="font-size: 13px">
-                                                                                {{ $item->nama }}
-                                                                            </td>
-                                                                            <td style="font-size: 13px">
-                                                                                Rp.{{ $item->total_donasi }}
-                                                                            </td>
-                                                                            <td style="font-size: 13px">
-                                                                                Rp.{{ $item->total_harga }}
-                                                                            </td>
-                                                                            <td style="font-size: 13px">
-                                                                                {{ $item->status }}
-                                                                            </td>
-                                                                        </tr>
-                                                                        @endforeach
+                        </div>
+                    </div>
+                </div>
 
-                                                                    </tbody>
-                                                                </table>
-                                                                <!--end::Table-->
-                                                            </div>
-                                                            <!--end::Table container-->
-                                                        </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="d-flex align-items-center mb-3">Laporan</h5><br>
+                                <h4 style="font-size: 20px; text-align:center; color:rgb(13, 127, 89)">Donasi yang uda Terbayarkan</h4><br>
+                                <div class="post d-flex flex-column-fluid" id="kt_post">
+                                    <!--begin::Container-->
+                                    <div id="kt_content_container" class="container-xxl">
+                                        <div class="tab-content">
+                                            <!--begin::Tab panel-->
+                                            <div id="kt_billing_months"
+                                                class="card-body p-0 tab-pane fade show active"
+                                                role="tabpanel" aria-labelledby="kt_billing_months">
+                                                <!--begin::Table container-->
+                                                <div class="table-responsive">
+                                                    <!--begin::Table-->
+                                                    <table
+                                                        class="table table-row-bordered align-middle gy-4 gs-9">
+                                                        <thead
+                                                            class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
+                                                            <tr>
+                                                                <td class="min-w-150px">Nama</td>
+                                                                <td class="min-w-150px">jenis Campaign</td>
+                                                                <td class="min-w-150px">Donasi</td>
+                                                                <td class="min-w-150px">Total Harga</td>
+                                                                {{-- <td class="min-w-150px">Status</td> --}}
+                                                                {{-- <td></td> --}}
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="fw-semibold text-gray-600">
+                                                            @foreach ($data->where('id_user',
+                                                            Auth::user()->id) as $item)
 
-                                                    </div>
-                                                    <!--end::Tab Content-->
+                                                            <!--begin::Table row-->
+                                                            <tr>
+                                                                <td style="font-size: 13px; font-weight:500">
+                                                                    {{ $item->nama }}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500">
+                                                                    @foreach ( $campaign as $judul)
+                                                                    @if($item->id_campaign === $judul->id)
+                                                                    {{ $judul->judul }}
+                                                                    @endif
+                                                                    @endforeach
+                                                                    {{-- {{ $item->id_campaign }} --}}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500">
+                                                                    Rp.{{number_format($item->total_donasi) }}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500">
+                                                                    Rp.{{number_format($item->total_harga )}}
+                                                                </td>
+                                                                {{-- <td style="font-size: 13px; color: rgb(70, 161, 69)">
+                                                                    {{ $item->status }}
+                                                                </td> --}}
+                                                            </tr>
+                                                            @endforeach
+
+                                                        </tbody>
+                                                    </table>
+                                                    <!--end::Table-->
                                                 </div>
-                                                <!--end::Billing Address-->
+                                                <!--end::Table container-->
                                             </div>
-                                            <!--end::Container--> <br>
 
-                                            <p>Campaigner</p>
-                                            <div class="post d-flex flex-column-fluid" id="kt_post">
-                                                <!--begin::Container-->
-                                                <div id="kt_content_container" class="container-xxl">
-                                                    <div class="tab-content">
-                                                        <!--begin::Tab panel-->
-                                                        <div id="kt_billing_months"
-                                                            class="card-body p-0 tab-pane fade show active"
-                                                            role="tabpanel" aria-labelledby="kt_billing_months">
-                                                            <!--begin::Table container-->
-                                                            <div class="table-responsive">
-                                                                <!--begin::Table-->
-                                                                <table
-                                                                    class="table table-row-bordered align-middle gy-4 gs-9">
-                                                                    <thead
-                                                                        class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
-                                                                        <tr>
-                                                                            <td class="min-w-150px">Nama</td>
-                                                                            <td class="min-w-150px">Kategori</td>
-                                                                            <td class="min-w-150px">Judul</td>
-                                                                            <td class="min-w-150px">Target</td>
-                                                                            <td class="min-w-150px">Tanggal Penggalangan
-                                                                            </td>
-                                                                            <td></td>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody class="fw-semibold text-gray-600">
-                                                                        @foreach ($data->where('id_user',
-                                                                        Auth::user()->id) as $item)
-                                                                        <!--begin::Table row-->
-                                                                        <tr>
-                                                                            <td>
-                                                                                {{ $item->namaLembaga}}
-                                                                            </td>
-                                                                            <td>
-                                                                                {{ $item->kategori}}
-                                                                            </td>
-                                                                            <td>
-                                                                                {{ $item->judul}}
-                                                                            </td>
-                                                                            <td>
-                                                                                {{ $item->target}}
-                                                                            </td>
-                                                                            <td>
-                                                                                {{ $item->batasWaktu}}
-                                                                            </td>
-                                                                        </tr>
-                                                                        @endforeach
-                                                                    </tbody>
-                                                                </table>
-                                                                <!--end::Table-->
-                                                            </div>
-                                                            <!--end::Table container-->
-                                                        </div>
-
-                                                    </div>
-                                                    <!--end::Tab Content-->
-                                                </div>
-                                                <!--end::Billing Address-->
-                                            </div>
                                         </div>
-                                        <!--end::Post-->
+                                        <!--end::Tab Content-->
                                     </div>
+                                    <!--end::Billing Address-->
+                                </div>
+                                <!--end::Container--> <br>
+
+                                <h4 style="font-size: 20px; text-align:center; color:rgb(13, 127, 89)">Campaign</h4><br>
+                                <div class="post d-flex flex-column-fluid" id="kt_post">
+                                    <!--begin::Container-->
+                                    <div id="kt_content_container" class="container-xxl">
+                                        <div class="tab-content">
+                                            <!--begin::Tab panel-->
+                                            <div id="kt_billing_months"
+                                                class="card-body p-0 tab-pane fade show active"
+                                                role="tabpanel" aria-labelledby="kt_billing_months">
+                                                <!--begin::Table container-->
+                                                <div class="table-responsive">
+                                                    <!--begin::Table-->
+                                                    <table
+                                                        class="table table-row-bordered align-middle gy-4 gs-9">
+                                                        <thead
+                                                            class="border-bottom border-gray-200 fs-6 text-gray-600 fw-bold bg-light bg-opacity-75">
+                                                            <tr>
+                                                                <td class="min-w-150px">Nama</td>
+                                                                <td class="min-w-150px">Kategori</td>
+                                                                <td class="min-w-150px">Judul</td>
+                                                                <td class="min-w-150px">Target</td>
+                                                                <td class="min-w-150px">Tanggal Penggalangan</td>
+                                                                <td class="min-w-150px">Status pengajuan</td>
+                                                                <td class="min-w-150px">Status Campaign</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="fw-semibold text-gray-600">
+                                                            @foreach ($campaign->where('id_user',
+                                                            Auth::user()->id) as $item)
+                                                            <!--begin::Table row-->
+                                                            <tr>
+                                                                <td style="font-size: 13px; font-weight:500;">
+                                                                    {{ $item->namaLembaga}}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500;">
+                                                                    {{ $item->kategori}}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500;">
+                                                                    {{ $item->judul}}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500;">
+                                                                    Rp.{{number_format($item->target)}}
+                                                                </td>
+                                                                <td style="font-size: 13px; font-weight:500">
+                                                                    {{ $item->batasWaktu}}
+                                                                </td>
+                                                                <td style="color: rgb(112, 20, 20); font-size:13px; font-weight:600">
+                                                                    {{ $item->statusPengajuan}}
+                                                                </td>
+                                                                <td style="color: rgb(112, 20, 20); font-size:13px; font-weight:600">
+                                                                    {{ $item->statusCampaign}}
+                                                                </td>
+                                                            </tr>
+                                                            @endforeach
+                                                        </tbody>
+                                                    </table>
+                                                    <!--end::Table-->
+                                                </div>
+                                                <!--end::Table container-->
+                                            </div>
+
+                                        </div>
+                                        <!--end::Tab Content-->
+                                    </div>
+                                    <!--end::Billing Address-->
                                 </div>
                             </div>
+                            <!--end::Post-->
                         </div>
                     </div>
                 </div>

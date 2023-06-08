@@ -239,7 +239,7 @@ strong {
 }
 
 .progress-bar {
-  background: var(--secondary-color);
+  background: rgb(3, 67, 132);
 }
 
 

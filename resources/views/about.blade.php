@@ -29,7 +29,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -70,10 +70,27 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <li class="nav-item">
                         <a class="nav-link " href="#">Donate</a>
                     </li>
+                    @if(Auth::check())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    @else
 
                     <li class="nav-item">
                         <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -94,7 +111,7 @@ https://templatemo.com/tm-581-kind-heart-charity
         </section>
 
         <div class="container">
-            <img src="assets/mitra-logo-pink309.png" alt="Gambar" style="float:right; margin-buttom:50px;">
+            <img src="{{ asset('assets/logo-2.png')}}" alt="Gambar" style="float:right; margin-buttom:50px;">
             <br><br><br><br>
             <h3 class="text-black" style="padding: 20px">Setiap orang berhak sehat dan berdaya</h3>
             <small class="text-black" style="padding: 20px">Sebuah upaya untuk mendorong tercapainya akses layanan

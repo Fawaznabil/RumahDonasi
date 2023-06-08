@@ -36,6 +36,7 @@ License: For each use you must have a valid license purchased only from above li
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
+
 	<body id="kt_body" class="auth-bg bgi-size-cover bgi-position-center">
 		<!--begin::Theme mode setup on page load-->
 		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
@@ -184,5 +185,25 @@ License: For each use you must have a valid license purchased only from above li
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>
+
 	<!--end::Body-->
 </html>
+
+<script>
+    // Mendapatkan elemen input password dan tombol mata
+const passwordInput = document.querySelector('input[name="password"]');
+const toggleButton = document.querySelector('[data-kt-password-meter-control="visibility"]');
+
+// Menambahkan event listener pada tombol mata
+toggleButton.addEventListener('click', function() {
+    // Mengubah tipe input dari password ke text atau sebaliknya
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+    // Mengubah ikon mata terlihat atau tersembunyi
+    const eyeIcon = toggleButton.querySelector('.bi-eye-fill');
+    const eyeSlashIcon = toggleButton.querySelector('.bi-eye-slash-fill');
+    eyeIcon.classList.toggle('d-none');
+    eyeSlashIcon.classList.toggle('d-none');
+});
+</script>

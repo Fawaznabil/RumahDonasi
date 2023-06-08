@@ -29,7 +29,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -71,9 +71,27 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <a class="nav-link" href="#">Donate</a>
                     </li>
 
+                    @if(Auth::check())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    @else
+
                     <li class="nav-item">
                         <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -98,249 +116,76 @@ https://templatemo.com/tm-581-kind-heart-charity
         <section class="section-padding" id="section_3">
             <div class="container">
                 <div class="row">
+                    @foreach ($bencana as $item )
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
+                            <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid"
+                                alt="">
 
                             <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
+                                <div class="custom-block-body" style="display: grid;grid-template-rows:90px 50px 100px">
+                                    @auth
+                <a href="/detailDonasi/{{$item->id_campaign}}" style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
+                @else
+                <a href="/detailDonasilogin/{{$item->id_campaign}}" style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
+                @endauth
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
+                                        <div class="progress-bar" style="width: {{ $item->presentasi }}%" role="progressbar" aria-valuenow=""
                                             aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
 
                                     <div class="d-flex align-items-center my-2">
                                         <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
+                                            <strong
+                                                style="text-align: center; color:rgb(46, 88, 152);font-size:14px">Dana
+                                                Terkumpul</strong><br>
+                                            <strong style="color: rgb(81, 79, 79);font-size:14px; text-align:left">Rp
+                                                {{ $item->total_donasi }}</strong>
                                         </p>
                                         <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
+                                            <strong
+                                                style="text-align: right; color:rgb(46, 88, 152);font-size:14px;">Target</strong><br><br>
+                                            <strong style="color: rgb(81, 79, 79);font-size:14px">Rp.
+                                                {{ number_format($item->target) }}</strong>
                                         </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a class="custom-btn btn" data-toggle="modal" data-target="#exampleModalCenter" >Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+                                    <hr>
 
                                     <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
+                                        <p class="mb-0" style="color: black; font-size:15px">
+                                            <strong>{{ $item->namaLembaga }}</strong><br>
                                         </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
 
-                                <a href="/donate" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                    </div><br>
 
                                     <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
+                                        <p class="mb-0" style="color: rgb(197, 21, 21); font-size:12px">
+                                            <strong>{{ $item->sisa_hari }} Hari lagi</strong>
                                         </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
+                                        <p class="ms-auto mb-0" style="color:rgb(101, 101, 101);font-size:12px">
+                                            <strong>{{ $item->jumlah_donatur }} Donatur</strong>
                                         </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
+                                    </div>
 
-                                <a href="/donate" class="custom-btn btn">Donate now</a>
+                                </div>
+                                @auth
+                    <a href="/donate/{{$item->id_campaign}}" class="custom-btn btn">Donate now</a>
+                @else
+                    <a href="/sign-in" class="custom-btn btn">Donate now</a>
+                @endauth
                             </div>
                         </div>
                     </div>
-
+                    @endforeach
                 </div>
             </div>
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
 
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="/donate" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="/donate" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                        <div class="custom-block-wrap">
-                            <img src="{{ asset('assets/1.jpeg')}}"
-                                class="custom-block-image img-fluid" alt="">
-
-                            <div class="custom-block">
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>Derita Gagal Ginjal Kronis Stadium 5, Marpin Harus Segera Transplantasi
-                                        Ginja</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong>Dana Terkumpul</strong><br>
-                                            Rp 2.000.000
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong>Target</strong><br>
-                                            Rp 50.000.000
-                                        </p>
-                                    </div><hr>
-                                    <p class="donatur" style="font-size: 13px">
-                                       60 Donatur
-                                    </p>
-                                </div>
-
-                                <a href="/donate" class="custom-btn btn">Donate now</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
             {{-- Pagination --}}
             <div class="col-lg-4 col-12 mx-auto">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination pagination-lg justify-content-center mt-5">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
+                        {{ $bencana->links() }}
                     </ul>
                 </nav>
             </div>

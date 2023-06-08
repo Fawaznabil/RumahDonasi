@@ -31,7 +31,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
+                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -69,15 +69,16 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
+                        <a class="nav-link" href="/Home">Donate</a>
                     </li>
+                    @if(Auth::check())
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
                             id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Akun
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/profile/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
                             <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -85,6 +86,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
                         </ul>
                     </li>
+                    @else
+
+                    <li class="nav-item">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
+                    </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -183,7 +190,13 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <textarea name="message" rows="5" class="form-control" id="message"
                                 placeholder="What can we help you?"></textarea>
 
-                            <button type="submit" class="form-control">Send Message</button>
+                            <button onclick="redirectToEmail()" class="form-control" style="background-color: #44525d; color:aliceblue;  border-radius: 30px;">Kirim Email</button>
+
+                                <script>
+                                  function redirectToEmail() {
+                                    window.location.href = "mailto:alamatemail@example.com";
+                                  }
+                                </script>
                         </form>
                     </div>
 
