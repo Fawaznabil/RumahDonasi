@@ -1,6 +1,7 @@
 @extends('layouts.navbar-admin')
 
 @section('content')
+@if(Auth::check())
 <!--begin::Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<!--begin::Toolbar-->
@@ -44,13 +45,8 @@
                                                             </svg>
                                                         </span>
                                                         <!--end::Svg Icon-->
-<<<<<<< Updated upstream
                                                         <a class="text-primary fw-bold fs-1">{{ $totalUser }}</a><br>
                                                         <a class="text-primary  fs-6">Jumlah User</a>
-=======
-                                                        <a href="#" class="text-primary fw-bold fs-1">1</a><br>
-                                                        <a href="#" class="text-primary  fs-6">Jumlah User</a>
->>>>>>> Stashed changes
                                                     </div>
                                                     <!--end::Col-->
                                                     <!--begin::Col-->
@@ -63,13 +59,8 @@
                                                             </svg>
                                                         </span>
                                                         <!--end::Svg Icon-->
-<<<<<<< Updated upstream
                                                         <a class="text-success fw-bold fs-1">{{ formatRupiah($totalDana) }},-</a><br>
                                                         <a class="text-success  fs-6">Total Dana Terkumpul</a>
-=======
-                                                        <a href="#" class="text-success fw-bold fs-1">Rp 10.000.000</a><br>
-                                                        <a href="#" class="text-success  fs-6">Total Dana Terkumpul</a>
->>>>>>> Stashed changes
                                                     </div>
                                                     <!--end::Col-->
                                                     <!--begin::Col-->
@@ -82,13 +73,8 @@
                                                             </svg>
                                                         </span>
                                                         <!--end::Svg Icon-->
-<<<<<<< Updated upstream
                                                         <a class="text-danger fw-bold fs-1">{{ $totalProgram }}</a><br>
                                                         <a class="text-danger  fs-6">Jumlah Program</a>
-=======
-                                                        <a href="#" class="text-danger fw-bold fs-1">1</a><br>
-                                                        <a href="#" class="text-danger  fs-6">Jumlah Program</a>
->>>>>>> Stashed changes
                                                     </div>
                                                     <!--end::Col-->
                                                 </div>
@@ -113,17 +99,9 @@
 											<!--begin::Header-->
 											<div class="card-header border-0 pt-5">
 												<h3 class="card-title align-items-start flex-column">
-<<<<<<< Updated upstream
 													<span class="card-label fw-bold fs-3 mb-1">Donatur Nominal Tertinggi</span>
-=======
-													<span class="card-label fw-bold fs-3 mb-1">Daftar Donatur</span>
->>>>>>> Stashed changes
 													<span class="text-muted mt-1 fw-semibold fs-7">5 Donatur dengan jumlah nominal tertinggi</span>
 												</h3>
-												<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top">
-													<a href="#" class="btn btn-sm btn-light btn-active-primary">
-													View All</a>
-												</div>
 											</div>
 											<!--end::Header-->
 											<!--begin::Body-->
@@ -135,291 +113,26 @@
 											<thead>
 												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
-													" style="width: 29.9px;">
-														<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
-														</div>
-												    </th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="NIK: activate to sort column ascending" style="width: 151.95px;">NIK</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Nama: activate to sort column ascending" style="width: 188.25px;">Nama</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Alamat: activate to sort column ascending" style="width: 167.1px;">Alamat</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="No. Hp : activate to sort column ascending" style="width: 151.95px;">No. Hp</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 197.65px;">Email</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Password: activate to sort column ascending" style="width: 197.65px;">Password</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 197.65px;">Created Date</th>
-                                                    <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 117.3px;">Actions</th></tr>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 188.25px;">Urutan</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 188.25px;">Nama</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 167.1px;">Nominal</th>
 												<!--end::Table row-->
+                                                </tr>
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<tbody class="fw-semibold text-gray-600">
-											    <tr class="odd">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-12-14T20:43:00+07:00">14 Dec 2020, 8:43 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="even">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-12-01T10:12:00+07:00">01 Dec 2020, 10:12 am</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="odd">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-11-12T14:01:00+07:00">12 Nov 2020, 2:01 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="even">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-10-21T17:54:00+07:00">21 Oct 2020, 5:54 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="odd">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-10-19T07:32:00+07:00">19 Oct 2020, 7:32 am</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr></tbody>
+                                                @php $i = 0 @endphp
+                                                @foreach ($nominalTerbanyak as $nominal)
+                                                <tr>
+                                                    @php $i++ @endphp
+                                                    <td>{{ $i }}</td>
+                                                    <td class="text-bold-500">{{ $nominal->name }}</td>
+                                                    <td>{{ formatRupiah($nominal->total) }}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+
 											<!--end::Table body-->
 										</table></div>
                                         <div class="row">
@@ -439,17 +152,9 @@
 											<!--begin::Header-->
 											<div class="card-header border-0 pt-5">
 												<h3 class="card-title align-items-start flex-column">
-<<<<<<< Updated upstream
 													<span class="card-label fw-bold fs-3 mb-1">Donatur Transaksi Terbanyak</span>
-=======
-													<span class="card-label fw-bold fs-3 mb-1">Daftar Donatur</span>
->>>>>>> Stashed changes
 													<span class="text-muted mt-1 fw-semibold fs-7">5 Donatur dengan jumlah transaksi terbanyak</span>
 												</h3>
-												<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top">
-													<a href="#" class="btn btn-sm btn-light btn-active-primary">
-													View All</a>
-												</div>
 											</div>
 											<!--end::Header-->
 											<!--begin::Body-->
@@ -461,291 +166,30 @@
 											<thead>
 												<!--begin::Table row-->
 												<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
-                                                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
-													" style="width: 29.9px;">
-														<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
-														</div>
-												    </th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="NIK: activate to sort column ascending" style="width: 151.95px;">NIK</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Nama: activate to sort column ascending" style="width: 188.25px;">Nama</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Alamat: activate to sort column ascending" style="width: 167.1px;">Alamat</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="No. Hp : activate to sort column ascending" style="width: 151.95px;">No. Hp</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 197.65px;">Email</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Password: activate to sort column ascending" style="width: 197.65px;">Password</th>
-                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 197.65px;">Created Date</th>
-                                                    <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 117.3px;">Actions</th></tr>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 188.25px;">Urutan</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 188.25px;">Nama</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 167.1px;">Total Donasi</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" style="width: 167.1px;">Banyak Donasi</th>
 												<!--end::Table row-->
+                                                </tr>
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<tbody class="fw-semibold text-gray-600">
-											    <tr class="odd">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-12-14T20:43:00+07:00">14 Dec 2020, 8:43 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="even">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-12-01T10:12:00+07:00">01 Dec 2020, 10:12 am</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="odd">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-11-12T14:01:00+07:00">12 Nov 2020, 2:01 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="even">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-10-21T17:54:00+07:00">21 Oct 2020, 5:54 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="odd">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-                                                    <td>1234</td>
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
-													</td>
-													<!--end::Name=-->
-                                                    <td>Jl.Barito</td>
-                                                    <td>08116837239</td>
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>***</td>
-													<!--end::Company=-->
-													<!--begin::Date=-->
-													<td data-order="2020-10-19T07:32:00+07:00">19 Oct 2020, 7:32 am</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr></tbody>
+                                                @php $i = 0 @endphp
+                                                @foreach ($donasiTerbanyak as $donasi)
+                                                <tr>
+                                                    @php $i++ @endphp
+                                                    <td>{{ $i }}</td>
+                                                    <td class="text-bold-500">{{ $donasi->name }}</td>
+                                                    <td>{{ formatRupiah($donasi->total) }}</td>
+                                                    <td>{{ $donasi->jumlah_donasi }}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+
+
+
 											<!--end::Table body-->
 										</table></div>
                                         <div class="row">
@@ -1042,5 +486,6 @@
 						</div>
 						<!--end::Post-->
 					</div>
+    @endauth
 					<!--end::Content-->
 @endsection

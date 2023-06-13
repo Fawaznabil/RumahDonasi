@@ -37,19 +37,39 @@ class userController extends Controller
      */
     public function storeUser(Request $request)
     {
-            $validatedData = $request->validate([
-                'nik'=> 'required',
-                'name'=> 'required',
-                'alamat'=> 'required',
-                'notelepon'=> 'required',
-                'email'=> 'required|email:dns',
-                'password'=> 'required|min:8|max:100'
-            ]);
+        //dd($request->all());
+        // $validatedData = $request->validate([
+        //     'gambar' => 'required',
+        //     'nik'=> 'required',
+        //     'name'=> 'required',
+        //     'alamat'=> 'required',
+        //     'notelepon'=> 'required',
+        //     'email'=> 'required|email:dns',
+        //     'password'=> 'required|min:8|max:100'
+        // ]);
+        $data = [
+            'id_user' =>Auth::user()->id,
+            'gambar' => $request->gambar,
+            'nik' => $request->nik,
+            'name' => $request->name,
+            'alamat' => $request->alamat,
+            'notelepon' => $request->notelepon,
+            'email' => $request->email,
+            'password' => $request->password,
+            'photo' => $request->photo,
 
-            //$validatedData['ID_User'] = Auth::user()->id;
-            User::create($validatedData);
-            $request->session()->flash('success', 'Data user berhasil ditambahkan!');
-            return redirect('/admin/master-user');
+        ];
+
+        $gambar = $request->file('photo');
+        $gambarFolder = 'gambar_folder';
+        $gambarName = $gambar->getClientOriginalName();
+        $gambar->move($gambarFolder, $gambarName);
+        $data['photo'] = $gambarName;
+        $data['password'] = bcrypt($data['password']);
+        
+        User::create($data);
+        $request->session()->flash('success', 'Data user berhasil ditambahkan!');
+        return redirect('/admin/master-user');
     }
 
 

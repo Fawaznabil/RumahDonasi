@@ -1,5 +1,11 @@
 @extends('layouts.navbar-admin')
 
+@if (session()->has('success') )
+<script>
+  alert('{{ session('success') }}')
+  </script>
+@endif
+
 @section('content')
             <!--begin::Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -10,7 +16,7 @@
 								<!--begin::Page title-->
 								<div class="page-title d-flex flex-column me-5 py-2">
 									<!--begin::Title-->
-									<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Master User</h1>
+									<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Master News</h1>
 									<!--end::Title-->
 									<!--begin::Breadcrumb-->
 									<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
@@ -25,7 +31,7 @@
 										</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-muted">Data User</li>
+										<li class="breadcrumb-item text-muted">Data News</li>
 										<!--end::Item-->
 										<!--begin::Item-->
 										<li class="breadcrumb-item">
@@ -33,7 +39,7 @@
 										</li>
 										<!--end::Item-->
 										<!--begin::Item-->
-										<li class="breadcrumb-item text-dark">Master User</li>
+										<li class="breadcrumb-item text-dark">Master News</li>
 										<!--end::Item-->
 									</ul>
 									<!--end::Breadcrumb-->
@@ -41,96 +47,6 @@
 								<!--end::Page title-->
 								<!--begin::Actions-->
 								<div class="d-flex align-items-center py-2">
-									<!--begin::Wrapper-->
-									<div class="me-4">
-										<!--begin::Menu-->
-										<a href="#" class="btn btn-sm btn-flex btn-light btn-active-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-										<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-										<span class="svg-icon svg-icon-5 svg-icon-gray-500 me-1">
-											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
-											</svg>
-										</span>
-										<!--end::Svg Icon-->Filter</a>
-										<!--begin::Menu 1-->
-										<div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_63d0dab50f621">
-											<!--begin::Header-->
-											<div class="px-7 py-5">
-												<div class="fs-5 text-dark fw-bold">Filter Options</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Menu separator-->
-											<div class="separator border-gray-200"></div>
-											<!--end::Menu separator-->
-											<!--begin::Form-->
-											<div class="px-7 py-5">
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Status:</label>
-													<!--end::Label-->
-													<!--begin::Input-->
-													<div>
-														<select class="form-select form-select-solid" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_63d0dab50f621" data-allow-clear="true">
-															<option></option>
-															<option value="1">Approved</option>
-															<option value="2">Pending</option>
-															<option value="2">In Process</option>
-															<option value="2">Rejected</option>
-														</select>
-													</div>
-													<!--end::Input-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Member Type:</label>
-													<!--end::Label-->
-													<!--begin::Options-->
-													<div class="d-flex">
-														<!--begin::Options-->
-														<label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-															<input class="form-check-input" type="checkbox" value="1" />
-															<span class="form-check-label">Author</span>
-														</label>
-														<!--end::Options-->
-														<!--begin::Options-->
-														<label class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="2" checked="checked" />
-															<span class="form-check-label">Customer</span>
-														</label>
-														<!--end::Options-->
-													</div>
-													<!--end::Options-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Notifications:</label>
-													<!--end::Label-->
-													<!--begin::Switch-->
-													<div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-														<input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked" />
-														<label class="form-check-label">Enabled</label>
-													</div>
-													<!--end::Switch-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Actions-->
-												<div class="d-flex justify-content-end">
-													<button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-													<button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-												</div>
-												<!--end::Actions-->
-											</div>
-											<!--end::Form-->
-										</div>
-										<!--end::Menu 1-->
-										<!--end::Menu-->
-									</div>
-									<!--end::Wrapper-->
 								</div>
 								<!--end::Actions-->
 							</div>
@@ -157,7 +73,7 @@
 													</svg>
 												</span>
 												<!--end::Svg Icon-->
-												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Donatur" />
+												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search News" />
 											</div>
 											<!--end::Search-->
 										</div>
@@ -167,16 +83,6 @@
 											<!--begin::Toolbar-->
 											<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
 												<!--begin::Filter-->
-												<div class="w-150px me-3">
-													<!--begin::Select2-->
-													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
-														<option></option>
-														<option value="all">All</option>
-														<option value="active">Active</option>
-														<option value="locked">Locked</option>
-													</select>
-													<!--end::Select2-->
-												</div>
 												<!--end::Filter-->
 												<!--begin::Add customer-->
 												<a href="/createNews" class="btn btn-primary">Add News</a>
@@ -215,9 +121,9 @@
                                                     <th class="min-w-125px">Kategori Berita</th>
                                                     <th class="min-w-125px">Author</th>
                                                     <th class="min-w-125px">Nama Campaigner</th>
-													<th class="min-w-125px">Gambar 1</th>
-                                                    <th class="min-w-125px">Gambar 2</th>
-                                                    <th class="min-w-125px">Gambar 3</th>
+													<th class="min-w-125px">Gambar Header</th>
+                                                    {{-- <th class="min-w-125px">Gambar 2</th>
+                                                    <th class="min-w-125px">Gambar 3</th> --}}
 													<th class="min-w-125px">Created Date</th>
 													<th class="text-end min-w-70px">Actions</th>
 												</tr>
@@ -241,15 +147,37 @@
                                                     <td>{{ $news->category }}</td>
                                                     <td>{{ $news->author }}</td>
                                                     <td>{{ $news->namaCampaigner }}</td>
-                                                    <td>{{ $news->gambar1 }}</td>
-                                                    <td>{{ $news->gambar2}}</td>
-                                                    <td>{{ $news->gambar3 }}</td>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="symbol symbol-200px me-5">
+                                                                <img src="{{asset('/gambar_folder/'.$news->gambar1)}}" alt="">
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    {{-- <td>
+                                                        @if($news->gambat2 !== null)
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="symbol symbol-200px me-5">
+                                                                <img src="{{asset('/gambar_folder/'.$news->gambar2)}}" alt="">
+                                                            </div>
+                                                        </div>
+                                                        @endif
+                                                    </td>
+                                                    <td>
+                                                        @if($news->gambat3 !== null)
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="symbol symbol-200px me-5">
+                                                                <img src="{{asset('/gambar_folder/'.$news->gambar3)}}" alt="">
+                                                            </div>
+                                                        </div>
+                                                        @endif
+                                                    </td> --}}
                                                     <td>{{ $news->created_at }}</td>
 													<!--begin::Action=-->
 													<td class="text-end">
                                                         <div class="d-flex justify-content-end flex-shrink-0">
 														<!--begin::Edit-->
-                                                            <a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#updateUser{{ $news->id }}">
+                                                            <a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#updateNews{{ $news->id }}">
                                                                 <span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit">
                                                                     <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                                                     <span class="svg-icon svg-icon-3">
@@ -279,7 +207,7 @@
                                                         </div>
 													</td>
                                                     <!--begin::Modal - New Card-->
-                                                    <div class="modal fade" id="updateUser{{ $news->id }}" tabindex="-1" aria-hidden="true">
+                                                    <div class="modal fade" id="updateNews{{ $news->id }}" tabindex="-1" aria-hidden="true">
                                                         <!--begin::Modal dialog-->
                                                         <div class="modal-dialog modal-dialog-centered mw-650px">
                                                             <!--begin::Modal content-->
@@ -287,7 +215,7 @@
                                                                 <!--begin::Modal header-->
                                                                 <div class="modal-header">
                                                                     <!--begin::Modal title-->
-                                                                    <h2>Edit User</h2>
+                                                                    <h2>Edit News</h2>
                                                                     <!--end::Modal title-->
                                                                     <!--begin::Close-->
                                                                     <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
@@ -313,21 +241,59 @@
                                                                         <div class="d-flex flex-column mb-7 fv-row">
                                                                             <!--begin::Label-->
                                                                             <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                                                                                <span class="">NIK</span>
+                                                                                <span class="">Gambar Header</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->nik }}" name="nik" />
+                                                                            <div class="card-body text-center pt-0">
+                                                                                <!--begin::Image input-->
+                                                                                <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3" data-kt-image-input="true">
+                                                                                    <!--begin::Preview existing avatar-->
+                                                                                    <div class="image-input-wrapper w-150px h-150px" style="background-image: url {{asset('/gambar_folder/'.$news->gambar1)}}"></div>
+                                                                                    <!--end::Preview existing avatar-->
+                                                                                    <!--begin::Label-->
+                                                                                    <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" aria-label="Change gambar1" data-bs-original-title="Change gambar1" data-kt-initialized="1">
+                                                                                        <i class="bi bi-pencil-fill fs-7"></i>
+                                                                                        <!--begin::Inputs-->
+                                                                                        <input type="file" name="gambar1" accept=".png, .jpg, .jpeg">
+                                                                                        <input type="hidden" name="gambar1">
+                                                                                        <!--end::Inputs-->
+                                                                                    </label>
+                                                                                    <!--end::Label-->
+                                                                                    <!--begin::Cancel-->
+                                                                                    <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" aria-label="Cancel gambar1" data-bs-original-title="Cancel gambar1" data-kt-initialized="1">
+                                                                                        <i class="bi bi-x fs-2"></i>
+                                                                                    </span>
+                                                                                    <!--end::Cancel-->
+                                                                                    <!--begin::Remove-->
+                                                                                    <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" aria-label="Remove gambar1" data-bs-original-title="Remove gambar1" data-kt-initialized="1">
+                                                                                        <i class="bi bi-x fs-2"></i>
+                                                                                    </span>
+                                                                                    <!--end::Remove-->
+                                                                                </div>
+                                                                                <!--end::Image input-->
+                                                                                <!--begin::Description-->
+                                                                                <div class="text-muted fs-7">Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                                                                                <!--end::Description-->
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-flex flex-column mb-7 fv-row">
+                                                                            <!--begin::Label-->
+                                                                            <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                                                <span class="">Judul Berita</span>
+                                                                            </label>
+                                                                            <!--end::Label-->
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->title }}" name="title" id="title" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
                                                                         <div class="d-flex flex-column mb-7 fv-row">
                                                                             <!--begin::Label-->
-                                                                            <label class="fs-6 fw-semibold form-label mb-2">Nama Lengkap</label>
+                                                                            <label class="fs-6 fw-semibold form-label mb-2">Isi Berita</label>
                                                                             <!--end::Label-->
                                                                             <!--begin::Input wrapper-->
                                                                             <div class="position-relative">
                                                                                 <!--begin::Input-->
-                                                                                <input type="text" class="form-control form-control-solid" placeholder="{{ $news->name }}" name="name"/>
+                                                                                <textarea type="text" class="form-control form-control-solid" placeholder="{{ $news->body }}" name="body" ></textarea>
                                                                                 <!--end::Input-->
                                                                             </div>
                                                                             <!--end::Input wrapper-->
@@ -337,117 +303,40 @@
                                                                         <div class="d-flex flex-column mb-7 fv-row">
                                                                             <!--begin::Label-->
                                                                             <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                                                                                <span class="">Alamat</span>
+                                                                                <span class="">Slug</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->alamat }}" name="alamat" />
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->slug }}" name="slug" id="slug"/>
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
                                                                         <div class="d-flex flex-column mb-7 fv-row">
                                                                             <!--begin::Label-->
                                                                             <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                                                                                <span class="">No. Telepon</span>
+                                                                                <span class="">Kategori</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->notelepon }}" name="notelepon" />
+                                                                            <select class="form-select" name="category" id="category" data-control="select2" data-placeholder={{ $news->category }}>
+                                                                                <option>-Pilih-</option>
+                                                                                <option value="Bencana">Bencana</option>
+                                                                                <option value="Pendidikan">Pendidikan</option>
+                                                                                <option value="Lainnya">Lainnya</option>
+                                                                            </select required>
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
                                                                         <div class="d-flex flex-column mb-7 fv-row">
                                                                             <!--begin::Label-->
                                                                             <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                                                                                <span class="">Email</span>
+                                                                                <span class="">Nama Campaigner</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->email }}" name="email" />
-                                                                        </div>
-                                                                        <!--end::Input group-->
-                                                                        <!--begin::Input group-->
-                                                                        <div class="d-flex flex-column mb-7 fv-row">
-                                                                            <!--begin::Label-->
-                                                                            <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
-                                                                                <span class="">Password</span>
-                                                                            </label>
-                                                                            <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->password }}" name="password" />
-                                                                        </div>
-                                                                        <!--end::Input group-->
-                                                                        <!--begin::Input group-->
-                                                                        <div class="row mb-10">
-                                                                            <!--begin::Col-->
-                                                                            <div class="col-md-12 fv-row">
-                                                                                <!--begin::Label-->
-                                                                                <label class="fs-6 fw-semibold form-label mb-2">Role</label>
-                                                                                <!--end::Label-->
-                                                                                <div class="d-flex">
-                                                                                    <div class="input-group  mb-5" id="#role">
-                                                                                        <input type="hidden"
-                                                                                            value="{{ $news->id }}">
-                                                                                        <div class="input-group  mb-5">
-                                                                                            <div
-                                                                                                class="form-check form-check-custom form-check-solid">
-                                                                                                <input class="form-check-input"
-                                                                                                    type="radio" name="role"
-                                                                                                    value="Udmin" @if($news->role === "admin") checked @endif />
-                                                                                                <label class="form-check-label"
-                                                                                                    for="flexRadioDefault">Admin
-                                                                                                </label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="input-group  mb-5">
-                                                                                            <div
-                                                                                                class="form-check form-check-custom form-check-solid">
-
-                                                                                                <input class="form-check-input"
-                                                                                                    type="radio" name="role"
-                                                                                                    value="User" @if($news->role === "costumer") checked @endif />
-                                                                                                <label class="form-check-label"
-                                                                                                    for="flexRadioDefault">User
-                                                                                                </label>
-                                                                                            </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!--end::Col-->
-                                                                        <!--begin::Input group-->
-                                                                        <div class="row mb-10">
-                                                                            <!--begin::Col-->
-                                                                            <div class="col-md-12 fv-row">
-                                                                                <!--begin::Label-->
-                                                                                <label class="fs-6 fw-semibold form-label mb-2">Ubah Status Akun</label>
-                                                                                <!--end::Label-->
-                                                                                <div class="d-flex">
-                                                                                    <div class="input-group  mb-5" id="#status">
-                                                                                        <input type="hidden"
-                                                                                            value="{{ $news->id }}">
-                                                                                        <div class="input-group  mb-5">
-                                                                                            <div
-                                                                                                class="form-check form-check-custom form-check-solid">
-                                                                                                <input class="form-check-input"
-                                                                                                    type="radio" name="status"
-                                                                                                    value="locked" @if($news->email_verified_at == 0) checked @endif />
-                                                                                                <label class="form-check-label"
-                                                                                                    for="flexRadioDefault">Locked
-                                                                                                </label>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                        <div class="input-group  mb-5">
-                                                                                            <div
-                                                                                                class="form-check form-check-custom form-check-solid">
-
-                                                                                                <input class="form-check-input"
-                                                                                                    type="radio" name="status"
-                                                                                                    value="active" @if($news->email_verified_at != 0 ) checked @endif />
-                                                                                                <label class="form-check-label"
-                                                                                                    for="flexRadioDefault">Active
-                                                                                                </label>
-                                                                                            </div>
-                                                                                    </div>
-																				</div>
-                                                                            </div>
-                                                                            <!--end::Col-->
+                                                                            <select class="form-select" name="namaCampaigner" id="namaCampaigner" data-control="select2" data-placeholder="{{ $news->namaCampaigner }}">
+                                                                                <option>-Pilih-</option>
+                                                                                @foreach ($campaigner as $item)
+                                                                                    <option value="{{ $item->namaLembaga }}">{{ $item->namaLembaga }}</option>
+                                                                                @endforeach
+                                                                            </select required>
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Actions-->
@@ -463,6 +352,20 @@
                                                                     </form>
                                                                     <!--end::Form-->
                                                                 </div>
+                                                                <script>
+                                                                    const title = document.querySelector("#title");
+                                                                    const slug = document.querySelector("#slug");
+
+                                                                    title.addEventListener("keyup", function() {
+                                                                        let preslug = title.value;
+                                                                        preslug = preslug.replace(/ /g,"-");
+                                                                        slug.value = preslug.toLowerCase();
+                                                                    });
+
+                                                                    document.addEventListener('trix-file-accept',function(e){
+                                                                        e.preventDefault();
+                                                                    })
+                                                                </script>
                                                                 <!--end::Modal body-->
                                                             </div>
                                                             <!--end::Modal content-->
@@ -489,12 +392,12 @@
 										<!--begin::Modal content-->
 										<div class="modal-content">
 											<!--begin::Form-->
-											<form class="form" action="storeUser" method="POST" id="kt_modal_add_customer_form" enctype="multipart/form-data">
+											<form class="form" action="storeNews" method="POST" id="kt_modal_add_customer_form" enctype="multipart/form-data">
                                                 @csrf
 												<!--begin::Modal header-->
 												<div class="modal-header" id="kt_modal_add_customer_header">
 													<!--begin::Modal title-->
-													<h2 class="fw-bold">Add a User</h2>
+													<h2 class="fw-bold">Update News</h2>
 													<!--end::Modal title-->
 													<!--begin::Close-->
 													<div id="kt_modal_add_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">

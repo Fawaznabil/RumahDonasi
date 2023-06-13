@@ -35,7 +35,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-muted">Data Campaign</li>
+                    <li class="breadcrumb-item text-muted">Data Master</li>
                     <!--end::Item-->
                     <!--begin::Item-->
                     <li class="breadcrumb-item">
@@ -70,50 +70,47 @@
                 <div class="container py-5 h-100">
                   <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col-12">
-                        <form action="storeCampaign" method="post">
+                        <form action="storeCampaign" method="post" enctype="multipart/form-data">
                             @csrf
                                 <div class="mb-3">
-                                <label for="gambar" style="color:black" class="form-label">Input Foto Campaign</label>
-                                <!--begin::Image input-->
-                                <div class="image-input image-input-empty" data-kt-image-input="true">
-                                    <!--begin::Image preview wrapper-->
-                                    <div class="image-input-wrapper w-125px h-125px"></div>
-                                    <!--end::Image preview wrapper-->
-                                    <!--begin::Edit button-->
-                                    <label class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow"
-                                    data-kt-image-input-action="change"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-dismiss="click"
-                                    title="Change avatar">
-                                        <i class="ki-duotone ki-pencil fs-6"><span class="path1"></span><span class="path2"></span></i>
-                                        <!--begin::Inputs-->
-                                        <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="avatar_remove" />
-                                        <!--end::Inputs-->
-                                    </label>
-                                    <!--end::Edit button-->
-
-                                    <!--begin::Cancel button-->
-                                    <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow"
-                                    data-kt-image-input-action="cancel"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-dismiss="click"
-                                    title="Cancel avatar">
-                                        <i class="ki-outline ki-cross fs-3"></i>
-                                    </span>
-                                    <!--end::Cancel button-->
-
-                                    <!--begin::Remove button-->
-                                    <span class="btn btn-icon btn-circle btn-color-muted btn-active-color-primary w-25px h-25px bg-body shadow"
-                                    data-kt-image-input-action="remove"
-                                    data-bs-toggle="tooltip"
-                                    data-bs-dismiss="click"
-                                    title="Remove avatar">
-                                        <i class="ki-outline ki-cross fs-3"></i>
-                                    </span>
-                                    <!--end::Remove button-->
-                                </div>
-                                <!--end::Image input-->
+                                    <label for="gambar" style="color:black" class="form-label">Input Foto Campaign</label>
+                                    <div class="card-body text-center pt-0">
+                                        <!--begin::Image input-->
+                                        <!--begin::Image input placeholder-->
+                                        <style>.image-input-placeholder { background-image: url('dist/assets/media/svg/files/blank-image.svg'); } [data-bs-theme="dark"] .image-input-placeholder { background-image: url('dist/assets/media/svg/files/blank-image-dark.svg'); }</style>
+                                        <!--end::Image input placeholder-->
+                                        <!--begin::Image input-->
+                                        <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3" data-kt-image-input="true">
+                                            <!--begin::Preview existing avatar-->
+                                            <div class="image-input-wrapper w-150px h-150px"></div>
+                                            <!--end::Preview existing avatar-->
+                                            <!--begin::Label-->
+                                            <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" aria-label="Change avatar" data-bs-original-title="Change avatar" data-kt-initialized="1">
+                                                <!--begin::Icon-->
+                                                <i class="bi bi-pencil-fill fs-7"></i>
+                                                <!--end::Icon-->
+                                                <!--begin::Inputs-->
+                                                <input type="file" name="gambar" accept=".png, .jpg, .jpeg">
+                                                <input type="hidden" name="gambar">
+                                                <!--end::Inputs-->
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Cancel-->
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" aria-label="Cancel avatar" data-bs-original-title="Cancel avatar" data-kt-initialized="1">
+                                                <i class="bi bi-x fs-2"></i>
+                                            </span>
+                                            <!--end::Cancel-->
+                                            <!--begin::Remove-->
+                                            <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" aria-label="Remove avatar" data-bs-original-title="Remove avatar" data-kt-initialized="1">
+                                                <i class="bi bi-x fs-2"></i>
+                                            </span>
+                                            <!--end::Remove-->
+                                        </div>
+                                        <!--end::Image input-->
+                                        <!--begin::Description-->
+                                        <div class="text-muted fs-7">Set the category thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                                        <!--end::Description-->
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="judul" style="color:black" class="form-label">Judul</label>
@@ -135,9 +132,9 @@
                                     <select class="form-select" name="kategori" data-control="select2" data-placeholder="Select an option" @error('kategori') is-invalid
                                     @enderror id="kategori">
                                         <option></option>
-                                        <option value="1">Pendidikan</option>
-                                        <option value="2">Bencana</option>
-                                        <option value="2">Lainnya</option>
+                                        <option value="Pendidikan">Pendidikan</option>
+                                        <option value="Bencana">Bencana</option>
+                                        <option value="Lainnya">Lainnya</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -199,6 +196,26 @@
                                 @enderror
                                 <input type="tujuanDana" class="form-control" name="tujuanDana" @error('tujuanDana') is-invalid
                                 @enderror id="tujuanDana">
+                              </div>
+                              <div class="mb-3">
+                                <label for="rincian" style="color:black" class="form-label">Rincian</label>
+                                @error('rincian')
+                                  <div class='invalid-feedback'>
+                                      {{ $message }}
+                                  </div>
+                                @enderror
+                                <input type="rincian" class="form-control" name="rincian" @error('rincian') is-invalid
+                                @enderror id="rincian">
+                              </div>
+                              <div class="mb-3">
+                                <label for="ajakan" style="color:black" class="form-label">Ajakan</label>
+                                @error('ajakan')
+                                  <div class='invalid-feedback'>
+                                      {{ $message }}
+                                  </div>
+                                @enderror
+                                <input type="ajakan" class="form-control" name="ajakan" @error('ajakan') is-invalid
+                                @enderror id="ajakan">
                               </div>
                             <input type="submit" class="btn btn-primary" value="Save">
                           </form>

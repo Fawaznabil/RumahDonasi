@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\adminController;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class adminController
 {
@@ -19,17 +20,64 @@ class adminController
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $totalDana = donasi::sum('total_donasi');
-        $totalUser = User::where('role','customer')->count();
-        $totalProgram = campaign::count();
-        // $donasiTertinggi = DB::table('users')
-        //                 ->select('donasi', DB::raw('MAX(total_donasi)'))
-        //                 ->groupBy('donasi')
-        //                 ->havingRaw('MAX(total_donasi)', [1,5])
-        //                 ->get();
-        return view('admin.index-admin', compact(['totalDana','totalUser','totalProgram']));
-    }
+{
+    $totalDana = Donasi::sum('total_donasi');
+    $totalUser = User::where('role', 'customer')->count();
+    $totalProgram = Campaign::count();
+
+    // $nominalTerbanyak = Donasi::join('users', 'donasis.id_user', '=', 'users.id')
+    // ->select(
+    // 'donasis.nama',
+    // DB::raw('SUM(donasis.total_donasi) as total'),
+    // )->where('donasis.status', 'Paid')
+    // ->groupBy('donasis.id_user')
+    // ->orderBy('total', 'desc')
+    // ->limit(5)
+    // ->get();
+
+    // $nominalTerbanyak = Donasi::join('users', 'donasis.id_user', '=', 'users.id')
+    // ->select('donasis.id_user', 'donasis.nama', DB::raw('SUM(donasis.total_donasi) as total'))
+    // ->where('donasis.status', 'Paid')
+    // ->groupBy('donasis.id_user', 'donasis.nama')
+    // ->orderBy('total', 'desc')
+    // ->limit(5)
+    // ->get();
+    $nominalTerbanyak = Donasi::join('users', 'donasis.id_user', '=', 'users.id')
+    ->select('users.name', DB::raw('SUM(donasis.total_donasi) as total'))
+    ->where('donasis.status', 'Paid')
+    ->groupBy('donasis.id_user', 'users.name')
+    ->orderBy('total', 'desc')
+    ->limit(5)
+    ->get();
+
+    $donasiTerbanyak = Donasi::join('users', 'donasis.id_user', '=', 'users.id')
+    ->select('users.name', DB::raw('SUM(donasis.total_donasi) as total'), DB::raw('COUNT(donasis.id) as jumlah_donasi'))
+    ->where('donasis.status', 'Paid')
+    ->groupBy('donasis.id_user', 'users.name')
+    ->orderBy('total', 'desc')
+    ->limit(5)
+    ->get();
+
+    // $donasiTerbanyak = Donasi::join('users', 'donasis.id_user', '=', 'users.id')
+    // ->select('donasis.id_user', 'donasis.nama', DB::raw('SUM(donasis.total_donasi) as total'), DB::raw('COUNT(donasis.id) as jumlah_donasi'))
+    // ->where('donasis.status', 'Paid')
+    // ->groupBy('donasis.id_user', 'donasis.nama')
+    // ->orderBy('total', 'desc')
+    // ->limit(5)
+    // ->get();
+
+
+    // $donasiTerbanyak = Donasi::with('user')
+    //     ->select('id_user', 'donasis.nama', DB::raw('SUM(total_donasi) as total'))
+    //     ->where('status', 'Paid')
+    //     ->groupBy('id_user')
+    //     ->orderBy('total', 'desc')
+    //     ->limit(5)
+    //     ->get();
+
+    return view('admin.index-admin', compact(['totalDana', 'totalUser', 'totalProgram', 'nominalTerbanyak', 'donasiTerbanyak']));
+}
+
 
     public function masterUser()
     {
@@ -37,19 +85,41 @@ class adminController
         return view('admin.master-user', compact(['dataUser']));
     }
 
-    public function updateUser()
+    public function updateUser(Request $request)
     {
-        User::find(request('ID_User'))->update([
-            'nik'=>request('nik'),
-            'name'=>request('name'),
-            'alamat'=>request('alamat'),
-            'notelepon'=>request('notelepon'),
-            'email'=>request('email'),
-            'password'=>request('password'),
-            'role'=>request('roles')
-            //'email_verified_at'=>request('statusUser')
-        ]);
-        return back()->withSuccess('success');
+
+        // User::find(request('ID_User'))->update([
+        //     'nik'=>request('nik'),
+        //     'name'=>request('name'),
+        //     'alamat'=>request('alamat'),
+        //     'notelepon'=>request('notelepon'),
+        //     'email'=>request('email'),
+        //     'password'=>request('password'),
+        //     'role'=>request('role')
+        //     //'photo'=>request('photo')
+        //     //'email_verified_at'=>request('statusUser')
+        // ]);
+
+        // return back()->withSuccess('success');
+
+        $data = [
+            'nik' => $request->input('nik'),
+            'name' => $request->input('name'),
+            'alamat' => $request->input('alamat'),
+            'email' => $request->input('email'),
+            'email_verified_at' => $request->input('email_verified_at')
+        ];
+
+        $request['password']= bcrypt( $request['password']);
+        $idUser = $request->input('ID_User');
+        $user = User::find($idUser);
+
+        if ($user) {
+            $user->update($data);
+            return back()->with('success', 'Data updated successfully.');
+        } else {
+            return back()->with('error', 'Failed to update data. News not found.');
+        }
     }
 
     public function deleteUser()
@@ -60,9 +130,40 @@ class adminController
 
     public function masterProgram()
     {
+
+        $dataProgram = DB::table('campaigns')
+    ->leftJoin('donasis', 'campaigns.id', '=', 'donasis.id_campaign')
+    ->select(
+        'campaigns.id',
+        'campaigns.id_user',
+        'campaigns.namaLembaga',
+        'campaigns.kategori',
+        'campaigns.target',
+        'campaigns.batasWaktu',
+        'campaigns.tujuan',
+        'campaigns.manfaat',
+        'campaigns.rincian',
+        'campaigns.deskripsiPenggalangan',
+        'campaigns.ajakan',
+        'campaigns.tujuanDana',
+        'campaigns.judul',
+        'campaigns.gambar',
+        'campaigns.statusPengajuan',
+        'campaigns.statusCampaign',
+        'campaigns.created_at',
+        DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
+        DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
+        DB::raw('DATEDIFF(campaigns.batasWaktu,CURDATE()) AS sisa_hari'),
+        DB::raw('COALESCE(SUM(donasis.total_donasi), 0) / campaigns.target * 100 AS presentasi'),
+    )
+
+    ->groupBy('campaigns.id')
+    ->get();
+
         $status1 = campaign::where('statusPengajuan','belum-verifikasi')->get();
         $status2 = campaign::where('statusPengajuan','terverifikasi')->get();
-        $dataProgram = campaign::all() ;
+        // $dataProgram = campaign::all();
+
         return view('admin.master-program', compact(['status1','status2','dataProgram']));
     }
 
@@ -70,7 +171,7 @@ class adminController
     {
         campaign::find(request('ID_Program'))->update([
             'judul'=>request('judul'),
-            'kategori'=>request('kategori'),
+            'namaLembaga'=>request('namaLembaga'),
             'tujuan'=>request('tujuan'),
             'manfaat'=>request('manfaat'),
             'tujuanDana'=>request('tujuanDana'),
@@ -78,7 +179,6 @@ class adminController
             'ajakan'=>request('ajakan'),
             'deskripsiPenggalangan'=>request('deskripsiPenggalangan'),
             'statusPengajuan'=>request('status1'),
-            'statusCampaign'=>request('status2')
         ]);
         return back()->withSuccess('success');
     }
@@ -121,31 +221,61 @@ class adminController
 
     public function masterNews()
     {
+        $campaigner = campaign::all();
         $dataNews = news::all() ;
-        return view('admin.master-news', compact(['dataNews']));
+        return view('admin.master-news', compact(['dataNews','campaigner']));
     }
 
-    public function updateNews()
+    public function updateNews(Request $request)
     {
-        news::find(request('ID_Program'))->update([
-            'judul'=>request('judul'),
-            'kategori'=>request('kategori'),
-            'tujuan'=>request('tujuan'),
-            'manfaat'=>request('manfaat'),
-            'tujuanDana'=>request('tujuanDana'),
-            'rincian'=>request('rincian'),
-            'ajakan'=>request('ajakan'),
-            'deskripsiPenggalangan'=>request('deskripsiPenggalangan'),
-            'statusPengajuan'=>request('status1'),
-            'statusCampaign'=>request('status2')
-        ]);
-        return back()->withSuccess('success');
+        $data = [
+            'title' => $request->input('title'),
+            'body' => $request->input('body'),
+            'slug' => $request->input('slug'),
+            'category' => $request->input('category'),
+            'namaCampaigner' => $request->input('namaCampaigner')
+        ];
+
+        if ($request->hasFile('gambar1')) {
+            $gambar = $request->file('gambar1');
+            $gambarFolder = 'gambar_folder';
+            $gambarName = $gambar->getClientOriginalName();
+            $gambar->move($gambarFolder, $gambarName);
+            $data['gambar1'] = $gambarName;
+        }
+
+        $idNews = $request->input('ID_News');
+        $news = news::find($idNews);
+
+        if ($news) {
+            $news->update($data);
+            return back()->with('success', 'Data updated successfully.');
+        } else {
+            return back()->with('error', 'Failed to update data. News not found.');
+        }
+
+
+        // news::find(request('ID_News'))->update([
+        //     'title'=>request('title'),
+        //     'body'=>request('body'),
+        //     'slug'=>request('slug'),
+        //     'category'=>request('category'),
+        //     'namaCampaigner'=>request('namaCampaigner'),
+        //     'gambar1'=>$request->file
+        // ]);
+        // return back()->withSuccess('success');
     }
 
     public function deleteNews()
     {
-        news::find(request('ID_Program'))->delete();
-        return back()->withSuccess('Program berhasil dihapus');
+        news::find(request('ID_News'))->delete();
+        return back()->withSuccess('News berhasil dihapus');
+    }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(news::class, 'slug', $request->title);
+        return response()->json(['slug' => $slug]);
     }
 
 

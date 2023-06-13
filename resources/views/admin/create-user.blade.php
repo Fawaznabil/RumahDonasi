@@ -62,6 +62,44 @@
                         <form action="storeUser" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
+                                <label for="gambar" style="color:black" class="form-label">Input Foto</label>
+                                <div class="card-body text-center pt-0">
+                                    <!--begin::Image input-->
+                                    <!--begin::Image input placeholder-->
+                                    <style>.image-input-placeholder { background-image: url('dist/assets/media/svg/files/blank-image.svg'); } [data-bs-theme="dark"] .image-input-placeholder { background-image: url('dist/assets/media/svg/files/blank-image-dark.svg'); }</style>
+                                    <!--end::Image input placeholder-->
+                                    <!--begin::Image input-->
+                                    <div class="image-input image-input-empty image-input-outline image-input-placeholder mb-3" data-kt-image-input="true">
+                                        <!--begin::Preview existing avatar-->
+                                        <div class="image-input-wrapper w-150px h-150px"></div>
+                                        <!--end::Preview existing avatar-->
+                                        <!--begin::Label-->
+                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" aria-label="Change avatar" data-bs-original-title="Change avatar" data-kt-initialized="1">
+                                            <i class="bi bi-pencil-fill fs-7"></i>
+
+                                            <input type="file" name="photo" accept=".png, .jpg, .jpeg">
+                                            <input type="hidden" name="photo">
+
+                                        </label>
+                                        <!--end::Label-->
+                                        <!--begin::Cancel-->
+                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" aria-label="Cancel avatar" data-bs-original-title="Cancel avatar" data-kt-initialized="1">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span>
+                                        <!--end::Cancel-->
+                                        <!--begin::Remove-->
+                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" aria-label="Remove avatar" data-bs-original-title="Remove avatar" data-kt-initialized="1">
+                                            <i class="bi bi-x fs-2"></i>
+                                        </span>
+                                        <!--end::Remove-->
+                                    </div>
+                                    <!--end::Image input-->
+                                    <!--begin::Description-->
+                                    <div class="text-muted fs-7">Set the category thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted</div>
+                                    <!--end::Description-->
+                                </div>
+                            </div>
+                            <div class="mb-3">
                                 <label for="nik" style="color:black" class="form-label">NIK</label>
                                 @error('nik')
                                   <div class='invalid-feedback'>

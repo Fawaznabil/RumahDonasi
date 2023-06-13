@@ -42,94 +42,6 @@
 								<!--begin::Actions-->
 								<div class="d-flex align-items-center py-2">
 									<!--begin::Wrapper-->
-									<div class="me-4">
-										<!--begin::Menu-->
-										<a href="#" class="btn btn-sm btn-flex btn-light btn-active-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-										<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-										<span class="svg-icon svg-icon-5 svg-icon-gray-500 me-1">
-											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
-											</svg>
-										</span>
-										<!--end::Svg Icon-->Filter</a>
-										<!--begin::Menu 1-->
-										<div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_63d0dab50f621">
-											<!--begin::Header-->
-											<div class="px-7 py-5">
-												<div class="fs-5 text-dark fw-bold">Filter Options</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Menu separator-->
-											<div class="separator border-gray-200"></div>
-											<!--end::Menu separator-->
-											<!--begin::Form-->
-											<div class="px-7 py-5">
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Status:</label>
-													<!--end::Label-->
-													<!--begin::Input-->
-													<div>
-														<select class="form-select form-select-solid" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_63d0dab50f621" data-allow-clear="true">
-															<option></option>
-															<option value="1">Approved</option>
-															<option value="2">Pending</option>
-															<option value="2">In Process</option>
-															<option value="2">Rejected</option>
-														</select>
-													</div>
-													<!--end::Input-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Member Type:</label>
-													<!--end::Label-->
-													<!--begin::Options-->
-													<div class="d-flex">
-														<!--begin::Options-->
-														<label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-															<input class="form-check-input" type="checkbox" value="1" />
-															<span class="form-check-label">Author</span>
-														</label>
-														<!--end::Options-->
-														<!--begin::Options-->
-														<label class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="2" checked="checked" />
-															<span class="form-check-label">Customer</span>
-														</label>
-														<!--end::Options-->
-													</div>
-													<!--end::Options-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Notifications:</label>
-													<!--end::Label-->
-													<!--begin::Switch-->
-													<div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-														<input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked" />
-														<label class="form-check-label">Enabled</label>
-													</div>
-													<!--end::Switch-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Actions-->
-												<div class="d-flex justify-content-end">
-													<button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-													<button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-												</div>
-												<!--end::Actions-->
-											</div>
-											<!--end::Form-->
-										</div>
-										<!--end::Menu 1-->
-										<!--end::Menu-->
-									</div>
 									<!--end::Wrapper-->
 								</div>
 								<!--end::Actions-->
@@ -157,7 +69,7 @@
 													</svg>
 												</span>
 												<!--end::Svg Icon-->
-												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search Donatur" />
+												<input type="text" data-kt-customer-table-filter="search" class="form-control form-control-solid w-250px ps-15" placeholder="Search User" />
 											</div>
 											<!--end::Search-->
 										</div>
@@ -167,16 +79,6 @@
 											<!--begin::Toolbar-->
 											<div class="d-flex justify-content-end" data-kt-customer-table-toolbar="base">
 												<!--begin::Filter-->
-												<div class="w-150px me-3">
-													<!--begin::Select2-->
-													<select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Status" data-kt-ecommerce-order-filter="status">
-														<option></option>
-														<option value="all">All</option>
-														<option value="active">Active</option>
-														<option value="locked">Locked</option>
-													</select>
-													<!--end::Select2-->
-												</div>
 												<!--end::Filter-->
 												<!--begin::Add customer-->
 												<a href="/createUser" class="btn btn-primary">Add User</a>
@@ -207,6 +109,7 @@
 															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
 														</div>
 													</th>
+                                                    <th class="min-w-125px">Photo</th>
                                                     <th class="min-w-125px">ID_User</th>
 													<th class="min-w-125px">NIK</th>
 													<th class="min-w-125px">Nama Lengkap</th>
@@ -226,11 +129,25 @@
 											<tbody class="fw-semibold text-gray-600">
                                                 @foreach ($dataUser as $user)
                                                 <tr>
+
 													<td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
 															<input class="form-check-input" type="checkbox" value="1" />
 														</div>
 													</td>
+
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="symbol symbol-45px me-5">
+                                                                @if ($user->photo === "assets/ava-icon-dark.png" )
+                                                                <img src="{{asset(Auth::user()->photo)}}" alt="">
+                                                                @elseif ($user->photo !== 0 )
+                                                                <img src="{{asset('/gambar_folder/'.$user->photo)}}" alt="">
+                                                                @endif
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
                                                     <td>{{ $user->id }}</td>
                                                     <td>{{ $user->nik }}</td>
                                                     <td>{{ $user->name }}</td>
@@ -399,11 +316,11 @@
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
-                                                                        <div class="row mb-10">
+                                                                        {{-- <div class="row mb-10">
                                                                             <!--begin::Col-->
                                                                             <div class="col-md-12 fv-row">
                                                                                 <!--begin::Label-->
-                                                                                <label class="fs-6 fw-semibold form-label mb-2">Role</label>
+                                                                                <label class="fs-6 fw-semibold form-label mb-2">Status</label>
                                                                                 <!--end::Label-->
                                                                                 <div class="d-flex">
                                                                                     <div class="input-group  mb-5" id="#role">
@@ -413,10 +330,10 @@
                                                                                             <div
                                                                                                 class="form-check form-check-custom form-check-solid">
                                                                                                 <input class="form-check-input"
-                                                                                                    type="radio" name="roles"
+                                                                                                    type="radio" name="role"
                                                                                                     value="admin" @if($user->role === "admin") checked @endif />
                                                                                                 <label class="form-check-label"
-                                                                                                    for="flexRadioDefault">Admin
+                                                                                                    for="role">Admin
                                                                                                 </label>
                                                                                             </div>
                                                                                         </div>
@@ -425,19 +342,19 @@
                                                                                                 class="form-check form-check-custom form-check-solid">
 
                                                                                                 <input class="form-check-input"
-                                                                                                    type="radio" name="roles"
+                                                                                                    type="radio" name="role"
                                                                                                     value="customer" @if($user->role === "customer") checked @endif />
                                                                                                 <label class="form-check-label"
-                                                                                                    for="flexRadioDefault">User
+                                                                                                    for="role">User
                                                                                                 </label>
                                                                                             </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div> --}}
                                                                         <!--end::Col-->
                                                                         <!--begin::Input group-->
-                                                                        {{-- <div class="row mb-10">
+                                                                        <div class="row mb-10">
                                                                             <!--begin::Col-->
                                                                             <div class="col-md-12 fv-row">
                                                                                 <!--begin::Label-->
@@ -452,7 +369,7 @@
                                                                                                 class="form-check form-check-custom form-check-solid">
                                                                                                 <input class="form-check-input"
                                                                                                     type="radio" name="statusUser"
-                                                                                                    value="locked" @if($user->email_verified_at === 0) checked @endif />
+                                                                                                    value="locked" @if($user->email_verified_at == 0) checked @endif />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Locked
                                                                                                 </label>
@@ -464,7 +381,7 @@
 
                                                                                                 <input class="form-check-input"
                                                                                                     type="radio" name="statusUser"
-                                                                                                    value="active" @if($user->email_verified_at !== 0 ) checked @endif />
+                                                                                                    value="active" @if($user->email_verified_at != 0 ) checked @endif />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Active
                                                                                                 </label>
@@ -473,7 +390,7 @@
 																				</div>
                                                                             </div>
                                                                             <!--end::Col-->
-                                                                        </div> --}}
+                                                                        </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Actions-->
                                                                         <div class="text-center pt-15">

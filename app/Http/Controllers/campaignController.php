@@ -38,7 +38,7 @@ class campaignController extends Controller
     {
         // dd($request->all());
         $data = [
-            //'id_user' =>Auth::user()->id,
+            'id_user' =>Auth::user()->id,
             'kategori' => $request->kategori,
             'judul' => $request->judul,
             'target' => $request->target,
@@ -47,7 +47,9 @@ class campaignController extends Controller
             'manfaat' => $request->manfaat,
             'gambar' => $request->gambar,
             'deskripsiPenggalangan' => $request->deskripsiPenggalangan,
-            'tujuanDana' => $request->tujuanDana
+            'tujuanDana' => $request->tujuanDana,
+            'rincian' => $request->rincian,
+            'ajakan' => $request->ajakan
         ];
 
         $gambar = $request->file('gambar');
@@ -57,7 +59,7 @@ class campaignController extends Controller
         $data['gambar'] = $gambarName;
 
         campaign::create($data);
-        return redirect('/admin/master-campaign');
+        return redirect('/admin/master-program');
     }
 
     /**

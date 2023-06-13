@@ -436,7 +436,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                 @endauth
                 </div>
             </div>
-            @endif
             @endforeach
         </div>
 
@@ -509,7 +508,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                     @endauth
                     </div>
                 </div>
-                @endif
                 @endforeach
             </div><br><br>
 
@@ -533,152 +531,76 @@ https://templatemo.com/tm-581-kind-heart-charity
             <section class="news-section section-padding" id="section_5">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-12 col-12 mb-5">
-                            <h2>Blogs</h2>
+                            <h2>News</h2>
                         </div>
-
+                        @foreach ($top as $data)
                         <div class="col-lg-7 col-12">
                             <div class="news-block">
                                 <div class="news-block-top">
-                                    <a href="news-detail.html">
-                                        <img src="{{ asset('assets/7.jpeg')}}" class="news-image img-fluid" alt="">
+                                    <a href="">
+                                        <img src="{{asset('/gambar_folder/'.$data->gambar1)}}"
+                                        class="news-image img-fluid" alt="">
                                     </a>
 
                                     <div class="news-category-block">
-                                        <a href="#" class="category-block-link">
-                                            Donation,
-                                        </a>
-                                        <a href="#" class="category-block-link">
-                                            Bencana
+                                        <a class="category-block-link">
+                                            {{ $data->namaCampaigner }}
                                         </a>
                                     </div>
                                 </div>
 
                                 <div class="news-block-info">
                                     <div class="d-flex mt-2">
-                                        <div class="news-block-date">
+                                        <div class="news-block-category">
                                             <p>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                                </svg>
-                                                October 12, 2036
+                                                <i class="bi bi-list custom-icon me-1"></i>
+                                                {{ $data->category }}
                                             </p>
                                         </div>
 
-                                        <div class="news-block-author mx-5">
+                                        <div class="news-block-date mx-5">
                                             <p>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                                </svg>
-                                                By Admin
+                                                <i class="bi-calendar4 custom-icon me-1"></i>
+                                                {{ $data->created_at }}
                                             </p>
                                         </div>
 
-                                        {{-- <div class="news-block-comment">
-                                        <p>
-                                            <i class="bi-chat-left custom-icon me-1"></i>
-                                            32 Comments
-                                        </p>
-                                    </div> --}}
-                                    </div>
-
-                                    <div class="news-block-title mb-2">
-                                        <h4><a href="news-detail.html" class="news-block-title-link">Campaign Bencana
-                                                menuju
-                                                surga</a></h4>
-                                    </div>
-
-                                    <div class="news-block-body">
-                                        <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                            Professional charity theme based on Bootstrap</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="news-block mt-3">
-                                <div class="news-block-top">
-                                    <a href="news-detail.html">
-                                        <img src="{{ asset('assets/6.jpeg')}}" class="news-image img-fluid" alt="">
-                                    </a>
-
-                                    <div class="news-category-block">
-                                        <a href="#" class="category-block-link">
-                                            Donation,
-                                        </a>
-                                        <a href="#" class="category-block-link">
-                                            Pendidikan
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="news-block-info">
-                                    <div class="d-flex mt-2">
-                                        <div class="news-block-date">
+                                        <div class="news-block-author mx-2">
                                             <p>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                                </svg>
-                                                October 20, 2036
-                                            </p>
-                                        </div>
-
-                                        <div class="news-block-author mx-5">
-                                            <p>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                                                </svg>
-                                                By Admin
+                                                <i class="bi-person custom-icon me-1"></i>
+                                                {{ $data->author }}
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="news-block-title mb-2">
-                                        <h4><a href="news-detail.html" class="news-block-title-link">Campaign Pendidikan
-                                                Is
-                                                the best</a>
-                                        </h4>
+                                        <h4><a href="/newsDetail/{{ $data->slug }}" class="news-block-title-link">
+                                        {{ $data->title }}</a></h4>
                                     </div>
 
                                     <div class="news-block-body">
-                                        <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis
-                                            metus
-                                            elementum, tempor risus vel, condimentum orci</p>
+                                        <p>{{ $data->excerpt }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                        @endforeach
                         <div class="col-lg-4 col-12 mx-auto">
-                            <form class="custom-form search-form" action="#" method="post" role="form">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-
-                                <button type="submit" class="form-control">
-                                    <i class="bi-search"></i>
-                                </button>
-                            </form>
-
                             <h5 class="mt-5 mb-3">Recent news</h5>
 
+                            @foreach ($top as $item)
                             <div class="news-block news-block-two-col d-flex mt-4">
                                 <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="{{ asset('assets/8.jpg')}}" class="news-image img-fluid" alt="">
+                                    <a>
+                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}" class="news-image img-fluid" alt="">
                                     </a>
                                 </div>
 
                                 <div class="news-block-two-col-info">
                                     <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Food donation
-                                                area</a>
+                                        <h6><a href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
+                                            {{ $item->title }}</a>
                                         </h6>
                                     </div>
 
@@ -689,75 +611,13 @@ https://templatemo.com/tm-581-kind-heart-charity
                                                 <path
                                                     d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
                                             </svg>
-                                            October 16, 2036
+                                            {{ $item->created_at }}
                                         </p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="news-block news-block-two-col d-flex mt-4">
-                                <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="{{ asset('assets/2.jpeg')}}" class="news-image img-fluid" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="news-block-two-col-info">
-                                    <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Volunteering
-                                                Clean</a>
-                                        </h6>
-                                    </div>
-
-                                    <div class="news-block-date">
-                                        <p>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-                                            </svg>
-                                            October 24, 2036
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="category-block d-flex flex-column">
-                                <h5 class="mb-3">Categories</h5>
-
-                                <a href="#" class="category-block-link">
-                                    Donation
-                                    <span class="badge">20</span>
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Bencana
-                                    <span class="badge">30</span>
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Pendidikan
-                                    <span class="badge">10</span>
-                                </a>
-                            </div>
-
-                            <div class="tags-block">
-                                <h5 class="mb-3">Tags</h5>
-
-                                <a href="#" class="tags-block-link">
-                                    Donation
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Bencana
-                                </a>
-
-                                <a href="#" class="tags-block-link">
-                                    Pendidikan
-                                </a>
-                            </div>
+                            @endforeach
                         </div>
-
                     </div>
                 </div>
             </section>

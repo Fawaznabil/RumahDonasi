@@ -23,6 +23,13 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $guarded=['id'];
 
+
+        public function donasi()
+    {
+        return $this->hasMany(donasi::class);
+    }
+
+
     protected $fillable = [
         'name',
         'email',
@@ -53,11 +60,6 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    public function donasi()
-    {
-        return $this->hasMany(donasi::class);
-    }
 
     public function campaign()
     {

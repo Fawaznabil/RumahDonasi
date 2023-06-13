@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
-use App\Models\campaign;
-use App\Models\donasi;
+use App\Models\news;
 use App\Models\User;
-use Illuminate\Support\Facades\DB;
+use App\Models\donasi;
+use App\Models\campaign;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class formCampaignController
@@ -27,6 +28,7 @@ class formCampaignController
         'campaigns.id as id_campaign',
         'campaigns.judul',
         'gambar',
+        'statusPengajuan',
         DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
         DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
         'campaigns.target',
@@ -44,6 +46,7 @@ class formCampaignController
         'campaigns.id as id_campaign',
         'campaigns.judul',
         'gambar',
+        'statusPengajuan',
         DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
         DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
         'campaigns.target',
@@ -51,6 +54,7 @@ class formCampaignController
         DB::raw('DATEDIFF(campaigns.batasWaktu,CURDATE()) AS sisa_hari'),
         DB::raw('COALESCE(SUM(donasis.total_donasi), 0) / campaigns.target * 100 AS presentasi'),
     )
+
     ->where('campaigns.kategori', 'pendidikan')
     ->groupBy('campaigns.id')
     ->get();
@@ -58,12 +62,16 @@ class formCampaignController
 
     $totalDonasi = donasi::count();
     $totalCampaign = campaign::count();
+    $news = news::all();
+    $top = news::orderBy('created_at', 'desc')->take(3)->get();
 
          return view("index-login",[
             "totalCampaign" => $totalCampaign,
             "totalDonasi" => $totalDonasi,
             "bencana" => $bencana ,
             "pendidikan" => $pendidikan,
+            "news" => $news,
+            'top' => $top
         ]);
      }
 
@@ -75,6 +83,7 @@ class formCampaignController
         'campaigns.id as id_campaign',
         'campaigns.judul',
         'gambar',
+        'statusPengajuan',
         DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
         DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
         'campaigns.target',
@@ -92,6 +101,7 @@ class formCampaignController
         'campaigns.id as id_campaign',
         'campaigns.judul',
         'gambar',
+        'statusPengajuan',
         DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
         DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
         'campaigns.target',
@@ -103,16 +113,22 @@ class formCampaignController
     ->groupBy('campaigns.id')
     ->get();
 
+
+
     // dd($pendidikan);
 
     $totalDonasi = donasi::count();
     $totalCampaign = campaign::count();
+    $news = news::all();
+    $top = news::orderBy('created_at', 'desc')->take(3)->get();
 
         return view("index",[
             "totalDonasi" => $totalDonasi,
             "totalCampaign" => $totalCampaign,
             "bencana" => $bencana ,
             "pendidikan" => $pendidikan,
+            "news" => $news,
+            'top' => $top
             // "data" => campaign::all(),
             // "bencana" => campaign::where('kategori', 'bencana')->get(),
             // "pendidikan" => campaign::where('kategori', 'pendidikan')->get(),

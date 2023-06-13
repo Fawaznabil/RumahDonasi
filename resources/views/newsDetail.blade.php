@@ -87,13 +87,13 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
                             <div class="news-block-top">
-                                {{-- <a href="news-detail.html">
-                                    <img src={{ $news->gambar1 }}
-                                        class="news-image img-fluid" alt="">
-                                </a> --}}
+                                <a href="">
+                                    <img src="{{asset('/gambar_folder/'.$news->gambar1)}}"
+                                    class="news-image img-fluid" alt="">
+                                </a>
 
                                 <div class="news-category-block">
-                                    <a href="#" class="category-block-link">
+                                    <a class="category-block-link">
                                         {{ $news->namaCampaigner }}
                                     </a>
                                 </div>
@@ -112,7 +112,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <div class="news-block-date mx-5">
                                         <p>
                                             <i class="bi-calendar4 custom-icon me-1"></i>
-                                            {{ $news->tanggal }}
+                                            {{ $news->created_at }}
                                         </p>
                                     </div>
 
@@ -133,69 +133,36 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     {!!$news->body !!}
                                 </div>
                             </div>
-
-                            <div class="row mt-5 mb-4">
-                                <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                                    <img src="asset/images/news/africa-humanitarian-aid-doctor.jpg"
-                                        class="news-detail-image img-fluid" alt="">
-                                </div>
-
-                                <div class="col-lg-6 col-12">
-                                    <img src="asset/images/news/close-up-happy-people-working-together.jpg"
-                                        class="news-detail-image img-fluid" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-12 mx-auto mt-4 mt-lg-0">
-                        <h5 class="mt-5 mb-3">Donasi Lainnya</h5>
+                        <h5 class="mt-5 mb-3">Recent News</h5>
 
-                        <div class="news-block news-block-two-col d-flex mt-4">
-                            <div class="news-block-two-col-image-wrap">
-                                <a href="news-detail.html">
-                                    <img src="asset/images/news/africa-humanitarian-aid-doctor.jpg"
-                                        class="news-image img-fluid" alt="">
-                                </a>
-                            </div>
-
-                            <div class="news-block-two-col-info">
-                                <div class="news-block-title mb-2">
-                                    <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
-                                    </h6>
+                            @foreach ($top as $item)
+                            <div class="news-block news-block-two-col d-flex mt-4">
+                                <div class="news-block-two-col-image-wrap">
+                                    <a>
+                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}" class="news-image img-fluid" alt="">
+                                    </a>
                                 </div>
 
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 16, 2036
-                                    </p>
+                                <div class="news-block-two-col-info">
+                                    <div class="news-block-title mb-2">
+                                        <h6><a href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
+                                            {{ $item->title }}</a>
+                                        </h6>
+                                    </div>
+
+                                    <div class="news-block-date">
+                                        <p>
+                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                            {{ $item->created_at }}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="news-block news-block-two-col d-flex mt-4">
-                            <div class="news-block-two-col-image-wrap">
-                                <a href="news-detail.html">
-                                    <img src="asset/images/news/close-up-happy-people-working-together.jpg"
-                                        class="news-image img-fluid" alt="">
-                                </a>
-                            </div>
-
-                            <div class="news-block-two-col-info">
-                                <div class="news-block-title mb-2">
-                                    <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a>
-                                    </h6>
-                                </div>
-
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 20, 2036
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                            @endforeach
                     </div>
 
                 </div>

@@ -17,10 +17,27 @@ class AuthController
     public function post_login(Request $request)
     {
         // dd($request->all());
-        if(Auth::attempt($request->only('email','password'))){
+        $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required'
+        ]);
+
+        if (Auth::attempt(array('email' => $request->email, 'password' => $request->password, 'role' => 'customer'))) {
+            $request->session()->regenerate();
             return redirect('/Home');
+            
+        }else if (Auth::attempt(array('email' => $request->email, 'password' => $request->password, 'role' => 'admin'))) {
+            $request->session()->regenerate();
+            return redirect('/admin');
         }
         return redirect('/sign-in');
+        // if(Auth::attempt($request->only('email','password','role'=='user'))){
+        //     return redirect('/Home');
+        // }
+        // elseif(Auth::attempt($request->only('email','password','role'=='admin'))){
+        //     return redirect('/admin');
+        // }
+        // return redirect('/sign-in');
     }
 
     public function logout(){

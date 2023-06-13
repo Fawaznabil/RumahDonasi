@@ -126,10 +126,10 @@ https://templatemo.com/tm-581-kind-heart-charity
                     <div class="col-lg-7 col-12">
                         <div class="news-block">
                             <div class="news-block-top">
-                                {{-- <a href="news-detail.html">
-                                    <img src={{ $data->gambar1 }}
+                                <a href="news-detail.html">
+                                    <img src="{{asset('/gambar_folder/'.$data->gambar1)}}"
                                         class="news-image img-fluid" alt="">
-                                </a> --}}
+                                </a>
 
                                 <div class="news-category-block">
                                     <a href="#" class="category-block-link">
@@ -151,11 +151,11 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <div class="news-block-date mx-5">
                                         <p>
                                             <i class="bi-calendar4 custom-icon me-1"></i>
-                                            {{ $data->tanggal }}
+                                            {{ $data->created_at }}
                                         </p>
                                     </div>
 
-                                    <div class="news-block-author mx-5">
+                                    <div class="news-block-author mx-2">
                                         <p>
                                             <i class="bi-person custom-icon me-1"></i>
                                             {{ $data->author }}

@@ -11,17 +11,10 @@
     <title>Kind Heart Charity - Free Bootstrap 5.2.2 CSS Template</title>
 
     <!-- CSS FILES -->
-<<<<<<< Updated upstream
-    <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
-    <link href="{{ asset('style1.css') }}" rel="stylesheet">
-=======
     <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
     <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
     <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
->>>>>>> Stashed changes
 
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
@@ -373,19 +366,9 @@ https://templatemo.com/tm-581-kind-heart-charity
             </div>
         </section>
         <div class="slider">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
             @foreach ($bencana as $item )
-            <div class="card" style="max-width: 330px;min-height: 700px">
-=======
-            @foreach ($data as $item )
             @if ($item->statusPengajuan == "Terverifikasi")
-            <div class="card" style="max-width: 330px">
->>>>>>> Stashed changes
-=======
-            @foreach ($data as $item )
-            <div class="card" style="max-width: 330px">
->>>>>>> Stashed changes
+            <div class="card" style="max-width: 330px;min-height: 700px">
                 <img src="{{asset('/gambar_folder/'.$item->gambar)}}" alt="Card 2" style="max-height: 2000px">
                 <div class="custom-block-body" style="display: grid;grid-template-rows:90px 50px 100px">
 
@@ -448,29 +431,14 @@ https://templatemo.com/tm-581-kind-heart-charity
             </section>
 
             <div class="slider">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
                 @foreach ($pendidikan as $item )
+                @if ($item->statusPengajuan == "Terverifikasi")
                 <div class="card" style="max-width: 330px;min-height: 700px">
                     <img src="{{asset('/gambar_folder/'.$item->gambar)}}" alt="Card 2" style="max-height: 2000px">
                     <div class="custom-block-body" style="display: grid;grid-template-rows:90px 50px 100px">
 
                         <a href="/detailDonasi/{{$item->id_campaign}}"
                             style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
-=======
-                @foreach ($data as $item )
-                @if ($item->statusPengajuan == "terverifikasi")
-=======
-                @foreach ($data as $item )
->>>>>>> Stashed changes
-                <div class="card" style="max-width: 330px">
-                    <img src="{{asset('/gambar_folder/'.$item->gambar)}}"  alt="Card 2" style="max-height: 2000px">
-                    <div class="custom-block-body" >
-                        <a href="" style="text-align: left"><strong>{{ $item->judul }}</a></strong>
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
                         <div class="progress mt-4">
                             <div class="progress-bar" style="width: {{ $item->presentasi }}%" role="progressbar"

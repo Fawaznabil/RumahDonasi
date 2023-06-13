@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\news;
 use App\Models\campaign;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StorenewsRequest;
 use App\Http\Requests\UpdatenewsRequest;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class NewsController extends Controller
 {
@@ -21,6 +24,7 @@ class NewsController extends Controller
         return view('news', [
             "title" => "News",
             "news" => News::all()
+
         ]);
     }
 
@@ -43,26 +47,26 @@ class NewsController extends Controller
      */
     public function storeNews(Request $request)
     {
-        //dd($request->all());
-        $validatedData = $request->validate([
-            'title'=> 'required',
-            'excerpt'=> 'required',
-            'body'=> 'required',
-            'slug'=> 'required',
-            'category'=> 'required',
-            'gambar1'=> 'required'
-        ]);
-
+        //($request->all());
+        $data = [
+            'id_user' =>Auth::user()->id,
+            'title' => $request->title,
+            'body' => $request->body,
+            'slug' => $request->slug,
+            'category' => $request->category,
+            'gambar1' => $request->gambar1,
+            'namaCampaigner' => $request->namaCampaigner,
+        ];
 
         $gambar = $request->file('gambar1');
         $gambarFolder = 'gambar_folder';
         $gambarName = $gambar->getClientOriginalName();
         $gambar->move($gambarFolder, $gambarName);
         $data['gambar1'] = $gambarName;
+        $data['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
-        //$validatedData['ID_User'] = Auth::user()->id;
-        news::create($validatedData);
-        $request->session()->flash('success', 'Data user berhasil ditambahkan!');
+        news::create($data);
+        $request->session()->flash('success', 'News berhasil ditambahkan!');
         return redirect('/admin/master-news');
     }
 
@@ -74,10 +78,19 @@ class NewsController extends Controller
      */
     public function show(news  $news)
     {
+        $top = news::orderBy('created_at', 'desc')->take(3)->get();
         return view('newsDetail', [
             "title" => "Single News",
-            "news" => $news
+            "news" => $news,
+            'top' => $top
+
         ]);
+    }
+
+    public function checkSlug(Request $request)
+    {
+        $slug = SlugService::createSlug(news::class, 'slug', $request->title);
+        return response()->json(['slug' => $slug]);
     }
 
     /**
