@@ -12,10 +12,8 @@
 
     <!-- CSS FILES -->
     <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="css/css/css/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="css/css/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
     <link href="style1.css" rel="stylesheet">
     <!--
 
@@ -109,8 +107,14 @@ https://templatemo.com/tm-581-kind-heart-charity
         <section class="section-padding" id="section_3">
             <div class="container mb-5">
                 <div class="row">
+<<<<<<< Updated upstream
                     @foreach ($pendidikan as $item )
                     <div class="col-lg-4 col-md-6 col-12 mb-40 mb-lg-0 mt-5">
+=======
+                    @foreach ($data as $item)
+                    @if($item->statusPengajuan == "terverifikasi")
+                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+>>>>>>> Stashed changes
                         <div class="custom-block-wrap">
                             <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid"
                                 alt="">
@@ -163,6 +167,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                             </div>
                         </div>
                     </div>
+                    @endif
                     @endforeach
                 </div>
             </div>

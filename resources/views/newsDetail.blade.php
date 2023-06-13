@@ -11,10 +11,10 @@
     <title>Kind Heart Charity - News Listing</title>
 
     <!-- CSS FILES -->
-    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
-    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
-    <link href="style1.css" rel="stylesheet">
+    <link href="../css/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="../style1.css" rel="stylesheet">
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -29,7 +29,7 @@ https://templatemo.com/tm-581-kind-heart-charity
     <nav class="navbar navbar-expand-lg bg-light shadow-lg">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
+                <img src="assets/mitra-logo-pink309.png" class="logo img-fluid" alt="">
                 <span>
                     Kind Heart Charity
                     <small>Non-profit Organization</small>
@@ -68,161 +68,145 @@ https://templatemo.com/tm-581-kind-heart-charity
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Donate</a>
+                        <a class="nav-link " href="login">Donate</a>
                     </li>
-
-                    @if(Auth::check())
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
-                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Akun
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
-                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
-                        </ul>
-                    </li>
-                    @else
 
                     <li class="nav-item">
                         <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
-                    @endif
                 </ul>
             </div>
         </div>
     </nav>
-
     <main>
 
-        <section class="news-detail-header-section text-center">
-            <div class="section-overlay"></div>
-
+        <section class="news-section section-padding">
             <div class="container">
                 <div class="row">
 
-                    <div class="col-lg-12 col-12">
-                        <h1 class="text-white">Campaign Pendidikan</h1>
-                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="news-block">
+                            <div class="news-block-top">
+                                {{-- <a href="news-detail.html">
+                                    <img src={{ $news->gambar1 }}
+                                        class="news-image img-fluid" alt="">
+                                </a> --}}
 
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding" id="section_3">
-<<<<<<< Updated upstream
-            <div class="container mb-5">
-                <div class="row">
-                    @foreach ($pendidikan as $item )
-                    <div class="col-lg-4 col-md-6 col-12 mb-40 mb-lg-0 mt-5">
-=======
-            <div class="container mt-5">
-                <div class="row">
-                    @foreach ($data as $item)
-                    @if($item->statusPengajuan == "terverifikasi")
-                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
->>>>>>> Stashed changes
-                        <div class="custom-block-wrap">
-                            <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid"
-                                alt="">
-
-                            <div class="custom-block">
-<<<<<<< Updated upstream
-                                <div class="custom-block-body" style="display: grid;grid-template-rows:90px 50px 100px">
-                                    @auth
-                                    <a href="/detailDonasi/{{$item->id_campaign}}" style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
-                                    @else
-                                    <a href="/detailDonasilogin/{{$item->id_campaign}}" style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
-                                    @endauth
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar" style="width: {{ $item->presentasi }}%" role="progressbar" aria-valuenow=""
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0">
-                                            <strong
-                                                style="text-align: center; color:rgb(46, 88, 152);font-size:14px">Dana
-                                                Terkumpul</strong><br>
-                                            <strong style="color: rgb(81, 79, 79);font-size:14px; text-align:left">Rp
-                                                {{ $item->total_donasi }}</strong>
-                                        </p>
-                                        <p class="ms-auto mb-0">
-                                            <strong
-                                                style="text-align: right; color:rgb(46, 88, 152);font-size:14px;">Target</strong><br><br>
-                                            <strong style="color: rgb(81, 79, 79);font-size:14px">Rp.
-                                                {{ number_format($item->target) }}</strong>
-                                        </p>
-                                    </div>
-                                    <hr>
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0" style="color: black; font-size:15px">
-                                            <strong>{{ $item->namaLembaga }}</strong><br>
-                                        </p>
-
-                                    </div><br>
-=======
-                                <div class="custom-block-body">
-                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
-                                    <strong>{{ $item->judul }}</strong>
-
-                                    <div class="progress mt-4">
-                                        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
->>>>>>> Stashed changes
-
-                                    <div class="d-flex align-items-center my-2">
-                                        <p class="mb-0" style="color: rgb(197, 21, 21); font-size:12px">
-                                            <strong>{{ $item->sisa_hari }} Hari lagi</strong>
-                                        </p>
-                                        <p class="ms-auto mb-0" style="color:rgb(101, 101, 101);font-size:12px">
-                                            <strong>{{ $item->jumlah_donatur }} Donatur</strong>
-                                        </p>
-                                    </div>
-
+                                <div class="news-category-block">
+                                    <a href="#" class="category-block-link">
+                                        {{ $news->namaCampaigner }}
+                                    </a>
                                 </div>
-                                @auth
-                    <a href="/donate/{{$item->id_campaign}}" class="custom-btn btn">Donate now</a>
-                @else
-                    <a href="/sign-in" class="custom-btn btn">Donate now</a>
-                @endauth
+                            </div>
+
+                            <div class="news-block-info">
+                                <div class="d-flex mt-2">
+
+                                    <div class="news-block-category">
+                                        <p>
+                                            <i class="bi bi-list custom-icon me-1"></i>
+                                            {{ $news->category }}
+                                        </p>
+                                    </div>
+
+                                    <div class="news-block-date mx-5">
+                                        <p>
+                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                            {{ $news->tanggal }}
+                                        </p>
+                                    </div>
+
+                                    <div class="news-block-author mx-5">
+                                        <p>
+                                            <i class="bi-person custom-icon me-1"></i>
+                                            {{ $news->author }}
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="news-block-title mb-2">
+                                    <h4><a class="news-block-title-link">
+                                    {{ $news->title }}</a></h4>
+                                </div>
+
+                                <div class="news-block-body">
+                                    {!!$news->body !!}
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 mb-4">
+                                <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                                    <img src="asset/images/news/africa-humanitarian-aid-doctor.jpg"
+                                        class="news-detail-image img-fluid" alt="">
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <img src="asset/images/news/close-up-happy-people-working-together.jpg"
+                                        class="news-detail-image img-fluid" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-<<<<<<< Updated upstream
-                    @endforeach
-=======
-                    @endif
-                    @endforeach
 
->>>>>>> Stashed changes
+                    <div class="col-lg-4 col-12 mx-auto mt-4 mt-lg-0">
+                        <h5 class="mt-5 mb-3">Donasi Lainnya</h5>
+
+                        <div class="news-block news-block-two-col d-flex mt-4">
+                            <div class="news-block-two-col-image-wrap">
+                                <a href="news-detail.html">
+                                    <img src="asset/images/news/africa-humanitarian-aid-doctor.jpg"
+                                        class="news-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="news-block-two-col-info">
+                                <div class="news-block-title mb-2">
+                                    <h6><a href="news-detail.html" class="news-block-title-link">Food donation area</a>
+                                    </h6>
+                                </div>
+
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        October 16, 2036
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="news-block news-block-two-col d-flex mt-4">
+                            <div class="news-block-two-col-image-wrap">
+                                <a href="news-detail.html">
+                                    <img src="asset/images/news/close-up-happy-people-working-together.jpg"
+                                        class="news-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="news-block-two-col-info">
+                                <div class="news-block-title mb-2">
+                                    <h6><a href="news-detail.html" class="news-block-title-link">Volunteering Clean</a>
+                                    </h6>
+                                </div>
+
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        October 20, 2036
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-            {{-- Pagination --}}
-            <div class="col-lg-4 col-12 mx-auto">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination pagination-lg justify-content-center mt-5">
-                        {{ $pendidikan->links() }}
-                    </ul>
-                </nav>
         </section>
-
-
-
     </main>
-
     <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-12 mb-4">
-                    <img src="images/logo.png" class="logo img-fluid" alt="">
+                    <img src="asset/images/logo.png" class="logo img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-12 mb-4">
@@ -317,6 +301,14 @@ https://templatemo.com/tm-581-kind-heart-charity
     <script src="js/js/js/click-scroll.js"></script>
     <script src="js/js/js/counter.js"></script>
     <script src="js/js/js/custom.js"></script>
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+        })
+    </script>
 
 </body>
 

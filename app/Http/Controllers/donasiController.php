@@ -112,8 +112,29 @@ class donasiController
 
     public function create()
     {
-        //
+        return view('admin.create-campaign');
     }
+
+    public function createDonasi()
+    {
+        $campaign = campaign::all();
+        return view('admin.create-donasi', compact(['campaign']));
+    }
+
+    public function storeDonasi(Request $request)
+    {
+        $validatedData = $request->validate([
+            'namaCampaign'=> 'required',
+            'jumlahDonasi'=> 'required',
+            'doaDonasi'=> 'required'
+        ]);
+
+        $validatedData['ID_User'] = Auth::user()->id;
+        donasi::create($validatedData);
+        $request->session()->flash('success', 'Data user berhasil ditambahkan!');
+        return redirect('/admin/master-donasi');
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -123,23 +144,29 @@ class donasiController
      */
     public function store(Request $request)
     {
-        $data = [
-            'NAMA_PEMESANAN'=>$request->nama_pemesanan,
-            'JUDUL' => $request->judul,
-            'ASAL_INSTANSI' => $request->asal_instansi,
-            'DESKRIPSI' => $request->deskripsi,
-            'JENIS_KONTEN' => $request->jenis_konten,
-            'id_user' => $request->id_user,
-            'TGL_UPLOAD' => $request->tgl_upload,
-            'MEDIA' => $request->media,
-            'LINK_POSTER' => $request->link_poster,
-            'LINK_KONTEN' => $request->link_konten,
-            'JENIS_KONTEN' => $request->jenis_konten,
-        ];
+        $validatedData = $request->validate([
+            'judul'=> 'required',
+            'target'=> 'required',
+            'batasWaktu'=> 'required',
+            'tujuan'=> 'required',
+            'manfaat'=> 'required',
+            'rincian'=> 'required',
+            'gambar'=> 'required',
+            'deskripsiPenggalangan'=> 'required',
+            'ajakan'=> 'required',
+            'tujuanDana'=> 'required'
+        ]);
 
-        donasi::create($data);
-        $data = donasi::orderBy('id', 'desc')->get();
-        return view('admin')->with('data', $data);
+        $gambar = $request->file('gambar');
+        $gambarFolder = 'gambar_folder';
+        $gambarName = $gambar->getClientOriginalName();
+        $gambar->move($gambarFolder, $gambarName);
+        $validatedData['gambar'] = $gambarName;
+
+        $validatedData['ID_User'] = Auth::user()->id;
+        User::create($validatedData);
+        $request->session()->flash('success', 'Data user berhasil ditambahkan!');
+        return redirect('/admin/master-campaign');
     }
 
     /**

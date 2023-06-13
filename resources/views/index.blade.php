@@ -11,17 +11,18 @@
     <title>Kind Heart Charity - Free Bootstrap 5.2.2 CSS Template</title>
 
     <!-- CSS FILES -->
-    <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="css/css/css/bootstrap.min.css" rel="stylesheet">
+    <link href="asset/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="asset/css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/bootstrap-icons.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
     <link href="{{ asset('style1.css') }}" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     <style type="text/css">
         .slider {
             width: 80%;
@@ -435,6 +436,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                 @endauth
                 </div>
             </div>
+            @endif
             @endforeach
         </div>
 
@@ -452,6 +454,7 @@ https://templatemo.com/tm-581-kind-heart-charity
             </section>
 
             <div class="slider">
+
                 @foreach ($pendidikan as $item )
                 <div class="card" style="max-width: 330px;min-height: 700px">
                     <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid"
@@ -506,6 +509,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                     @endauth
                     </div>
                 </div>
+                @endif
                 @endforeach
             </div><br><br>
 

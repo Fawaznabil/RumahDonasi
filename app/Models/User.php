@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\admin;
+use App\Models\donasi;
+use App\Models\campaign;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -18,6 +21,8 @@ class User extends Authenticatable implements MustVerifyEmail
      *
      * @var array<int, string>
      */
+    protected $guarded=['id'];
+
     protected $fillable = [
         'name',
         'email',
@@ -57,6 +62,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function campaign()
     {
         return $this->hasMany(campaign::class);
+    }
+
+    public function admin()
+    {
+        return $this->hasMany(Admin::class,'user_id');
     }
 
     // public function pemesanan()

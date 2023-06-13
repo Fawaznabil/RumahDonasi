@@ -12,130 +12,8 @@
 									<!--begin::Title-->
 									<h1 class="d-flex flex-column text-dark fw-bold fs-3 mb-0">Dashboard</h1>
 									<!--end::Title-->
-									<!--begin::Breadcrumb-->
-									<ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 pt-1">
-										<!--begin::Item-->
-										<li class="breadcrumb-item text-muted">
-											<a href="../../demo10/dist/index.html" class="text-muted text-hover-primary">Home</a>
-										</li>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<li class="breadcrumb-item">
-											<span class="bullet bg-gray-200 w-5px h-2px"></span>
-										</li>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<li class="breadcrumb-item text-muted">Dashboards</li>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<li class="breadcrumb-item">
-											<span class="bullet bg-gray-200 w-5px h-2px"></span>
-										</li>
-										<!--end::Item-->
-										<!--begin::Item-->
-										<li class="breadcrumb-item text-dark">Default</li>
-										<!--end::Item-->
-									</ul>
-									<!--end::Breadcrumb-->
 								</div>
 								<!--end::Page title-->
-								<!--begin::Actions-->
-								<div class="d-flex align-items-center py-2">
-									<!--begin::Wrapper-->
-									<div class="me-4">
-										<!--begin::Menu-->
-										<a href="#" class="btn btn-sm btn-flex btn-light btn-active-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-										<!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-										<span class="svg-icon svg-icon-5 svg-icon-gray-500 me-1">
-											<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="currentColor" />
-											</svg>
-										</span>
-										<!--end::Svg Icon-->Filter</a>
-										<!--begin::Menu 1-->
-										<div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_63d0db1932754">
-											<!--begin::Header-->
-											<div class="px-7 py-5">
-												<div class="fs-5 text-dark fw-bold">Filter Options</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Menu separator-->
-											<div class="separator border-gray-200"></div>
-											<!--end::Menu separator-->
-											<!--begin::Form-->
-											<div class="px-7 py-5">
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Status:</label>
-													<!--end::Label-->
-													<!--begin::Input-->
-													<div>
-														<select class="form-select form-select-solid" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_63d0db1932754" data-allow-clear="true">
-															<option></option>
-															<option value="1">Approved</option>
-															<option value="2">Pending</option>
-															<option value="2">In Process</option>
-															<option value="2">Rejected</option>
-														</select>
-													</div>
-													<!--end::Input-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Member Type:</label>
-													<!--end::Label-->
-													<!--begin::Options-->
-													<div class="d-flex">
-														<!--begin::Options-->
-														<label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-															<input class="form-check-input" type="checkbox" value="1" />
-															<span class="form-check-label">Author</span>
-														</label>
-														<!--end::Options-->
-														<!--begin::Options-->
-														<label class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="2" checked="checked" />
-															<span class="form-check-label">Customer</span>
-														</label>
-														<!--end::Options-->
-													</div>
-													<!--end::Options-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Input group-->
-												<div class="mb-10">
-													<!--begin::Label-->
-													<label class="form-label fw-semibold">Notifications:</label>
-													<!--end::Label-->
-													<!--begin::Switch-->
-													<div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-														<input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked" />
-														<label class="form-check-label">Enabled</label>
-													</div>
-													<!--end::Switch-->
-												</div>
-												<!--end::Input group-->
-												<!--begin::Actions-->
-												<div class="d-flex justify-content-end">
-													<button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-													<button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-												</div>
-												<!--end::Actions-->
-											</div>
-											<!--end::Form-->
-										</div>
-										<!--end::Menu 1-->
-										<!--end::Menu-->
-									</div>
-									<!--end::Wrapper-->
-									<!--begin::Button-->
-									<a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Create</a>
-									<!--end::Button-->
-								</div>
-								<!--end::Actions-->
 							</div>
 							<!--end::Container-->
 						</div>
@@ -147,267 +25,100 @@
 								<!--begin::Row-->
 								<div class="row g-5 g-xl-8">
 									<!--begin::Col-->
-									<div class="col-xl-6">
+									<div class="col-xl-12">
 										<!--begin::Mixed Widget 12-->
-										<div class="card card-xl-stretch mb-5 mb-xl-8">
-											<!--begin::Header-->
-											<div class="card-header border-0 bg-danger py-5">
-												<h3 class="card-title fw-bold text-white">Infografis Website</h3>
-											</div>
+										<div class="card text-center card-xl-stretch mb-5 mb-xl-8">
 											<!--end::Header-->
 											<!--begin::Body-->
-											<div class="card-body p-0">
-												<!--begin::Chart-->
-												<div class="mixed-widget-12-chart card-rounded-bottom bg-danger" data-kt-color="danger" style="height: 200px"></div>
-												<!--end::Chart-->
-												<!--begin::Stats-->
-												<div class="card-rounded bg-body mt-n10 position-relative card-px py-15">
-													<!--begin::Row-->
-													<div class="row g-0 mb-7">
-														<!--begin::Col-->
-														<div class="col mx-5">
-															<div class="fs-6 text-gray-400">Avarage Sale</div>
-															<div class="fs-2 fw-bold text-gray-800">$650</div>
-														</div>
-														<!--end::Col-->
-														<!--begin::Col-->
-														<div class="col mx-5">
-															<div class="fs-6 text-gray-400">Comissions</div>
-															<div class="fs-2 fw-bold text-gray-800">$29,500</div>
-														</div>
-														<!--end::Col-->
-													</div>
-													<!--end::Row-->
-													<!--begin::Row-->
-													<div class="row g-0">
-														<!--begin::Col-->
-														<div class="col mx-5">
-															<div class="fs-6 text-gray-400">Revenue</div>
-															<div class="fs-2 fw-bold text-gray-800">$55,000</div>
-														</div>
-														<!--end::Col-->
-														<!--begin::Col-->
-														<div class="col mx-5">
-															<div class="fs-6 text-gray-400">Expenses</div>
-															<div class="fs-2 fw-bold text-gray-800">$1,130,600</div>
-														</div>
-														<!--end::Col-->
-													</div>
-													<!--end::Row-->
-												</div>
-												<!--end::Stats-->
-											</div>
+
+                                            <div class="card-body p-0">
+                                                <!--begin::Row-->
+                                                <div class="row g-0">
+                                                    <!--begin::Col-->
+                                                    <div class="col bg-light-primary px-6 py-8 rounded-2 me-7 mb-7">
+                                                        <!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
+                                                        <span class="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M8 22C7.4 22 7 21.6 7 21V9C7 8.4 7.4 8 8 8C8.6 8 9 8.4 9 9V21C9 21.6 8.6 22 8 22Z" fill="black" />
+                                                                <path opacity="0.3" d="M4 15C3.4 15 3 14.6 3 14V6C3 5.4 3.4 5 4 5C4.6 5 5 5.4 5 6V14C5 14.6 4.6 15 4 15ZM13 19V3C13 2.4 12.6 2 12 2C11.4 2 11 2.4 11 3V19C11 19.6 11.4 20 12 20C12.6 20 13 19.6 13 19ZM17 16V5C17 4.4 16.6 4 16 4C15.4 4 15 4.4 15 5V16C15 16.6 15.4 17 16 17C16.6 17 17 16.6 17 16ZM21 18V10C21 9.4 20.6 9 20 9C19.4 9 19 9.4 19 10V18C19 18.6 19.4 19 20 19C20.6 19 21 18.6 21 18Z" fill="black" />
+                                                            </svg>
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+<<<<<<< Updated upstream
+                                                        <a class="text-primary fw-bold fs-1">{{ $totalUser }}</a><br>
+                                                        <a class="text-primary  fs-6">Jumlah User</a>
+=======
+                                                        <a href="#" class="text-primary fw-bold fs-1">1</a><br>
+                                                        <a href="#" class="text-primary  fs-6">Jumlah User</a>
+>>>>>>> Stashed changes
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col bg-light-success px-6 py-8 rounded-2 me-7 mb-7">
+                                                        <!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
+                                                        <span class="svg-icon svg-icon-3x svg-icon-success d-block my-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M8 22C7.4 22 7 21.6 7 21V9C7 8.4 7.4 8 8 8C8.6 8 9 8.4 9 9V21C9 21.6 8.6 22 8 22Z" fill="black" />
+                                                                <path opacity="0.3" d="M4 15C3.4 15 3 14.6 3 14V6C3 5.4 3.4 5 4 5C4.6 5 5 5.4 5 6V14C5 14.6 4.6 15 4 15ZM13 19V3C13 2.4 12.6 2 12 2C11.4 2 11 2.4 11 3V19C11 19.6 11.4 20 12 20C12.6 20 13 19.6 13 19ZM17 16V5C17 4.4 16.6 4 16 4C15.4 4 15 4.4 15 5V16C15 16.6 15.4 17 16 17C16.6 17 17 16.6 17 16ZM21 18V10C21 9.4 20.6 9 20 9C19.4 9 19 9.4 19 10V18C19 18.6 19.4 19 20 19C20.6 19 21 18.6 21 18Z" fill="black" />
+                                                            </svg>
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+<<<<<<< Updated upstream
+                                                        <a class="text-success fw-bold fs-1">{{ formatRupiah($totalDana) }},-</a><br>
+                                                        <a class="text-success  fs-6">Total Dana Terkumpul</a>
+=======
+                                                        <a href="#" class="text-success fw-bold fs-1">Rp 10.000.000</a><br>
+                                                        <a href="#" class="text-success  fs-6">Total Dana Terkumpul</a>
+>>>>>>> Stashed changes
+                                                    </div>
+                                                    <!--end::Col-->
+                                                    <!--begin::Col-->
+                                                    <div class="col bg-light-danger px-6 py-8 rounded-2 me-7 mb-7">
+                                                        <!--begin::Svg Icon | path: icons/duotune/general/gen032.svg-->
+                                                        <span class="svg-icon svg-icon-3x svg-icon-danger d-block my-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path d="M8 22C7.4 22 7 21.6 7 21V9C7 8.4 7.4 8 8 8C8.6 8 9 8.4 9 9V21C9 21.6 8.6 22 8 22Z" fill="black" />
+                                                                <path opacity="0.3" d="M4 15C3.4 15 3 14.6 3 14V6C3 5.4 3.4 5 4 5C4.6 5 5 5.4 5 6V14C5 14.6 4.6 15 4 15ZM13 19V3C13 2.4 12.6 2 12 2C11.4 2 11 2.4 11 3V19C11 19.6 11.4 20 12 20C12.6 20 13 19.6 13 19ZM17 16V5C17 4.4 16.6 4 16 4C15.4 4 15 4.4 15 5V16C15 16.6 15.4 17 16 17C16.6 17 17 16.6 17 16ZM21 18V10C21 9.4 20.6 9 20 9C19.4 9 19 9.4 19 10V18C19 18.6 19.4 19 20 19C20.6 19 21 18.6 21 18Z" fill="black" />
+                                                            </svg>
+                                                        </span>
+                                                        <!--end::Svg Icon-->
+<<<<<<< Updated upstream
+                                                        <a class="text-danger fw-bold fs-1">{{ $totalProgram }}</a><br>
+                                                        <a class="text-danger  fs-6">Jumlah Program</a>
+=======
+                                                        <a href="#" class="text-danger fw-bold fs-1">1</a><br>
+                                                        <a href="#" class="text-danger  fs-6">Jumlah Program</a>
+>>>>>>> Stashed changes
+                                                    </div>
+                                                    <!--end::Col-->
+                                                </div>
+                                                <!--end::Row-->
+
+                                            </div>
 											<!--end::Body-->
 										</div>
 										<!--end::Mixed Widget 12-->
 									</div>
 									<!--end::Col-->
 									<!--begin::Col-->
-									<div class="col-xl-6">
-										<!--begin::Mixed Widget 5-->
-										<div class="card card-xxl-stretch mb-xl-8">
-											<!--begin::Beader-->
-											<div class="card-header border-0 py-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label fw-bold fs-3 mb-1">Campaign Unggulan</span>
-													<span class="text-muted fw-semibold fs-7"></span>
-												</h3>
-												<div class="card-toolbar">
-													<!--begin::Menu-->
-													<button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-														<!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-														<span class="svg-icon svg-icon-2">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																	<rect x="5" y="5" width="5" height="5" rx="1" fill="currentColor" />
-																	<rect x="14" y="5" width="5" height="5" rx="1" fill="currentColor" opacity="0.3" />
-																	<rect x="5" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3" />
-																	<rect x="14" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3" />
-																</g>
-															</svg>
-														</span>
-														<!--end::Svg Icon-->
-													</button>
-													<!--begin::Menu 3-->
-													<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
-														<!--begin::Heading-->
-														<div class="menu-item px-3">
-															<div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Payments</div>
-														</div>
-														<!--end::Heading-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3">
-															<a href="#" class="menu-link px-3">Create Invoice</a>
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3">
-															<a href="#" class="menu-link flex-stack px-3">Create Payment
-															<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a target name for future usage and reference"></i></a>
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3">
-															<a href="#" class="menu-link px-3">Generate Bill</a>
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-															<a href="#" class="menu-link px-3">
-																<span class="menu-title">Subscription</span>
-																<span class="menu-arrow"></span>
-															</a>
-															<!--begin::Menu sub-->
-															<div class="menu-sub menu-sub-dropdown w-175px py-4">
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Plans</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Billing</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Statements</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu separator-->
-																<div class="separator my-2"></div>
-																<!--end::Menu separator-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<div class="menu-content px-3">
-																		<!--begin::Switch-->
-																		<label class="form-check form-switch form-check-custom form-check-solid">
-																			<!--begin::Input-->
-																			<input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-																			<!--end::Input-->
-																			<!--end::Label-->
-																			<span class="form-check-label text-muted fs-6">Recuring</span>
-																			<!--end::Label-->
-																		</label>
-																		<!--end::Switch-->
-																	</div>
-																</div>
-																<!--end::Menu item-->
-															</div>
-															<!--end::Menu sub-->
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3 my-1">
-															<a href="#" class="menu-link px-3">Settings</a>
-														</div>
-														<!--end::Menu item-->
-													</div>
-													<!--end::Menu 3-->
-													<!--end::Menu-->
-												</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Body-->
-											<div class="card-body d-flex flex-column">
-												<!--begin::Chart-->
-												<div class="mixed-widget-5-chart card-rounded-top" data-kt-chart-color="info" style="height: 150px"></div>
-												<!--end::Chart-->
-												<!--begin::Items-->
-												<div class="mt-5">
-													<!--begin::Item-->
-													<div class="d-flex flex-stack mb-5">
-														<!--begin::Section-->
-														<div class="d-flex align-items-center me-2">
-															<!--begin::Symbol-->
-															<div class="symbol symbol-50px me-3">
-																<div class="symbol-label bg-light">
-																	<img src="dist/assets/media/svg/brand-logos/plurk.svg" class="h-50" alt="" />
-																</div>
-															</div>
-															<!--end::Symbol-->
-															<!--begin::Title-->
-															<div>
-																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Top Authors</a>
-																<div class="fs-7 text-muted fw-semibold mt-1">Ricky Hunt, Sandra Trepp</div>
-															</div>
-															<!--end::Title-->
-														</div>
-														<!--end::Section-->
-														<!--begin::Label-->
-														<div class="badge badge-light fw-semibold py-4 px-3">+82$</div>
-														<!--end::Label-->
-													</div>
-													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex flex-stack mb-5">
-														<!--begin::Section-->
-														<div class="d-flex align-items-center me-2">
-															<!--begin::Symbol-->
-															<div class="symbol symbol-50px me-3">
-																<div class="symbol-label bg-light">
-																	<img src="dist/assets/media/svg/brand-logos/figma-1.svg" class="h-50" alt="" />
-																</div>
-															</div>
-															<!--end::Symbol-->
-															<!--begin::Title-->
-															<div>
-																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Top Sales</a>
-																<div class="fs-7 text-muted fw-semibold mt-1">PitStop Emails</div>
-															</div>
-															<!--end::Title-->
-														</div>
-														<!--end::Section-->
-														<!--begin::Label-->
-														<div class="badge badge-light fw-semibold py-4 px-3">+82$</div>
-														<!--end::Label-->
-													</div>
-													<!--end::Item-->
-													<!--begin::Item-->
-													<div class="d-flex flex-stack">
-														<!--begin::Section-->
-														<div class="d-flex align-items-center me-2">
-															<!--begin::Symbol-->
-															<div class="symbol symbol-50px me-3">
-																<div class="symbol-label bg-light">
-																	<img src="dist/assets/media/svg/brand-logos/vimeo.svg" class="h-50" alt="" />
-																</div>
-															</div>
-															<!--end::Symbol-->
-															<!--begin::Title-->
-															<div class="py-1">
-																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Top Engagement</a>
-																<div class="fs-7 text-muted fw-semibold mt-1">KT.com</div>
-															</div>
-															<!--end::Title-->
-														</div>
-														<!--end::Section-->
-														<!--begin::Label-->
-														<div class="badge badge-light fw-semibold py-4 px-3">+82$</div>
-														<!--end::Label-->
-													</div>
-													<!--end::Item-->
-												</div>
-												<!--end::Items-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Mixed Widget 5-->
-									</div>
 									<!--end::Col-->
 								</div>
 								<!--end::Row-->
 								<!--begin::Row-->
 								<div class="row gy-5 g-xl-8">
 									<!--begin::Col-->
-									<div class="col-xl-4">
+									<div class="col-xl-6">
 										<!--begin::Tables Widget 9-->
 										<div class="card card-xl-stretch mb-5 mb-xl-8">
 											<!--begin::Header-->
 											<div class="card-header border-0 pt-5">
 												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label fw-bold fs-3 mb-1">Members Statistics</span>
-													<span class="text-muted mt-1 fw-semibold fs-7">Over 500 members</span>
+<<<<<<< Updated upstream
+													<span class="card-label fw-bold fs-3 mb-1">Donatur Nominal Tertinggi</span>
+=======
+													<span class="card-label fw-bold fs-3 mb-1">Daftar Donatur</span>
+>>>>>>> Stashed changes
+													<span class="text-muted mt-1 fw-semibold fs-7">5 Donatur dengan jumlah nominal tertinggi</span>
 												</h3>
 												<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top">
 													<a href="#" class="btn btn-sm btn-light btn-active-primary">
@@ -419,22 +130,31 @@
 											<div class="card-body py-3">
                                                 <div class="card-body pt-0">
 										<!--begin::Table-->
-										<div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="table-responsive"><table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer" id="kt_customers_table">
+										<div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="table-responsive"><table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer">
 											<!--begin::Table head-->
 											<thead>
 												<!--begin::Table row-->
-												<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0"><th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+												<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
 													" style="width: 29.9px;">
 														<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
 															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
 														</div>
-													</th><th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Customer Name: activate to sort column ascending" style="width: 151.95px;">Customer Name</th><th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 188.25px;">Email</th><th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Company: activate to sort column ascending" style="width: 167.1px;">Company</th><th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Payment Method: activate to sort column ascending" style="width: 151.95px;">Payment Method</th><th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 197.65px;">Created Date</th><th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 117.3px;">Actions</th></tr>
+												    </th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="NIK: activate to sort column ascending" style="width: 151.95px;">NIK</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Nama: activate to sort column ascending" style="width: 188.25px;">Nama</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Alamat: activate to sort column ascending" style="width: 167.1px;">Alamat</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="No. Hp : activate to sort column ascending" style="width: 151.95px;">No. Hp</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 197.65px;">Email</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Password: activate to sort column ascending" style="width: 197.65px;">Password</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 197.65px;">Created Date</th>
+                                                    <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 117.3px;">Actions</th></tr>
 												<!--end::Table row-->
 											</thead>
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<tbody class="fw-semibold text-gray-600">
-											<tr class="odd">
+											    <tr class="odd">
 													<!--begin::Checkbox-->
 													<td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
@@ -442,23 +162,22 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
 														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
 														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>-</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="mastercard">
-													<img src="assets/media/svg/card-logos/mastercard.svg" class="w-35px me-3" alt="">**** 4311</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td data-order="2020-12-14T20:43:00+07:00">14 Dec 2020, 8:43 pm</td>
 													<!--end::Date=-->
@@ -496,23 +215,22 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Melody Macy</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">melody@altbox.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>Google</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="visa">
-													<img src="assets/media/svg/card-logos/visa.svg" class="w-35px me-3" alt="">**** 8664</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td data-order="2020-12-01T10:12:00+07:00">01 Dec 2020, 10:12 am</td>
 													<!--end::Date=-->
@@ -550,23 +268,22 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Max Smith</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">max@kt.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>Bistro Union</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="mastercard">
-													<img src="assets/media/svg/card-logos/mastercard.svg" class="w-35px me-3" alt="">**** 4360</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td data-order="2020-11-12T14:01:00+07:00">12 Nov 2020, 2:01 pm</td>
 													<!--end::Date=-->
@@ -604,23 +321,22 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Sean Bean</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">sean@dellito.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>Astro Limited</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="american_express">
-													<img src="assets/media/svg/card-logos/american-express.svg" class="w-35px me-3" alt="">**** 3132</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td data-order="2020-10-21T17:54:00+07:00">21 Oct 2020, 5:54 pm</td>
 													<!--end::Date=-->
@@ -658,23 +374,22 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Brian Cox</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">brian@exchange.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>-</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="visa">
-													<img src="assets/media/svg/card-logos/visa.svg" class="w-35px me-3" alt="">**** 4931</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
 													<td data-order="2020-10-19T07:32:00+07:00">19 Oct 2020, 7:32 am</td>
 													<!--end::Date=-->
@@ -704,6 +419,120 @@
 														<!--end::Menu-->
 													</td>
 													<!--end::Action=-->
+												</tr></tbody>
+											<!--end::Table body-->
+										</table></div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div></div></div>
+										<!--end::Table-->
+									    </div>
+									    </div>
+											<!--begin::Body-->
+										</div>
+										<!--end::Tables Widget 9-->
+									</div>
+									<!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-xl-6">
+										<!--begin::Tables Widget 9-->
+										<div class="card card-xl-stretch mb-5 mb-xl-8">
+											<!--begin::Header-->
+											<div class="card-header border-0 pt-5">
+												<h3 class="card-title align-items-start flex-column">
+<<<<<<< Updated upstream
+													<span class="card-label fw-bold fs-3 mb-1">Donatur Transaksi Terbanyak</span>
+=======
+													<span class="card-label fw-bold fs-3 mb-1">Daftar Donatur</span>
+>>>>>>> Stashed changes
+													<span class="text-muted mt-1 fw-semibold fs-7">5 Donatur dengan jumlah transaksi terbanyak</span>
+												</h3>
+												<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top">
+													<a href="#" class="btn btn-sm btn-light btn-active-primary">
+													View All</a>
+												</div>
+											</div>
+											<!--end::Header-->
+											<!--begin::Body-->
+											<div class="card-body py-3">
+                                                <div class="card-body pt-0">
+										<!--begin::Table-->
+										<div id="kt_customers_table_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="table-responsive"><table class="table align-middle table-row-dashed fs-6 gy-5 dataTable no-footer">
+											<!--begin::Table head-->
+											<thead>
+												<!--begin::Table row-->
+												<tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                                    <th class="w-10px pe-2 sorting_disabled" rowspan="1" colspan="1" aria-label="
+													" style="width: 29.9px;">
+														<div class="form-check form-check-sm form-check-custom form-check-solid me-3">
+															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1">
+														</div>
+												    </th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="NIK: activate to sort column ascending" style="width: 151.95px;">NIK</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Nama: activate to sort column ascending" style="width: 188.25px;">Nama</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Alamat: activate to sort column ascending" style="width: 167.1px;">Alamat</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="No. Hp : activate to sort column ascending" style="width: 151.95px;">No. Hp</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Email: activate to sort column ascending" style="width: 197.65px;">Email</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Password: activate to sort column ascending" style="width: 197.65px;">Password</th>
+                                                    <th class="min-w-125px sorting" tabindex="0" aria-controls="kt_customers_table" rowspan="1" colspan="1" aria-label="Created Date: activate to sort column ascending" style="width: 197.65px;">Created Date</th>
+                                                    <th class="text-end min-w-70px sorting_disabled" rowspan="1" colspan="1" aria-label="Actions" style="width: 117.3px;">Actions</th></tr>
+												<!--end::Table row-->
+											</thead>
+											<!--end::Table head-->
+											<!--begin::Table body-->
+											<tbody class="fw-semibold text-gray-600">
+											    <tr class="odd">
+													<!--begin::Checkbox-->
+													<td>
+														<div class="form-check form-check-sm form-check-custom form-check-solid">
+															<input class="form-check-input" type="checkbox" value="1">
+														</div>
+													</td>
+													<!--end::Checkbox-->
+                                                    <td>1234</td>
+													<!--begin::Name=-->
+													<td>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
+													</td>
+													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
+													<!--begin::Email=-->
+													<td>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
+													</td>
+													<!--end::Email=-->
+													<!--begin::Company=-->
+													<td>***</td>
+													<!--end::Company=-->
+													<!--begin::Date=-->
+													<td data-order="2020-12-14T20:43:00+07:00">14 Dec 2020, 8:43 pm</td>
+													<!--end::Date=-->
+													<!--begin::Action=-->
+													<td class="text-end">
+														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+														<span class="svg-icon svg-icon-5 m-0">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
+															</svg>
+														</span>
+														<!--end::Svg Icon--></a>
+														<!--begin::Menu-->
+														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+															</div>
+															<!--end::Menu item-->
+															<!--begin::Menu item-->
+															<div class="menu-item px-3">
+																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+															</div>
+															<!--end::Menu item-->
+														</div>
+														<!--end::Menu-->
+													</td>
+													<!--end::Action=-->
 												</tr><tr class="even">
 													<!--begin::Checkbox-->
 													<td>
@@ -712,25 +541,24 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Mikaela Collins</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">mik@pex.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>Keenthemes</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="american_express">
-													<img src="assets/media/svg/card-logos/american-express.svg" class="w-35px me-3" alt="">**** 7533</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
-													<td data-order="2020-09-23T00:37:00+07:00">23 Sep 2020, 12:37 am</td>
+													<td data-order="2020-12-01T10:12:00+07:00">01 Dec 2020, 10:12 am</td>
 													<!--end::Date=-->
 													<!--begin::Action=-->
 													<td class="text-end">
@@ -766,25 +594,24 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Francis Mitcham</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">f.mit@kpmg.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>Paypal</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="mastercard">
-													<img src="assets/media/svg/card-logos/mastercard.svg" class="w-35px me-3" alt="">**** 4354</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
-													<td data-order="2020-09-11T15:15:00+07:00">11 Sep 2020, 3:15 pm</td>
+													<td data-order="2020-11-12T14:01:00+07:00">12 Nov 2020, 2:01 pm</td>
 													<!--end::Date=-->
 													<!--begin::Action=-->
 													<td class="text-end">
@@ -820,25 +647,24 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Olivia Wild</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">olivia@corpmail.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>-</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="american_express">
-													<img src="assets/media/svg/card-logos/american-express.svg" class="w-35px me-3" alt="">**** 8800</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
-													<td data-order="2020-09-03T01:08:00+07:00">03 Sep 2020, 1:08 am</td>
+													<td data-order="2020-10-21T17:54:00+07:00">21 Oct 2020, 5:54 pm</td>
 													<!--end::Date=-->
 													<!--begin::Action=-->
 													<td class="text-end">
@@ -874,79 +700,24 @@
 														</div>
 													</td>
 													<!--end::Checkbox-->
+                                                    <td>1234</td>
 													<!--begin::Name=-->
 													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Neil Owen</a>
+														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
 													</td>
 													<!--end::Name=-->
+                                                    <td>Jl.Barito</td>
+                                                    <td>08116837239</td>
 													<!--begin::Email=-->
 													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">owen.neil@gmail.com</a>
+														<a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
 													</td>
 													<!--end::Email=-->
 													<!--begin::Company=-->
-													<td>Paramount</td>
+													<td>***</td>
 													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="visa">
-													<img src="assets/media/svg/card-logos/visa.svg" class="w-35px me-3" alt="">**** 7871</td>
-													<!--end::Payment method=-->
 													<!--begin::Date=-->
-													<td data-order="2020-09-01T16:58:00+07:00">01 Sep 2020, 4:58 pm</td>
-													<!--end::Date=-->
-													<!--begin::Action=-->
-													<td class="text-end">
-														<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-														<span class="svg-icon svg-icon-5 m-0">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor"></path>
-															</svg>
-														</span>
-														<!--end::Svg Icon--></a>
-														<!--begin::Menu-->
-														<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="../../demo10/dist/apps/customers/view.html" class="menu-link px-3">View</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
-															</div>
-															<!--end::Menu item-->
-														</div>
-														<!--end::Menu-->
-													</td>
-													<!--end::Action=-->
-												</tr><tr class="even">
-													<!--begin::Checkbox-->
-													<td>
-														<div class="form-check form-check-sm form-check-custom form-check-solid">
-															<input class="form-check-input" type="checkbox" value="1">
-														</div>
-													</td>
-													<!--end::Checkbox-->
-													<!--begin::Name=-->
-													<td>
-														<a href="../../demo10/dist/apps/customers/view.html" class="text-gray-800 text-hover-primary mb-1">Dan Wilson</a>
-													</td>
-													<!--end::Name=-->
-													<!--begin::Email=-->
-													<td>
-														<a href="#" class="text-gray-600 text-hover-primary mb-1">dam@consilting.com</a>
-													</td>
-													<!--end::Email=-->
-													<!--begin::Company=-->
-													<td>Trinity Studio</td>
-													<!--end::Company=-->
-													<!--begin::Payment method=-->
-													<td data-filter="visa">
-													<img src="assets/media/svg/card-logos/visa.svg" class="w-35px me-3" alt="">**** 4398</td>
-													<!--end::Payment method=-->
-													<!--begin::Date=-->
-													<td data-order="2020-08-18T15:34:00+07:00">18 Aug 2020, 3:34 pm</td>
+													<td data-order="2020-10-19T07:32:00+07:00">19 Oct 2020, 7:32 am</td>
 													<!--end::Date=-->
 													<!--begin::Action=-->
 													<td class="text-end">
@@ -976,465 +747,15 @@
 													<!--end::Action=-->
 												</tr></tbody>
 											<!--end::Table body-->
-										</table></div><div class="row"><div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"><div class="dataTables_length" id="kt_customers_table_length"><label><select name="kt_customers_table_length" aria-controls="kt_customers_table" class="form-select form-select-sm form-select-solid"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label></div></div><div class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end"><div class="dataTables_paginate paging_simple_numbers" id="kt_customers_table_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="kt_customers_table_previous"><a href="#" aria-controls="kt_customers_table" data-dt-idx="0" tabindex="0" class="page-link"><i class="previous"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="kt_customers_table" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_customers_table" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_customers_table" data-dt-idx="3" tabindex="0" class="page-link">3</a></li><li class="paginate_button page-item "><a href="#" aria-controls="kt_customers_table" data-dt-idx="4" tabindex="0" class="page-link">4</a></li><li class="paginate_button page-item next" id="kt_customers_table_next"><a href="#" aria-controls="kt_customers_table" data-dt-idx="5" tabindex="0" class="page-link"><i class="next"></i></a></li></ul></div></div></div></div>
+										</table></div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start"></div></div></div>
 										<!--end::Table-->
-									</div>
+									    </div>
 									    </div>
 											<!--begin::Body-->
 										</div>
 										<!--end::Tables Widget 9-->
-									</div>
-									<!--end::Col-->
-                                    <!--begin::Col-->
-									<div class="col-xl-4">
-										<!--begin::List Widget 4-->
-										<div class="card card-xl-stretch mb-5 mb-xl-8">
-											<!--begin::Header-->
-											<div class="card-header border-0 pt-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label fw-bold text-dark">Trends</span>
-													<span class="text-muted mt-1 fw-semibold fs-7">Latest tech trends</span>
-												</h3>
-												<div class="card-toolbar">
-													<!--begin::Menu-->
-													<button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-														<!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
-														<span class="svg-icon svg-icon-2">
-															<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-																<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																	<rect x="5" y="5" width="5" height="5" rx="1" fill="currentColor" />
-																	<rect x="14" y="5" width="5" height="5" rx="1" fill="currentColor" opacity="0.3" />
-																	<rect x="5" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3" />
-																	<rect x="14" y="14" width="5" height="5" rx="1" fill="currentColor" opacity="0.3" />
-																</g>
-															</svg>
-														</span>
-														<!--end::Svg Icon-->
-													</button>
-													<!--begin::Menu 3-->
-													<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3" data-kt-menu="true">
-														<!--begin::Heading-->
-														<div class="menu-item px-3">
-															<div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">Payments</div>
-														</div>
-														<!--end::Heading-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3">
-															<a href="#" class="menu-link px-3">Create Invoice</a>
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3">
-															<a href="#" class="menu-link flex-stack px-3">Create Payment
-															<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a target name for future usage and reference"></i></a>
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3">
-															<a href="#" class="menu-link px-3">Generate Bill</a>
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-end">
-															<a href="#" class="menu-link px-3">
-																<span class="menu-title">Subscription</span>
-																<span class="menu-arrow"></span>
-															</a>
-															<!--begin::Menu sub-->
-															<div class="menu-sub menu-sub-dropdown w-175px py-4">
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Plans</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Billing</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<a href="#" class="menu-link px-3">Statements</a>
-																</div>
-																<!--end::Menu item-->
-																<!--begin::Menu separator-->
-																<div class="separator my-2"></div>
-																<!--end::Menu separator-->
-																<!--begin::Menu item-->
-																<div class="menu-item px-3">
-																	<div class="menu-content px-3">
-																		<!--begin::Switch-->
-																		<label class="form-check form-switch form-check-custom form-check-solid">
-																			<!--begin::Input-->
-																			<input class="form-check-input w-30px h-20px" type="checkbox" value="1" checked="checked" name="notifications" />
-																			<!--end::Input-->
-																			<!--end::Label-->
-																			<span class="form-check-label text-muted fs-6">Recuring</span>
-																			<!--end::Label-->
-																		</label>
-																		<!--end::Switch-->
-																	</div>
-																</div>
-																<!--end::Menu item-->
-															</div>
-															<!--end::Menu sub-->
-														</div>
-														<!--end::Menu item-->
-														<!--begin::Menu item-->
-														<div class="menu-item px-3 my-1">
-															<a href="#" class="menu-link px-3">Settings</a>
-														</div>
-														<!--end::Menu item-->
-													</div>
-													<!--end::Menu 3-->
-													<!--end::Menu-->
-												</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Body-->
-											<div class="card-body pt-5">
-												<!--begin::Item-->
-												<div class="d-flex align-items-sm-center mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50px me-5">
-														<span class="symbol-label">
-															<img src="dist/assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Section-->
-													<div class="d-flex align-items-center flex-row-fluid flex-wrap">
-														<div class="flex-grow-1 me-2">
-															<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top Authors</a>
-															<span class="text-muted fw-semibold d-block fs-7">Mark, Rowling, Esther</span>
-														</div>
-														<span class="badge badge-light fw-bold my-2">+82$</span>
-													</div>
-													<!--end::Section-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-sm-center mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50px me-5">
-														<span class="symbol-label">
-															<img src="dist/assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Section-->
-													<div class="d-flex align-items-center flex-row-fluid flex-wrap">
-														<div class="flex-grow-1 me-2">
-															<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Popular Authors</a>
-															<span class="text-muted fw-semibold d-block fs-7">Randy, Steve, Mike</span>
-														</div>
-														<span class="badge badge-light fw-bold my-2">+280$</span>
-													</div>
-													<!--end::Section-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-sm-center mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50px me-5">
-														<span class="symbol-label">
-															<img src="dist/assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Section-->
-													<div class="d-flex align-items-center flex-row-fluid flex-wrap">
-														<div class="flex-grow-1 me-2">
-															<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">New Users</a>
-															<span class="text-muted fw-semibold d-block fs-7">John, Pat, Jimmy</span>
-														</div>
-														<span class="badge badge-light fw-bold my-2">+4500$</span>
-													</div>
-													<!--end::Section-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-sm-center mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50px me-5">
-														<span class="symbol-label">
-															<img src="dist/assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Section-->
-													<div class="d-flex align-items-center flex-row-fluid flex-wrap">
-														<div class="flex-grow-1 me-2">
-															<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Active Customers</a>
-															<span class="text-muted fw-semibold d-block fs-7">Mark, Rowling, Esther</span>
-														</div>
-														<span class="badge badge-light fw-bold my-2">+686$</span>
-													</div>
-													<!--end::Section-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-sm-center mb-7">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50px me-5">
-														<span class="symbol-label">
-															<img src="dist/assets/media/svg/brand-logos/kickstarter.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Section-->
-													<div class="d-flex align-items-center flex-row-fluid flex-wrap">
-														<div class="flex-grow-1 me-2">
-															<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Bestseller Theme</a>
-															<span class="text-muted fw-semibold d-block fs-7">Disco, Retro, Sports</span>
-														</div>
-														<span class="badge badge-light fw-bold my-2">+726$</span>
-													</div>
-													<!--end::Section-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::List Widget 4-->
-									</div>
-									<!--end::Col-->
-                                    <!--begin::Col-->
-									<div class="col-xl-4">
-										<!--begin::List widget 21-->
-										<div class="card card-flush h-xl-100">
-											<!--begin::Header-->
-											<div class="card-header border-0 pt-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label fw-bold text-dark">Active Lessons</span>
-													<span class="text-muted mt-1 fw-semibold fs-7">Avg. 72% completed lessons</span>
-												</h3>
-												<!--begin::Toolbar-->
-												<div class="card-toolbar">
-													<a href="#" class="btn btn-sm btn-light">All Lessons</a>
-												</div>
-												<!--end::Toolbar-->
-											</div>
-											<!--end::Header-->
-											<!--begin::Body-->
-											<div class="card-body pt-5">
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="d-flex align-items-center me-3">
-														<!--begin::Logo-->
-														<img src="assets/media/svg/brand-logos/laravel-2.svg" class="me-4 w-30px" alt="" />
-														<!--end::Logo-->
-														<!--begin::Section-->
-														<div class="flex-grow-1">
-															<!--begin::Text-->
-															<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Laravel</a>
-															<!--end::Text-->
-															<!--begin::Description-->
-															<span class="text-gray-400 fw-semibold d-block fs-6">PHP Framework</span>
-															<!--end::Description=-->
-														</div>
-														<!--end::Section-->
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Statistics-->
-													<div class="d-flex align-items-center w-100 mw-125px">
-														<!--begin::Progress-->
-														<div class="progress h-6px w-100 me-2 bg-light-success">
-															<div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-														<!--end::Progress-->
-														<!--begin::Value-->
-														<span class="text-gray-400 fw-semibold">65%</span>
-														<!--end::Value-->
-													</div>
-													<!--end::Statistics-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Separator-->
-												<div class="separator separator-dashed my-3"></div>
-												<!--end::Separator-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="d-flex align-items-center me-3">
-														<!--begin::Logo-->
-														<img src="assets/media/svg/brand-logos/vue-9.svg" class="me-4 w-30px" alt="" />
-														<!--end::Logo-->
-														<!--begin::Section-->
-														<div class="flex-grow-1">
-															<!--begin::Text-->
-															<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Vue 3</a>
-															<!--end::Text-->
-															<!--begin::Description-->
-															<span class="text-gray-400 fw-semibold d-block fs-6">JS Framework</span>
-															<!--end::Description=-->
-														</div>
-														<!--end::Section-->
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Statistics-->
-													<div class="d-flex align-items-center w-100 mw-125px">
-														<!--begin::Progress-->
-														<div class="progress h-6px w-100 me-2 bg-light-warning">
-															<div class="progress-bar bg-warning" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-														<!--end::Progress-->
-														<!--begin::Value-->
-														<span class="text-gray-400 fw-semibold">87%</span>
-														<!--end::Value-->
-													</div>
-													<!--end::Statistics-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Separator-->
-												<div class="separator separator-dashed my-3"></div>
-												<!--end::Separator-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="d-flex align-items-center me-3">
-														<!--begin::Logo-->
-														<img src="assets/media/svg/brand-logos/bootstrap5.svg" class="me-4 w-30px" alt="" />
-														<!--end::Logo-->
-														<!--begin::Section-->
-														<div class="flex-grow-1">
-															<!--begin::Text-->
-															<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Bootstrap 5</a>
-															<!--end::Text-->
-															<!--begin::Description-->
-															<span class="text-gray-400 fw-semibold d-block fs-6">CSS Framework</span>
-															<!--end::Description=-->
-														</div>
-														<!--end::Section-->
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Statistics-->
-													<div class="d-flex align-items-center w-100 mw-125px">
-														<!--begin::Progress-->
-														<div class="progress h-6px w-100 me-2 bg-light-primary">
-															<div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-														<!--end::Progress-->
-														<!--begin::Value-->
-														<span class="text-gray-400 fw-semibold">44%</span>
-														<!--end::Value-->
-													</div>
-													<!--end::Statistics-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Separator-->
-												<div class="separator separator-dashed my-3"></div>
-												<!--end::Separator-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="d-flex align-items-center me-3">
-														<!--begin::Logo-->
-														<img src="assets/media/svg/brand-logos/angular-icon.svg" class="me-4 w-30px" alt="" />
-														<!--end::Logo-->
-														<!--begin::Section-->
-														<div class="flex-grow-1">
-															<!--begin::Text-->
-															<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Angular 13</a>
-															<!--end::Text-->
-															<!--begin::Description-->
-															<span class="text-gray-400 fw-semibold d-block fs-6">JS Framework</span>
-															<!--end::Description=-->
-														</div>
-														<!--end::Section-->
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Statistics-->
-													<div class="d-flex align-items-center w-100 mw-125px">
-														<!--begin::Progress-->
-														<div class="progress h-6px w-100 me-2 bg-light-info">
-															<div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-														<!--end::Progress-->
-														<!--begin::Value-->
-														<span class="text-gray-400 fw-semibold">70%</span>
-														<!--end::Value-->
-													</div>
-													<!--end::Statistics-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Separator-->
-												<div class="separator separator-dashed my-3"></div>
-												<!--end::Separator-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="d-flex align-items-center me-3">
-														<!--begin::Logo-->
-														<img src="assets/media/svg/brand-logos/spring-3.svg" class="me-4 w-30px" alt="" />
-														<!--end::Logo-->
-														<!--begin::Section-->
-														<div class="flex-grow-1">
-															<!--begin::Text-->
-															<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">Spring</a>
-															<!--end::Text-->
-															<!--begin::Description-->
-															<span class="text-gray-400 fw-semibold d-block fs-6">Java Framework</span>
-															<!--end::Description=-->
-														</div>
-														<!--end::Section-->
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Statistics-->
-													<div class="d-flex align-items-center w-100 mw-125px">
-														<!--begin::Progress-->
-														<div class="progress h-6px w-100 me-2 bg-light-danger">
-															<div class="progress-bar bg-danger" role="progressbar" style="width: 56%" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-														<!--end::Progress-->
-														<!--begin::Value-->
-														<span class="text-gray-400 fw-semibold">56%</span>
-														<!--end::Value-->
-													</div>
-													<!--end::Statistics-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Separator-->
-												<div class="separator separator-dashed my-3"></div>
-												<!--end::Separator-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack">
-													<!--begin::Wrapper-->
-													<div class="d-flex align-items-center me-3">
-														<!--begin::Logo-->
-														<img src="assets/media/svg/brand-logos/typescript-1.svg" class="me-4 w-30px" alt="" />
-														<!--end::Logo-->
-														<!--begin::Section-->
-														<div class="flex-grow-1">
-															<!--begin::Text-->
-															<a href="#" class="text-gray-800 text-hover-primary fs-5 fw-bold lh-0">TypeScript</a>
-															<!--end::Text-->
-															<!--begin::Description-->
-															<span class="text-gray-400 fw-semibold d-block fs-6">Better Tooling</span>
-															<!--end::Description=-->
-														</div>
-														<!--end::Section-->
-													</div>
-													<!--end::Wrapper-->
-													<!--begin::Statistics-->
-													<div class="d-flex align-items-center w-100 mw-125px">
-														<!--begin::Progress-->
-														<div class="progress h-6px w-100 me-2 bg-light-success">
-															<div class="progress-bar bg-success" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-														</div>
-														<!--end::Progress-->
-														<!--begin::Value-->
-														<span class="text-gray-400 fw-semibold">82%</span>
-														<!--end::Value-->
-													</div>
-													<!--end::Statistics-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::List widget 21-->
 									</div>
 									<!--end::Col-->
 								</div>

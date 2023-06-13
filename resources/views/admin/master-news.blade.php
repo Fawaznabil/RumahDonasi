@@ -179,7 +179,7 @@
 												</div>
 												<!--end::Filter-->
 												<!--begin::Add customer-->
-												<a href="/createUser" class="btn btn-primary">Add User</a>
+												<a href="/createNews" class="btn btn-primary">Add News</a>
 												<!--end::Add customer-->
 											</div>
 											<!--end::Toolbar-->
@@ -207,15 +207,17 @@
 															<input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_customers_table .form-check-input" value="1" />
 														</div>
 													</th>
-                                                    <th class="min-w-125px">ID_User</th>
-													<th class="min-w-125px">NIK</th>
-													<th class="min-w-125px">Nama Lengkap</th>
-                                                    <th class="min-w-125px">Alamat</th>
-                                                    <th class="min-w-125px">No. HP</th>
-                                                    <th class="min-w-125px">Email</th>
-                                                    <th class="min-w-125px">Password</th>
-                                                    <th class="min-w-125px">Role</th>
-													<th class="min-w-125px">Status</th>
+                                                    <th class="min-w-125px">ID_News</th>
+													<th class="min-w-125px">Judul Berita</th>
+													<th class="min-w-125px">Ringkasan Berita</th>
+                                                    <th class="min-w-125px">Isi Berita</th>
+                                                    <th class="min-w-125px">Slug Berita</th>
+                                                    <th class="min-w-125px">Kategori Berita</th>
+                                                    <th class="min-w-125px">Author</th>
+                                                    <th class="min-w-125px">Nama Campaigner</th>
+													<th class="min-w-125px">Gambar 1</th>
+                                                    <th class="min-w-125px">Gambar 2</th>
+                                                    <th class="min-w-125px">Gambar 3</th>
 													<th class="min-w-125px">Created Date</th>
 													<th class="text-end min-w-70px">Actions</th>
 												</tr>
@@ -224,34 +226,30 @@
 											<!--end::Table head-->
 											<!--begin::Table body-->
 											<tbody class="fw-semibold text-gray-600">
-                                                @foreach ($dataUser as $user)
+                                                @foreach ($dataNews as $news)
                                                 <tr>
 													<td>
 														<div class="form-check form-check-sm form-check-custom form-check-solid">
 															<input class="form-check-input" type="checkbox" value="1" />
 														</div>
 													</td>
-                                                    <td>{{ $user->id }}</td>
-                                                    <td>{{ $user->nik }}</td>
-                                                    <td>{{ $user->name }}</td>
-                                                    <td>{{ $user->alamat }}</td>
-                                                    <td>{{ $user->notelepon }}</td>
-                                                    <td>{{ $user->email }}</td>
-                                                    <td>{{ $user->password }}</td>
-                                                    <td>{{ $user->role }}</td>
-													<td>
-                                                        @if($user->email_verified_at == 0)
-														<div class="badge badge-light-danger">Locked</div>
-                                                        @elseif($user->email_verified_at != 0)
-                                                        <div class="badge badge-light-success">Active</div>
-                                                        @endif
-													</td>
-                                                    <td>{{ $user->created_at }}</td>
+                                                    <td>{{ $news->id }}</td>
+                                                    <td>{{ $news->title }}</td>
+                                                    <td>{{ $news->excerpt }}</td>
+                                                    <td>{{ $news->body }}</td>
+                                                    <td>{{ $news->slug }}</td>
+                                                    <td>{{ $news->category }}</td>
+                                                    <td>{{ $news->author }}</td>
+                                                    <td>{{ $news->namaCampaigner }}</td>
+                                                    <td>{{ $news->gambar1 }}</td>
+                                                    <td>{{ $news->gambar2}}</td>
+                                                    <td>{{ $news->gambar3 }}</td>
+                                                    <td>{{ $news->created_at }}</td>
 													<!--begin::Action=-->
 													<td class="text-end">
                                                         <div class="d-flex justify-content-end flex-shrink-0">
 														<!--begin::Edit-->
-                                                            <a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#updateUser{{ $user->id }}">
+                                                            <a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#updateUser{{ $news->id }}">
                                                                 <span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit">
                                                                     <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
                                                                     <span class="svg-icon svg-icon-3">
@@ -263,48 +261,25 @@
                                                                     <!--end::Svg Icon-->
                                                                 </span>
                                                             </a>
-                                                        <!--end::Edit-->
+                                                            <!--end::Edit-->
 
                                                             <!--begin::Delete-->
-                                                            <a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#deleteUser{{ $user->id }}">
-                                                                <span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Delete">
-                                                                    <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
-                                                                    <span class="svg-icon svg-icon-3">
-                                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
-                                                                            <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
-                                                                            <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
-                                                                        </svg>
-                                                                    </span>
+                                                            <a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="tooltip" title="Delete" data-kt-customer-payment-method="delete">
+                                                                <!--begin::Svg Icon | path: icons/duotune/general/gen027.svg-->
+                                                                <span class="svg-icon svg-icon-3">
+                                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
+                                                                        <path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
+                                                                        <path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
+                                                                    </svg>
                                                                 </span>
                                                                 <!--end::Svg Icon-->
                                                             </a>
-                                                            <form action="/delete-user" method="POST">
-                                                                    @csrf
-                                                                    <input type="hidden" value="{{ $user->id }}" name="ID_User">
-                                                                <div class="modal fade" id="deleteUser{{$user->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog">
-                                                                    <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Perhatian!</h1>
-                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                        <h1>Apakah anda yakin untuk menghapus ?</h1>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                        <button type="submit" class="btn btn-primary">Yes</button>
-                                                                        </div>
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
                                                         <!--end::Delete-->
                                                         </div>
 													</td>
                                                     <!--begin::Modal - New Card-->
-                                                    <div class="modal fade" id="updateUser{{ $user->id }}" tabindex="-1" aria-hidden="true">
+                                                    <div class="modal fade" id="updateUser{{ $news->id }}" tabindex="-1" aria-hidden="true">
                                                         <!--begin::Modal dialog-->
                                                         <div class="modal-dialog modal-dialog-centered mw-650px">
                                                             <!--begin::Modal content-->
@@ -331,9 +306,9 @@
                                                                 <!--begin::Modal body-->
                                                                 <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
                                                                     <!--begin::Form-->
-                                                                    <form id="kt_modal_new_card_form{{ $user->id }}" class="form" action="/update-user" method="post" enctype="multipart/form-data">
+                                                                    <form id="kt_modal_new_card_form{{ $news->id }}" class="form" action="/update-news" method="post" enctype="multipart/form-data">
                                                                         @csrf
-                                                                        <input type="hidden" value="{{ $user->id }}" name="ID_User">
+                                                                        <input type="hidden" value="{{ $news->id }}" name="ID_News">
                                                                         <!--begin::Input group-->
                                                                         <div class="d-flex flex-column mb-7 fv-row">
                                                                             <!--begin::Label-->
@@ -341,7 +316,7 @@
                                                                                 <span class="">NIK</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $user->nik }}" name="nik" />
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->nik }}" name="nik" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -352,7 +327,7 @@
                                                                             <!--begin::Input wrapper-->
                                                                             <div class="position-relative">
                                                                                 <!--begin::Input-->
-                                                                                <input type="text" class="form-control form-control-solid" placeholder="{{ $user->name }}" name="name"/>
+                                                                                <input type="text" class="form-control form-control-solid" placeholder="{{ $news->name }}" name="name"/>
                                                                                 <!--end::Input-->
                                                                             </div>
                                                                             <!--end::Input wrapper-->
@@ -365,7 +340,7 @@
                                                                                 <span class="">Alamat</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $user->alamat }}" name="alamat" />
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->alamat }}" name="alamat" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -375,7 +350,7 @@
                                                                                 <span class="">No. Telepon</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $user->notelepon }}" name="notelepon" />
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->notelepon }}" name="notelepon" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -385,7 +360,7 @@
                                                                                 <span class="">Email</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $user->email }}" name="email" />
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->email }}" name="email" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -395,7 +370,7 @@
                                                                                 <span class="">Password</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $user->password }}" name="password" />
+                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $news->password }}" name="password" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -408,13 +383,13 @@
                                                                                 <div class="d-flex">
                                                                                     <div class="input-group  mb-5" id="#role">
                                                                                         <input type="hidden"
-                                                                                            value="{{ $user->id }}">
+                                                                                            value="{{ $news->id }}">
                                                                                         <div class="input-group  mb-5">
                                                                                             <div
                                                                                                 class="form-check form-check-custom form-check-solid">
                                                                                                 <input class="form-check-input"
-                                                                                                    type="radio" name="roles"
-                                                                                                    value="admin" @if($user->role === "admin") checked @endif />
+                                                                                                    type="radio" name="role"
+                                                                                                    value="Udmin" @if($news->role === "admin") checked @endif />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Admin
                                                                                                 </label>
@@ -425,8 +400,8 @@
                                                                                                 class="form-check form-check-custom form-check-solid">
 
                                                                                                 <input class="form-check-input"
-                                                                                                    type="radio" name="roles"
-                                                                                                    value="customer" @if($user->role === "customer") checked @endif />
+                                                                                                    type="radio" name="role"
+                                                                                                    value="User" @if($news->role === "costumer") checked @endif />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">User
                                                                                                 </label>
@@ -437,7 +412,7 @@
                                                                         </div>
                                                                         <!--end::Col-->
                                                                         <!--begin::Input group-->
-                                                                        {{-- <div class="row mb-10">
+                                                                        <div class="row mb-10">
                                                                             <!--begin::Col-->
                                                                             <div class="col-md-12 fv-row">
                                                                                 <!--begin::Label-->
@@ -446,13 +421,13 @@
                                                                                 <div class="d-flex">
                                                                                     <div class="input-group  mb-5" id="#status">
                                                                                         <input type="hidden"
-                                                                                            value="{{ $user->id }}">
+                                                                                            value="{{ $news->id }}">
                                                                                         <div class="input-group  mb-5">
                                                                                             <div
                                                                                                 class="form-check form-check-custom form-check-solid">
                                                                                                 <input class="form-check-input"
-                                                                                                    type="radio" name="statusUser"
-                                                                                                    value="locked" @if($user->email_verified_at === 0) checked @endif />
+                                                                                                    type="radio" name="status"
+                                                                                                    value="locked" @if($news->email_verified_at == 0) checked @endif />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Locked
                                                                                                 </label>
@@ -463,8 +438,8 @@
                                                                                                 class="form-check form-check-custom form-check-solid">
 
                                                                                                 <input class="form-check-input"
-                                                                                                    type="radio" name="statusUser"
-                                                                                                    value="active" @if($user->email_verified_at !== 0 ) checked @endif />
+                                                                                                    type="radio" name="status"
+                                                                                                    value="active" @if($news->email_verified_at != 0 ) checked @endif />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Active
                                                                                                 </label>
@@ -473,7 +448,7 @@
 																				</div>
                                                                             </div>
                                                                             <!--end::Col-->
-                                                                        </div> --}}
+                                                                        </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Actions-->
                                                                         <div class="text-center pt-15">
@@ -494,9 +469,7 @@
                                                         </div>
                                                         <!--end::Modal dialog-->
                                                     </div>
-
-
-
+                                                    <!--end::Modal - New Card-->
 
 												</tr>
                                                 @endforeach

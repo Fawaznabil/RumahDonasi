@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
+use App\Models\donasi;
+use App\Traits\HasFormatRupiah;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class campaign extends Model
 {
+    use HasFormatRupiah;
     use HasFactory;
 
     protected $guarded =['id'];

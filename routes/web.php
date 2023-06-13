@@ -5,17 +5,33 @@ use Illuminate\Http\Request;
 use App\Events\MessageCreated;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+<<<<<<< Updated upstream
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\userController;
+=======
+>>>>>>> Stashed changes
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\indexController;
 use Illuminate\Auth\Events\PasswordReset;
-use App\Http\Controllers\GoogleControllerr;
-use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\donasiController;
+use App\Http\Controllers\GoogleControllerr;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\campaignController;
 use App\Http\Controllers\formCampaignController;
-use App\Http\Controllers\campaignpendidikanController;
+use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\campaignbencanaController;
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 use App\Http\Controllers\campaignNonpendidikanController;
 use App\Http\Controllers\campaignNonbencanaController;
+=======
+use App\Http\Controllers\campaignpendidikanController;
+>>>>>>> Stashed changes
+=======
+use App\Http\Controllers\campaignNonbencanaController;
+use App\Http\Controllers\campaignpendidikanController;
+use App\Http\Controllers\campaignNonpendidikanController;
+>>>>>>> Stashed changes
 // use Illuminate\Support\Facades\Auth;
 
 /*
@@ -169,6 +185,50 @@ Route::get('auth/google/callback',[App\Http\Controllers\GoogleController::class,
 //     Route::get('auth/google/callback', 'handleGoogleCallback');
 // });
 
+<<<<<<< Updated upstream
+=======
+// login biasa
+Route::get('/sign-in', function(){
+    return view('auth.login');
+});
+
+
+Route::post('/post_login', [AuthController::class,'post_login'])->name('post_login');
+
+// log out
+Route::get('/sesi/logout',[AuthController::class,'logout']);
+
+
+// admin
+
+Route::get('/admin', [adminController::class, 'index']);
+
+Route::get('/admin/master-user', [adminController::class, 'masterUser']);
+Route::get('/createUser', [userController::class, 'create']);
+Route::post('storeUser', [userController::class, 'storeUser']);
+Route::post('/update-user', [adminController::class, 'updateUser']);
+Route::post('/delete-user', [adminController::class, 'deleteUser']);
+
+Route::get('/admin/master-program', [adminController::class, 'masterProgram']);
+Route::get('/createCampaign', [campaignController::class, 'create']);
+Route::post('storeCampaign', [campaignController::class, 'store']);
+Route::post('/update-program', [adminController::class, 'updateProgram']);
+Route::post('/delete-program', [adminController::class, 'deleteProgram']);
+
+Route::get('/admin/master-donasi', [adminController::class, 'masterDonasi']);
+Route::post('/update-donasi', [adminController::class, 'updateUser']);
+Route::get('/createDonasi', [donasiController::class, 'createDonasi']);
+Route::post('storeDonasi', [donasiController::class, 'storeDonasi']);
+
+Route::get('/admin/master-news', [adminController::class, 'masterNews']);
+Route::post('/update-news', [adminController::class, 'updateNews']);
+Route::get('/createNews', [NewsController::class, 'createNews']);
+Route::post('storeNews', [NewsController::class, 'storeNews']);
+Route::get('/news', [NewsController::class, 'index']);
+Route::get('/newsDetail/{news:slug}', [NewsController::class, 'show']);
+
+
+>>>>>>> Stashed changes
 Route::get('/test', function () {
 
     return view('test');
@@ -202,21 +262,13 @@ Route::get('/detailDonasilogin/{id}', [formCampaignController::class, 'detaillog
         Route::resource('/campaign-pendidikan-login', campaignpendidikanController::class);
     });
 
-    // Admin --------------------------------------------------------------------------------------
-
     Route::group(['middleware' => 'ceklevel:admin'], function(){
-
-    Route::get('/admin', function () {
-
-        return view('admin.index-admin');
+        //dashboard
+        Route::get('/admin', [adminController::class, 'index']);
+        //masteruser
+        Route::get('/admin/master-user', [adminController::class, 'masterUser']);
     });
 
-    Route::get('/admin/master-user', function () {
-
-        return view('admin.master-user');
-    });
-
-});
 
 // test------
 

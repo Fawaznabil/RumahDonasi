@@ -114,8 +114,9 @@ https://templatemo.com/tm-581-kind-heart-charity
         </section>
 
         <section class="section-padding" id="section_3">
-            <div class="container">
+            <div class="container mb-5">
                 <div class="row">
+<<<<<<< Updated upstream
                     @foreach ($bencana as $item )
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
@@ -129,6 +130,19 @@ https://templatemo.com/tm-581-kind-heart-charity
                 @else
                 <a href="/detailDonasilogin/{{$item->id_campaign}}" style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
                 @endauth
+=======
+                    @foreach ($data as $item )
+                    @if($item->statusPengajuan == "terverifikasi")
+                    <div class="col-lg-4 col-md-6 col-12 mb-40 mb-lg-0 mt-5">
+                        <div class="custom-block-wrap">
+                            <img src="{{asset('/gambar_folder/'.$item->gambar)}}"
+                                class="custom-block-image img-fluid" alt="">
+
+                            <div class="custom-block">
+                                <div class="custom-block-body">
+                                    {{-- <h5 class="mb-3">Children Education</h5> --}}
+                                    <strong>{{ $item->judul }}</strong>
+>>>>>>> Stashed changes
 
                                     <div class="progress mt-4">
                                         <div class="progress-bar" style="width: {{ $item->presentasi }}%" role="progressbar" aria-valuenow=""
@@ -149,6 +163,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <strong style="color: rgb(81, 79, 79);font-size:14px">Rp.
                                                 {{ number_format($item->target) }}</strong>
                                         </p>
+<<<<<<< Updated upstream
                                     </div>
                                     <hr>
 
@@ -178,6 +193,28 @@ https://templatemo.com/tm-581-kind-heart-charity
                         </div>
                     </div>
                     @endforeach
+=======
+                                    </div><hr>
+                                    <div class="d-flex align-items-center my-2">
+                                        <p class="mb-0">
+                                            60 Donatur
+                                        </p>
+                                        <p class="ms-auto mb-0">
+                                            Antony Salim
+                                        </p>
+                                    </div><br>
+                                    <p class="donatur" style="font-size: 13px">
+                                       24 hari
+                                    </p>
+                                </div>
+                                <a class="custom-btn btn" data-toggle="modal" data-target="#exampleModalCenter" >Donate now</a>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+
+>>>>>>> Stashed changes
                 </div>
             </div>
 

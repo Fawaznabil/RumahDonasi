@@ -26,14 +26,11 @@ return new class extends Migration
             $table->string('role')->default('customer');
             $table->string('number')->nullable();
             $table->string('photo')->default('assets/ava-icon-dark.png');
+            $table->timestamp('tanggal')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
     }
-    //     Schema::table('users', function (Blueprint $table) {
-    //         $table->string('role', 16)->default('customer')->after('password');
-    //     });
-    // }
 
     /**
      * Reverse the migrations.
