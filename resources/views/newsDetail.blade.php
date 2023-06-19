@@ -44,36 +44,51 @@ https://templatemo.com/tm-581-kind-heart-charity
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/">Home</a>
+                        <a class="nav-link click-scroll" href="/Home">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll " href="/about">About</a>
+                        <a class="nav-link " href="/about-login">About</a>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
-                            id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Campaign</a>
+                        <a class="nav-link  dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Campaign</a>
 
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="/campaign-bencana">Campaign Bencana</a></li>
+                            <li><a class="dropdown-item" href="/campaign-bencana-login">Campaign Bencana</a></li>
 
-                            <li><a class="dropdown-item" href="/campaign-pendidikan">Campaign Pendidikan</a></li>
+                            <li><a class="dropdown-item" href="/campaign-pendidikan-login">Campaign Pendidikan</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="/contact">Contact</a>
+                        <a class="nav-link" href="/contact-login">Contact</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link " href="login">Donate</a>
+                        <a class="nav-link" href="#section_3">Donate</a>
                     </li>
-
+                    @if(Auth::check())
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-btn custom-border-btn btn" href="#"
+                            id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Akun
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/user-login/{id}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="/contact-login">Bantuan</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/sesi/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    @else
                     <li class="nav-item">
                         <a class="nav-link custom-btn custom-border-btn btn" href="/sign-in">Login</a>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -143,13 +158,13 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <div class="news-block news-block-two-col d-flex mt-4">
                                 <div class="news-block-two-col-image-wrap">
                                     <a>
-                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}" class="news-image img-fluid" alt="">
+                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}" class="news-image img-fluid" alt="" style="max-width: 100px">
                                     </a>
                                 </div>
 
                                 <div class="news-block-two-col-info">
                                     <div class="news-block-title mb-2">
-                                        <h6><a href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
+                                        <h6 style="font-size: 15px; font-weight:500"><a href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
                                             {{ $item->title }}</a>
                                         </h6>
                                     </div>

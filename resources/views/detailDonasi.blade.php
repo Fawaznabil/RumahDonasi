@@ -175,7 +175,8 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 
                                     <div class="news-block-body">
-                                        <p class="card-text"><strong>{!! $detailDonasi->deskripsiPenggalangan !!}</strong> </p>
+                                        <p class="card-text"><strong>{!! $detailDonasi->deskripsiPenggalangan
+                                                !!}</strong> </p>
                                     </div>
 
 
@@ -248,53 +249,38 @@ https://templatemo.com/tm-581-kind-heart-charity
                             </div>
 
                             <h5 class="mt-5 mb-3">Donasi Lainnya</h5>
-
+                            @foreach ($top as $item)
                             <div class="news-block news-block-two-col d-flex mt-4">
                                 <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="{{ asset('assets/c3.jpg') }}" class="news-image img-fluid" alt="">
+                                    <a>
+                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}"
+                                            class="news-image img-fluid" alt="" style="max-width: 100px; ">
                                     </a>
                                 </div>
 
-                                <div class="news-block-two-col-info">
+                                <div class="news-block-two-col-info" style="margin-left:20px">
                                     <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Food donation
-                                                area</a>
+                                        <h6 style="font-size: 15px; font-weight:500"><a
+                                                href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
+                                                {{ $item->title }}</a>
                                         </h6>
                                     </div>
 
                                     <div class="news-block-date">
                                         <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 16, 2036
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                            </svg>
+                                            {{ $item->created_at }}
                                         </p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="news-block news-block-two-col d-flex mt-4">
-                                <div class="news-block-two-col-image-wrap">
-                                    <a href="news-detail.html">
-                                        <img src="{{ asset('assets/c1.jpg') }}" class="news-image img-fluid" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="news-block-two-col-info">
-                                    <div class="news-block-title mb-2">
-                                        <h6><a href="news-detail.html" class="news-block-title-link">Volunteering
-                                                Clean</a>
-                                        </h6>
-                                    </div>
-
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 20, 2036
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
+
 </form>
 </div>
 </div>

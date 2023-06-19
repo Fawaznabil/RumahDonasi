@@ -157,11 +157,12 @@
                                                     <td>{{ $user->password }}</td>
                                                     <td>{{ $user->role }}</td>
 													<td>
-                                                        @if($user->email_verified_at == 0)
+                                                        {{-- @if($user->email_verified_at === 0)
 														<div class="badge badge-light-danger">Locked</div>
-                                                        @elseif($user->email_verified_at != 0)
+                                                        @elseif($user->email_verified_at !== 0)
                                                         <div class="badge badge-light-success">Active</div>
-                                                        @endif
+                                                        @endif --}}
+                                                        {{ $user->email_verified_at }}
 													</td>
                                                     <td>{{ $user->created_at }}</td>
 													<!--begin::Action=-->
@@ -369,7 +370,7 @@
                                                                                                 class="form-check form-check-custom form-check-solid">
                                                                                                 <input class="form-check-input"
                                                                                                     type="radio" name="statusUser"
-                                                                                                    value="locked" @if($user->email_verified_at == 0) checked @endif />
+                                                                                                    value="locked" />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Locked
                                                                                                 </label>
@@ -381,7 +382,7 @@
 
                                                                                                 <input class="form-check-input"
                                                                                                     type="radio" name="statusUser"
-                                                                                                    value="active" @if($user->email_verified_at != 0 ) checked @endif />
+                                                                                                    value="active" />
                                                                                                 <label class="form-check-label"
                                                                                                     for="flexRadioDefault">Active
                                                                                                 </label>

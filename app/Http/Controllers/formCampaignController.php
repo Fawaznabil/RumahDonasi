@@ -64,6 +64,7 @@ class formCampaignController
     $totalCampaign = campaign::count();
     $news = news::all();
     $top = news::orderBy('created_at', 'desc')->take(3)->get();
+    $top1 = news::orderBy('created_at', 'desc')->take(1)->get();
 
          return view("index-login",[
             "totalCampaign" => $totalCampaign,
@@ -71,7 +72,8 @@ class formCampaignController
             "bencana" => $bencana ,
             "pendidikan" => $pendidikan,
             "news" => $news,
-            'top' => $top
+            'top' => $top,
+            'top1' => $top1
         ]);
      }
 
@@ -121,6 +123,7 @@ class formCampaignController
     $totalCampaign = campaign::count();
     $news = news::all();
     $top = news::orderBy('created_at', 'desc')->take(3)->get();
+    $top1 = news::orderBy('created_at', 'desc')->take(1)->get();
 
         return view("index",[
             "totalDonasi" => $totalDonasi,
@@ -128,7 +131,8 @@ class formCampaignController
             "bencana" => $bencana ,
             "pendidikan" => $pendidikan,
             "news" => $news,
-            'top' => $top
+            'top' => $top,
+            'top1' => $top1,
             // "data" => campaign::all(),
             // "bencana" => campaign::where('kategori', 'bencana')->get(),
             // "pendidikan" => campaign::where('kategori', 'pendidikan')->get(),
@@ -157,6 +161,8 @@ class formCampaignController
 
         $detailProgram =campaign::find($id);
         $donatur = donasi::all();
+        $news = news::all();
+        $top = news::orderBy('created_at', 'desc')->take(3)->get();
 
         return view('detailDonasi', [
             // "paragraphs" => $paragraphs,
@@ -164,6 +170,7 @@ class formCampaignController
             "detailDonasi" => $detailProgram,
             "donatur" =>$donatur,
             "id_campaign"=>$id,
+            "top" => $top,
             // "deskripsiPenggalangan" => $deskripsiPenggalangan,
         ]);
     }
@@ -189,6 +196,8 @@ class formCampaignController
 
         $detailProgram =campaign::find($id);
         $donatur = donasi::all();
+        $news = news::all();
+        $top = news::orderBy('created_at', 'desc')->take(3)->get();
 
         return view('detailDonasi', [
             // "paragraphs" => $paragraphs,
@@ -196,6 +205,7 @@ class formCampaignController
             "detailDonasi" => $detailProgram,
             "donatur" =>$donatur,
             "id_campaign"=>$id,
+            "top" => $top,
             // "deskripsiPenggalangan" => $deskripsiPenggalangan,
         ]);
     }

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\donasi;
 use App\Models\campaign;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class profileController
 {
@@ -95,22 +97,18 @@ public function store(Request $request)
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function ubahPassword(Request $request)
     {
-        $data = [
-            'NamaLengkap' => $request->username,
-            'NamaDepan' => $request->first_name,
-            'NamaBelakang' => $request->last_name,
-            'Status' => $request->status,
-            'keterangan' => $request->keterangan,
-            'twitter' => $request->twitter,
-            'instagram' => $request->instagram,
-            'facebook' => $request->facebook,
-            'Gambar' => $request->file
-        ];
+        $request->validate([
+            'password' => 'required',
+        ]);
 
-        Profile::where('id', $id)->update($data);
-        return redirect()->to('ProfileUser')->with('succes', 'Berhasil melakukan update data');
+        // Mengupdate password user
+        $user = Auth::user();
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->back()->with('success', 'Password berhasil diubah.');
     }
 
     /**

@@ -38,9 +38,9 @@ class donasiController
 //  dd($request->input('radio'));
 
         if($request->hide == true) {
-            $request -> request->add(['total_harga' => $nominal + 2000,'total_donasi' => $nominal, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, 'nama'=>'anonim' ]);
+            $request -> request->add(['total_harga' => $nominal + 2000,'total_donasi' => $nominal, 'status' => 'Paid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, 'nama'=>'anonim' ]);
         }else{
-            $request -> request->add(['total_harga' => $nominal + 2000,'total_donasi' => $nominal, 'status' => 'Unpaid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, ]);
+            $request -> request->add(['total_harga' => $nominal + 2000,'total_donasi' => $nominal, 'status' => 'Paid', 'id_user' => $request->id_user, 'id_campaign' => $request->id_campaign, ]);
         }
             $donasi = donasi::create($request->all());
 

@@ -107,26 +107,28 @@ https://templatemo.com/tm-581-kind-heart-charity
         <section class="section-padding" id="section_3">
             <div class="container mb-5">
                 <div class="row">
-<<<<<<< Updated upstream
                     @foreach ($pendidikan as $item )
-                    <div class="col-lg-4 col-md-6 col-12 mb-40 mb-lg-0 mt-5">
-=======
-                    @foreach ($data as $item)
-                    @if($item->statusPengajuan == "terverifikasi")
+                    @if ($item->statusPengajuan === "Terverifikasi")
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
->>>>>>> Stashed changes
                         <div class="custom-block-wrap">
                             <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid"
                                 alt="">
 
                             <div class="custom-block">
                                 <div class="custom-block-body" style="display: grid;grid-template-rows:90px 50px 100px">
+                                    @auth
                                     <a href="/detailDonasi/{{$item->id_campaign}}"
                                         style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
+                                    @else
+                                    <a href="/detailDonasilogin/{{$item->id_campaign}}"
+                                        style="text-align: left; color:rgb(8, 8, 69)"><strong>{{ $item->judul }}</a></strong>
+                                    @endauth
+
 
                                     <div class="progress mt-4">
-                                        <div class="progress-bar" style="width: {{ $item->presentasi }}%" role="progressbar" aria-valuenow=""
-                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" style="width: {{ $item->presentasi }}%"
+                                            role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
                                     </div>
 
                                     <div class="d-flex align-items-center my-2">
@@ -161,9 +163,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <strong>{{ $item->jumlah_donatur }} Donatur</strong>
                                         </p>
                                     </div>
-
                                 </div>
+                                @auth
+                                <a href="/donate/{{$item->id_campaign}}" class="custom-btn btn">Donate now</a>
+                                @else
                                 <a href="/sign-in" class="custom-btn btn">Donate now</a>
+                                @endauth
                             </div>
                         </div>
                     </div>
@@ -181,9 +186,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </nav>
             </div>
         </section>
-
-
-
     </main>
 
     <footer class="site-footer">

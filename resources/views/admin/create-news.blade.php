@@ -127,11 +127,10 @@
                                     <option>-Pilih-</option>
                                     <option value="Bencana">Bencana</option>
                                     <option value="Pendidikan">Pendidikan</option>
-                                    <option value="Lainnya">Lainnya</option>
                                 </select required>
                               </div>
                               <div class="mb-3">
-                                <label for="namaCampaigner" style="color:black" class="form-label">Nama Campaigner</label>
+                                <label for="namaCampaigner" style="color:black" class="form-label">Nama Lembaga</label>
                                 <select class="form-select" name="namaCampaigner" id="namaCampaigner" data-control="select2" data-placeholder="Select an option">
                                     <option>-Pilih-</option>
                                     @foreach ($campaigner as $item)

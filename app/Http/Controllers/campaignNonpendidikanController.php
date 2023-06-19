@@ -25,6 +25,7 @@ class campaignNonpendidikanController
             'campaigns.id as id_campaign',
             'campaigns.judul',
             'gambar',
+            'statusPengajuan',
             DB::raw('COALESCE(SUM(donasis.total_donasi), 0) AS total_donasi'),
             DB::raw('COUNT(donasis.total_donasi) AS jumlah_donatur'),
             'campaigns.target',

@@ -106,20 +106,21 @@ https://templatemo.com/tm-581-kind-heart-charity
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
                         <div class="custom-form donate-form">
-                            <h3 class="mb-4">Pembayaran</h3>
+                            <h3 class="mb-4" style="text-align: center; font-size:25px; color:#597081">Pembayaran</h3><br>
 
                             <div class="row">
                                 <div class="col-lg-12 col-12">
-                                    <h5 class="mb-3">Isi Nominal Donasi</h5>
+                                    <h5 class="mb-3" style="font-size: 20px; font-weight:700">Nominal Donasi</h5>
+                                    <h5 class="mb-3" style="font-size: 13px; font-weight:700; color:#665f5f">( Biaya Penanganan Rp.2000 )</h5>
                                 </div>
 
                                 <div class="col-lg-12 col-12">
-                                    <input class="form-control" type="text" value="Rp.{{  number_format($donasi->total_harga) }}"
+                                    <input class="form-control" type="text" value="Rp.{{ number_format($donasi->total_harga) }}"
                                         aria-label="Disabled input example" disabled readonly>
                                 </div>
 
                                 <div class="col-lg-12 col-12 mt-2">
-                                    <h5 class="mb-3">Nama Pengirim</h5>
+                                    <h5 class="mb-3" style="font-size: 20px; font-weight:700">Nama Pengirim</h5>
                                 </div>
 
                                 <div class="col-lg-12 col-12">
@@ -128,9 +129,9 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="col-lg-12 col-12">
-                                    <h5 class="mt-2">Doa di Donasi</h5>
+                                    <h5 class="mt-2" style="font-size: 20px; font-weight:700">Doa di Donasi</h5>
                                     <input class="form-control" type="text" value={{ $donasi->doa }}
-                                        aria-label="Disabled input example" disabled readonly>
+                                        aria-label="Disabled input example" disabled >
                                 </div>
 
                             </div>

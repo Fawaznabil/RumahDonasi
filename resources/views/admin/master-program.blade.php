@@ -164,7 +164,7 @@
                                                     <td>{{ $program->tujuanDana }}</td>
                                                     <!--begin::Status=-->
 													<td>
-                                                        @if($program->statusPengajuan == "belum-verifikasi")
+                                                        @if($program->statusPengajuan === "belum-verifikasi")
 														<div class="badge badge-light-danger">Belum Terverifikasi</div>
                                                         @else()
                                                         <div class="badge badge-light-success">Terverifikasi</div>
@@ -280,7 +280,7 @@
                                                                                 <span class="">Nama Campaign</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->judul }}" name="judul" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->judul }}" name="judul" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -291,7 +291,7 @@
                                                                             <!--begin::Input wrapper-->
                                                                             <div class="position-relative">
                                                                                 <!--begin::Input-->
-                                                                                <input type="text" class="form-control form-control-solid" placeholder="{{ $program->namaLembaga }}" name="namaLembaga"/>
+                                                                                <input type="text" class="form-control form-control-solid" value="{{ $program->namaLembaga }}" name="namaLembaga"/>
                                                                                 <!--end::Input-->
                                                                             </div>
                                                                             <!--end::Input wrapper-->
@@ -304,7 +304,7 @@
                                                                                 <span class="">Tujuan Campaign</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->tujuan }}" name="tujuan" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->tujuan }}" name="tujuan" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -314,7 +314,7 @@
                                                                                 <span class="">Manfaat Campaign</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->manfaat }}" name="manfaat" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->manfaat }}" name="manfaat" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -324,7 +324,7 @@
                                                                                 <span class="">Tujuan Dana</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->tujuanDana }}" name="tujuanDana" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->tujuanDana }}" name="tujuanDana" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -334,7 +334,7 @@
                                                                                 <span class="">Deskripsi Campaign</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->rincian }}" name="rincian" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->rincian }}" name="rincian" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -344,7 +344,7 @@
                                                                                 <span class="">Motto Campaign</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->ajakan }}" name="ajakan" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->ajakan }}" name="ajakan" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->
@@ -354,7 +354,7 @@
                                                                                 <span class="">Kategori Tujuan Campaign</span>
                                                                             </label>
                                                                             <!--end::Label-->
-                                                                            <input type="text" class="form-control form-control-solid" placeholder="{{ $program->deskripsiPenggalangan }}" name="deskripsiPenggalangan" />
+                                                                            <input type="text" class="form-control form-control-solid" value="{{ $program->deskripsiPenggalangan }}" name="deskripsiPenggalangan" />
                                                                         </div>
                                                                         <!--end::Input group-->
                                                                         <!--begin::Input group-->

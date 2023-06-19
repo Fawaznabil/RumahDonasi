@@ -202,6 +202,7 @@ Route::get('/detailDonasilogin/{id}', [formCampaignController::class, 'detaillog
         Route::get('/profile/{id}', [donasiController::class, 'invoice']);
 
         Route::get('/user-login/{id}', [profileController::class, 'invoice']);
+        Route::post('/ubahPassword', [profileController::class, 'ubahPassword']);
 
         Route::get('/user-status-donasi', function () {
 

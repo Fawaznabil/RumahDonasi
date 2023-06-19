@@ -137,7 +137,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="{{ asset('assets/6.jpeg')}}" class="carousel-image img-fluid" alt="...">
+                                    <img src="{{ asset('assets/bg1.jpg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>be a Kind Heart</h1>
@@ -147,7 +147,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/7.jpeg')}}" class="carousel-image img-fluid" alt="...">
+                                    <img src="{{ asset('assets/bg2.jpg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Non-profit</h1>
@@ -157,7 +157,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="carousel-item">
-                                    <img src="{{ asset('assets/8.jpg')}}" class="carousel-image img-fluid" alt="...">
+                                    <img src="{{ asset('assets/bg3.jpg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Humanity</h1>
@@ -379,7 +379,9 @@ https://templatemo.com/tm-581-kind-heart-charity
         </section>
 
         <div class="slider">
+
             @foreach ($bencana as $item )
+            @if ($item->statusPengajuan === "Terverifikasi")
             <div class="card" style="max-width: 330px;min-height: 700px">
                 <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid" alt="Card 2">
                 <div class="custom-block-body" style="display: grid;grid-template-rows:90px 50px 100px">
@@ -436,7 +438,9 @@ https://templatemo.com/tm-581-kind-heart-charity
                 @endauth
                 </div>
             </div>
+            @endif
             @endforeach
+
         </div>
 
 
@@ -453,8 +457,8 @@ https://templatemo.com/tm-581-kind-heart-charity
             </section>
 
             <div class="slider">
-
                 @foreach ($pendidikan as $item )
+                @if ($item->statusPengajuan === "Terverifikasi")
                 <div class="card" style="max-width: 330px;min-height: 700px">
                     <img src="{{asset('/gambar_folder/'.$item->gambar)}}" class="custom-block-image img-fluid"
                         alt="Card 2">
@@ -508,7 +512,9 @@ https://templatemo.com/tm-581-kind-heart-charity
                     @endauth
                     </div>
                 </div>
+                @endif
                 @endforeach
+
             </div><br><br>
 
             <section class="cta-section section-padding section-bg">
@@ -534,7 +540,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                         <div class="col-lg-12 col-12 mb-5">
                             <h2>News</h2>
                         </div>
-                        @foreach ($top as $data)
+                        @foreach ($top1 as $data)
                         <div class="col-lg-7 col-12">
                             <div class="news-block">
                                 <div class="news-block-top">
@@ -575,7 +581,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </div>
 
                                     <div class="news-block-title mb-2">
-                                        <h4><a href="/newsDetail/{{ $data->slug }}" class="news-block-title-link">
+                                        <h4><a href="/newsDetail/{{ $data->slug }}" class="news-block-title-link" style="font-weight: 700">
                                         {{ $data->title }}</a></h4>
                                     </div>
 
@@ -588,18 +594,17 @@ https://templatemo.com/tm-581-kind-heart-charity
                         @endforeach
                         <div class="col-lg-4 col-12 mx-auto">
                             <h5 class="mt-5 mb-3">Recent news</h5>
-
                             @foreach ($top as $item)
                             <div class="news-block news-block-two-col d-flex mt-4">
                                 <div class="news-block-two-col-image-wrap">
                                     <a>
-                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}" class="news-image img-fluid" alt="">
+                                        <img src="{{asset('/gambar_folder/'.$item->gambar1)}}" class="news-image img-fluid" alt="" style="max-width: 100px; ">
                                     </a>
                                 </div>
 
-                                <div class="news-block-two-col-info">
+                                <div class="news-block-two-col-info" style="margin-left:20px">
                                     <div class="news-block-title mb-2">
-                                        <h6><a href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
+                                        <h6 style="font-size: 15px; font-weight:500"><a href="/newsDetail/{{ $item->slug }}" class="news-block-title-link">
                                             {{ $item->title }}</a>
                                         </h6>
                                     </div>

@@ -25,6 +25,7 @@
 
     <link href="{{ asset('css/css/css/templatemo-kind-heart-charity.css') }}" rel="stylesheet">
     <link href="{{ asset('style1.css') }}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!--
 
@@ -114,8 +115,67 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <h4> </h4>
                                             <p class="text-secondary mb-1"></p>
                                             <p class="text-muted font-size-sm"></p>
-                                            <button class="btn btn-primary">Follow</button>
-                                            <button class="btn btn-outline-primary">Message</button>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ubahPassword{{ Auth::user()->id }}">
+                                                Ubah Password
+                                            </button>
+                                        </div>
+                                        <div class="modal fade" id="ubahPassword{{ Auth::user()->id }}" tabindex="-1" aria-hidden="true">
+                                            <!--begin::Modal dialog-->
+                                            <div class="modal-dialog modal-dialog-centered mw-650px">
+                                                <!--begin::Modal content-->
+                                                <div class="modal-content">
+                                                    <!--begin::Modal header-->
+                                                    <div class="modal-header">
+                                                        <!--begin::Modal title-->
+                                                        <h2>Ubah Password</h2>
+                                                        <!--end::Modal title-->
+                                                        <!--begin::Close-->
+                                                        <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                                                            <span class="svg-icon svg-icon-1">
+                                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+                                                                    <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+                                                                </svg>
+                                                            </span>
+                                                            <!--end::Svg Icon-->
+                                                        </div>
+                                                        <!--end::Close-->
+                                                    </div>
+                                                    <!--end::Modal header-->
+                                                    <!--begin::Modal body-->
+                                                    <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                                                        <!--begin::Form-->
+                                                        <form id="kt_modal_new_card_form{{ Auth::user()->id }}" class="form" action="/ubahPassword" method="post" enctype="multipart/form-data">
+                                                            @csrf
+                                                            <input type="hidden" value="{{ Auth::user()->id }}" name="ID_User">
+                                                            <!--begin::Input group-->
+                                                            <div class="d-flex flex-column mb-7 fv-row">
+                                                                <!--begin::Label-->
+                                                                <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                                                    <span class="">Password</span>
+                                                                </label>
+                                                                <!--end::Label-->
+                                                                <input type="text" class="form-control form-control-solid" placeholder="{{ Auth::user()->password }}" name="password" />
+                                                            </div>
+                                                            <!--begin::Actions-->
+                                                            <div class="text-center pt-15">
+                                                                {{-- <button type="submit" class="btn btn-primary">
+                                                                    <span class="indicator-label">Submit</span>
+                                                                    <span class="indicator-progress">Please wait...
+                                                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                                </button> --}}
+                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                            </div>
+                                                            <!--end::Actions-->
+                                                        </form>
+                                                        <!--end::Form-->
+                                                    </div>
+                                                    <!--end::Modal body-->
+                                                </div>
+                                                <!--end::Modal content-->
+                                            </div>
+                                            <!--end::Modal dialog-->
                                         </div>
                                     </div>
                                     {{-- <hr class="my-4">
@@ -181,12 +241,12 @@ https://templatemo.com/tm-581-kind-heart-charity
                                             <input type="text" class="form-control" name="alamat" value="{{ Auth::user()->alamat }}">
                                         </div>
                                     </div>
-                                    <div class="row">
+                                    {{-- <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">
                                             <input type="button" class="btn btn-primary px-4" value="Save Changes">
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
 

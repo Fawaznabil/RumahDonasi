@@ -110,7 +110,7 @@ class adminController
             'email_verified_at' => $request->input('email_verified_at')
         ];
 
-        $request['password']= bcrypt( $request['password']);
+        $request['password'] = bcrypt( $request['password']);
         $idUser = $request->input('ID_User');
         $user = User::find($idUser);
 
