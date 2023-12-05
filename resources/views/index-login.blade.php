@@ -137,9 +137,9 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     <img src="{{ asset('assets/bg1.jpg')}}" class="carousel-image img-fluid" alt="...">
 
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
-                                        <h1>be a Kind Heart</h1>
+                                        <h1>Ayo Donasi</h1>
 
-                                        <p>Professional charity theme based on Bootstrap 5.2.2</p>
+                                        <p>bersama Rumah Donasi kita bisa membantu!</p>
                                     </div>
                                 </div>
 
@@ -320,47 +320,6 @@ https://templatemo.com/tm-581-kind-heart-charity
                 </div>
             </div>
         </section>
-
-        {{-- <section class="about-section section-padding">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-6 col-md-5 col-12">
-                        <img src="images/portrait-volunteer-who-organized-donations-charity.jpg"
-                            class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="">
-                    </div>
-
-                    <div class="col-lg-5 col-md-7 col-12">
-                        <div class="custom-text-block">
-                            <h2 class="mb-0">Sandy Chan</h2>
-
-                            <p class="text-muted mb-lg-4 mb-md-4">Founding Partner</p>
-
-                            <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito Professional
-                                charity theme based</p>
-
-                            <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus</p>
-
-                            <ul class="social-icon mt-4">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section> --}}
-
 
         <section class="section-padding" id="section_3">
             <div class="container">

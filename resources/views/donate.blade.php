@@ -15,7 +15,7 @@
  <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment --> --}}
 
 
-    <title>Kind Heart Charity - News Listing</title>
+    <title>KRumah Donasi</title>
 
     <!-- CSS FILES -->
     <link href="{{ asset('css/css/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -40,7 +40,7 @@ https://templatemo.com/tm-581-kind-heart-charity
             <a class="navbar-brand" href="index.html">
                 <img src="{{ asset('assets/logo-2.png')}}" class="logo img-fluid" alt="">
                 <span>
-                    Kind Heart Charity
+                    Rumah Donasi
                     <small>Non-profit Organization</small>
                 </span>
             </a>
